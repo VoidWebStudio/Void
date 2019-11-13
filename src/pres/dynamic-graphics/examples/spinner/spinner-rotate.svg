@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+
+	<defs>
+		<style>
+			#rect	{ fill: #000 }
+			#one	{ opacity: 1.0 }
+			#two	{ opacity: 0.1 }
+			#three	{ opacity: 0.1 }
+			#four	{ opacity: 0.1 }
+			#five	{ opacity: 0.2 }
+			#six	{ opacity: 0.4 }
+			#seven	{ opacity: 0.6 }
+			#eight	{ opacity: 0.8 }
+		</style>
+		<rect width="50" height="150" rx="25" ry="25" id="rect"/>
+	</defs>
+
+	<g transform="rotate( 0, 250, 250 )">
+		<g>
+			<use x="225" y="0" xlink:href="#rect" id="one"/>
+			<use x="225" y="350" xlink:href="#rect" id="five"/>
+		</g>
+		<g transform="rotate( 45, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="two"/>
+			<use x="225" y="350" xlink:href="#rect" id="six"/>
+		</g>
+		<g transform="rotate( 90, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="three"/>
+			<use x="225" y="350" xlink:href="#rect" id="seven"/>
+		</g>
+		<g transform="rotate( 135, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="four"/>
+			<use x="225" y="350" xlink:href="#rect" id="eight"/>
+		</g>
+		<animateTransform
+			attributeName="transform"
+			type="rotate"
+			values="45,250,250; 90,250,250; 135,250,250; 180,250,250; 225,250,250; 270,250,250; 315,250,250; 360,250,250"
+			dur="0.6s"
+			calcMode="discrete"
+			repeatCount="indefinite"
+		/>
+	</g>
+
+</svg>

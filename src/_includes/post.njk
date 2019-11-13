@@ -1,0 +1,16 @@
+---
+layout: page.njk
+---
+
+{% include 'header.njk' %}
+<main class="main post">
+    <div class="post__caption">
+        <h1 class="post__title">{{ title }}</h1>
+        <p class="post__date">{{ date | readableDate }}</p>
+    </div>
+    <div class="post__content content">
+        {{ content | safe }}
+    </div>
+</main>
+{% include 'archive.njk' %}
+{% include 'footer.njk' %}

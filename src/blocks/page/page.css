@@ -1,0 +1,21 @@
+/* Page */
+
+.page {
+    font-size: 18px;
+    font-family: 'Journal Sans New', sans-serif;
+}
+
+.page__body {
+    display: grid;
+    box-sizing: border-box;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:
+        min-content
+        1fr
+        min-content
+        min-content;
+    margin: 0;
+    background-color: #eeeceb;
+    color: hsl(6, 28%, 20%);
+}

@@ -1,0 +1,153 @@
+@import 'reset.css';
+
+BODY {
+	padding:50px 50px 0;
+	background:#FFF;
+	font:.8125em/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color:#333;
+	}
+A {
+	text-decoration:none;
+	color:#60BF60;
+	}
+A:hover {
+	color:#98D998;
+	}
+
+/* Header
+---------------------------------------- */
+.header {
+	margin:0 0 2em;
+	}
+	.header H1 {
+		margin:0 0 .2em;
+		text-shadow:#DDD 1px 1px 5px;
+		line-height:1;
+		font-size:2em;
+		}
+	.header P {
+		color:#888;
+		}
+
+/* Anchors
+---------------------------------------- */
+.anchors {
+	position:absolute;
+	top:50px;
+	right:50px;
+	padding:1em 0 0;
+	border:dotted 1px #DDD;
+	border-width:1px 0;
+	font-size:.85em;
+	}
+	.anchors UL {
+		margin:0 0 1em;
+		}
+
+/* Modes
+---------------------------------------- */
+.modes {
+	padding:0 50px;
+	margin:0 -50px;
+	overflow:hidden;
+	}
+	.modes DL {
+		clear:both;
+		float:left;
+		padding:0 0 50px;
+		}
+	.modes DT {
+		margin:0 0 20px;
+		line-height:1.2;
+		text-shadow:#DDD 1px 1px 5px;
+		font-size:2em;
+		}
+		.modes DT SMALL {
+			display:block;
+			font-size:.5em;
+			color:#999;
+			}
+	.modes DD {
+		clear:both;
+		float:left;
+		margin:-20px 0 -20px -20px;
+		}
+		.modes DD .tl {
+			float:left;
+			background:url(../i/tl-br.png) no-repeat;
+			font-size:.85em;
+			}
+		.modes DD .br {
+			background:url(../i/tl-br.png) 100% 100% no-repeat;
+			}
+		.modes DD .bl {
+			background:url(../i/bl-tr.png) 0 100% no-repeat;
+			}
+		.modes DD .tr {
+			padding:27px;
+			width:11em;
+			height:11em;
+			background:url(../i/bl-tr.png) 100% 0 no-repeat;
+			}
+	.modes OL LI {
+		margin-bottom:10px;
+		}
+
+/* Elements
+---------------------------------------- */
+.code {
+	display:inline-block;
+	font-weight:bold;
+	}
+.doctype {
+	padding-right:13px;
+	}
+	.doctype.correct {
+		background:url(../i/correct.gif) 100% 50% no-repeat;
+		}
+	.doctype.wrong {
+		background:url(../i/wrong.gif) 100% 50% no-repeat;
+		}
+	.doctype.missed {
+		background:url(../i/missed.gif) 100% 50% no-repeat;
+		}
+.xml {
+	color:#39C;
+	}
+.compat {
+	color:#C33;
+	}
+.html {
+	color:#999;
+	}
+.spaces {
+	width:18px;
+	background:url(../i/spaces.gif) 0 80% no-repeat;
+	text-indent:-9999px;
+	}
+.symbols {
+	width:10px;
+	background:url(../i/symbols.gif) 0 80% no-repeat;
+	text-indent:-9999px;
+	}
+
+/* Convention
+---------------------------------------- */
+.convention {
+	margin:0 0 3em;
+	}
+	.convention H2 {
+		margin:0 0 1em;
+		font-size:1.2em;
+		}
+	.convention DL {
+		margin:0 0 1em;
+		font-size:.85em;
+		}
+	.convention DT,
+	.convention DD {
+		display:inline;
+		}
+	.convention DT:after {
+		content:'\a0\2014';
+		}

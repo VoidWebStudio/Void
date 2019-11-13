@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Кнопка</title>
+	<link rel="stylesheet" href="style.css">
+	<style>		
+		.button {
+			display: inline-block;
+			padding: 0.8rem 1rem;
+			background-color: white;
+			text-align: center;
+			line-height: 1.1;
+			font-size: 50px;
+		}
+
+		.button:hover {
+			background-color: lightblue;
+		}
+
+		.button:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.2em tomato;
+		}
+
+		.button:active {
+			background-color: tomato;
+		}
+
+		.button--disabled,
+		.button--disabled:hover {
+			background-color: grey;
+			color: darkgrey;
+		}
+	</style>
+</head>
+<body>
+	<div class="group group--d">
+		<div class="button" tabindex="0">
+			Пыщь
+		</div>
+		<div class="button button--disabled" tabindex="0">
+			Тыщь
+		</div>
+		<textarea class="field"></textarea>
+	</div>
+	<script>
+		document.querySelectorAll('.button').forEach(function(item) {
+			item.addEventListener('click', function(event) {
+				pish();
+			});
+
+			item.addEventListener('keyup', function(event) {
+				if (event.key == ' ') {
+					event.preventDefault();
+					pish();
+				}
+			});
+		});
+
+		function pish() {
+			document.querySelector('.field').value += 'Пыщь! ';
+		}
+	</script>
+	<details class="todo">
+		<summary>Туду</summary>
+		<ul>
+			<li>😎 Фокусироваться на кнопке с клавиатуры</li>
+			<li>😎 Вызывать клик по нажатию пробела</li>
+			<li>😰 Дизаблить всё предыдущее по атрибуту disabled</li>
+			<li>😰 Дизаблить группу полей одним атрибутом</li>
+			<li>😰 Объяснить скринридеру, что это кнопка</li>
+		</ul>
+	</details>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Динамическая графика — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Динамическая графика</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, <a href="http://www.opera.com/">Opera Software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Динамическая графика</h2>
+		<img class="cover" src="pictures/marble.jpg" alt="Marble of Doom">
+		<style>
+			#cover {
+				background: #1b1b27;
+				}
+			#cover h2 {
+				color: #fff;
+				text-shadow: 0 3px 10px #000;
+				text-align: center;
+				font-size: 75px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/phone.gif" alt="GIF">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">SVG</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Появление SVG</h2>
+		<ul>
+			<li>Adobe, IBM, Netscape, Sun → <strong><a href="http://en.wikipedia.org/wiki/PGML">PGML</a> ?</strong></li>
+			<li>Microsoft, Macromedia, HP → <strong><a href="http://en.wikipedia.org/wiki/VML">VML</a> ?</strong></li>
+			<li>…</li>
+			<li>W3C → <strong><a href="http://en.wikipedia.org/wiki/SVG">SVG</a> !</strong></li>
+		</ul>
+		<p class="note">
+			<strong>SVG</strong> (масштабируемая векторная графика) — XML-подобный язык для визуального описания векторной графики.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Поддержка SVG</h2>
+		<ul>
+			<li><strong>Chrome, Firefox, Safari —</strong> сносная поддержка с исключениями</li>
+			<li><strong>IE9 —</strong> нативно, <strong>IE7–8</strong> при помощи <a href="http://raphaeljs.com/">Raphaël</a> и Chrome Frame ;)</li>
+			<li><strong>Opera —</strong> исторический лидер во внедрении и поддержке</li>
+			<li>iOS, Android, Opera Mobile и Opera Mini</li>
+		</ul>
+		<p class="note">
+			<strong>Opera Mini</strong> — показывает статическую картинку.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Особенности SVG</h2>
+		<ul>
+			<li><strong>Векторный,</strong> а не растровый → масштабируется</li>
+			<li><strong>Текстовый,</strong> а не бинарный → доступен *</li>
+			<li><strong>Хитрый,</strong> а не как <em>GIF</em> → стили, скрипты, анимация…</li>
+		</ul>
+		<p class="note">
+			31 августа 2010 года <a href="http://googlewebmastercentral.blogspot.com/2010/08/google-now-indexes-svg.html">Google заявила</a> о начале индексации <strong>SVG</strong>.
+		</p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/smile-bitmap.png" alt="Растровый смайл">
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/smile-vector.png" alt="Векторный смайл">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Примитивы</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Шаблон</h2>
+		<pre>
+			<code>&lt;svg <mark>xmlns</mark>="http://www.w3.org/2000/svg"</code>
+			<code>     <mark>xmlns</mark>:xlink="http://www.w3.org/1999/xlink"&gt;</code>
+			<code>     <mark class="important">…</mark></code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Прямоугольник</h2>
+		<pre>
+			<code><mark>&lt;rect</mark></code>
+			<code>    x="100" y="100"</code>
+			<code>    <mark>width="550" height="550"</mark></code>
+			<code>    fill="#FAFAA2" stroke="#000"</code>
+			<code><mark>/&gt;</mark></code>
+		</pre>
+		<p class="note">
+			<a href="examples/svg/rectangle.svg">Исходный файл</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Круг</h2>
+		<pre>
+			<code><mark>&lt;circle</mark></code>
+			<code>    cx="100" cy="100" <mark>r="275"</mark></code>
+			<code>    fill="#FAFAA2" stroke="#000"</code>
+			<code><mark>/&gt;</mark></code>
+		</pre>
+		<p class="note">
+			<a href="examples/svg/circle.svg">Исходный файл</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Линия</h2>
+		<pre>
+			<code><mark>&lt;line</mark></code>
+			<code>    <mark>x1</mark>="230" <mark>y1</mark>="570"</code>
+			<code>    <mark>x2</mark>="640" <mark>y2</mark>="490"</code>
+			<code>    stroke="#000"</code>
+			<code><mark>/&gt;</mark></code>
+		</pre>
+		<p class="note">А также: polyline, polygon, path, градиенты и многое другое…</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Анимация</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Анимация</h2>
+		<p>SMIL → <em>Synchronized Multimedia Integration Language *</em></p>
+		<ul>
+			<li><a href="http://www.w3.org/TR/REC-smil/">SMIL 1.0</a> → 1998 г.</li>
+			<li><a href="http://www.w3.org/TR/SMIL2/">SMIL 2.1</a> → 2005 г.</li>
+			<li><a href="http://www.w3.org/TR/SMIL3/">SMIL 3.0</a> → 2008 г.</li>
+		</ul>
+		<p class="note">
+			Произносится как «смайл», будущее под сомнением.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Спиннер</h2>
+		<pre>
+			<code><mark>&lt;rect</mark> width="50" height="150"</code>
+			<code>    rx="<mark>25</mark>" ry="<mark>25</mark>" id="<mark class="important">rect</mark>"/&gt;</code>
+		</pre>
+		<pre>
+			<code><mark>&lt;use</mark> x="225" y="0" xlink:href="<mark>#rect</mark>"/&gt;</code>
+			<code><mark>&lt;use</mark> x="225" y="350" xlink:href="<mark>#rect</mark>"/&gt;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/spinner/spinner-rotate.svg">От винта!</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Спиннер</h2>
+		<pre>
+			<code><mark>&lt;animateTransform</mark> attributeName="transform"</code>
+			<code>    type="rotate" dur="0.6s" calcMode="<mark class="important">discrete</mark>"</code>
+			<code>    values="<mark> 45,250,250;</mark> <mark> 90,250,250;</mark> <mark>135,250,250;</mark></code>
+			<code>            <mark>180,250,250;</mark> <mark>225,250,250;</mark> <mark>270,250,250;</mark></code>
+			<code>            <mark>315,250,250;</mark> <mark>360,250,250"</mark></code>
+			<code>    repeatCount="indefinite"</code>
+			<code><mark>/&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Гипножаба</h2>
+		<pre>
+			<code>&lt;g transform="<mark>scale(1, 0.2)</mark>"&gt;</code>
+			<code>    &lt;circle class="<mark>glow</mark>"/&gt;</code>
+			<code>    &lt;circle class="<mark>hole</mark>"/&gt;</code>
+			<code>    &lt;animateTransform … "/&gt;</code>
+			<code>&lt;/g&gt;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/hypnotoad/index.html">Все любят гипножабу</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Соседи</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Скрипты</h2>
+		<ul>
+			<li>SMIL, вероятно, будет заменён CSS-трансформациями</li>
+			<li>SVG имеет ту же DOM</li>
+			<li>Старый добрый JavaScript спешит на помощь…</li>
+		</ul>
+		<p><a href="examples/inbox-attack/index.svg">Inbox Attack</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>Медиа-выражения</h2>
+		<ul>
+			<li>Новая технология в ответ на требования времени</li>
+			<li>Широко поддерживается, легко эмулируется</li>
+			<li>Блестяще интегрируется с SVG…</li>
+		</ul>
+		<p><a href="examples/media-queries-vector/index.html">Супер-логотип</a></p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/super-icon.jpg" alt="Супер-иконка">
+	</section>
+
+	<section class="slide">
+		<h2>Супер-иконка</h2>
+		<ul>
+			<li>Растровые иконки пока неизбежны</li>
+			<li>Скучные дубовые форматы</li>
+			<li>Элегантное решение…</li>
+		</ul>
+		<p><a href="examples/media-queries-bitmap/index.html">Супер-иконка</a></p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/smile-vector.png" alt="Векторный смайлик">
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/smile-bitmap.png" alt="Растровый смайлик">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Canvas</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Появление Canvas</h2>
+		<ul>
+			<li>Придумано в Apple, как компонент Mac OS для Dashboard</li>
+			<li>Предложено W3C в качестве стандарта</li>
+			<li>Широко поддерживается современными браузерами</li>
+		</ul>
+		<p class="note">
+			<strong>Canvas</strong> (англ. canvas — «холст») — набор API для создания и управления растровой графикой при помощи JavaScript.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Поддержка Canvas</h2>
+		<ul>
+			<li><strong>Chrome, Firefox, Opera, Safari —</strong> уверенная поддержка</li>
+			<li><strong>IE9 —</strong> нативно, <strong>IE7–8</strong> при помощи трюков *</li>
+			<li>iOS, Android, Opera Mobile и Opera Mini</li>
+		</ul>
+		<p class="note">
+			Имитация: через VML <a href="http://code.google.com/p/explorercanvas/">ExplorerCanvas</a>, через Flash <a href="http://burzak.com/proj/fxcanvas/">fxCanvas</a>.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Особенности Canvas</h2>
+		<ul>
+			<li><strong>Растровый,</strong> а не векторный → <strong>не</strong> масштабируется</li>
+			<li>Работает через <strong>JavaScript</strong> → ограниченная доступность</li>
+			<li><strong>Плоская картинка</strong> → отсутствие содержимого *</li>
+		</ul>
+		<p class="note">
+			Не забывайте про фолбек: <code>&lt;canvas&gt; Too Old &lt;/canvas&gt;</code>.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Примитивы</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Шаблон</h2>
+		<pre>
+			<code><mark>&lt;canvas</mark> id="canvas"&gt;</code>
+			<code>    width="<mark>600</mark>" height="<mark>600</mark>"&gt;&lt;/canvas&gt;</code>
+		</pre>
+		<pre>
+			<code>var <mark>canvas</mark> =</code>
+			<code>    document.querySelector('<mark>#canvas</mark>').getContext(<mark>'2d'</mark>);</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/circle.html">Исходный файл</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Примитивы</h2>
+		<pre>
+			<code>canvas.<mark>beginPath()</mark>;</code>
+			<code>    <mark class="important">…</mark></code>
+			<code>canvas.<mark>closePath()</mark>;</code>
+			<code>canvas.fill();</code>
+			<code>canvas.stroke();</code>
+		</pre>
+		<p class="note">
+			Обратите внимание на порядок применения <code>fill()</code> и <code>stroke()</code>.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Прямоугольник</h2>
+		<pre>
+			<code>canvas.<mark>rect(25, 25, 550, 550)</mark>;</code>
+			<code>canvas.<mark>fillStyle</mark> = '#FAFAA2';</code>
+			<code>canvas.<mark>strokeStyle</mark> = '#000';</code>
+			<code>canvas.<mark>lineWidth</mark> = 50;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/rectangle.html">Исходный файл</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Круг</h2>
+		<pre>
+			<code>canvas.<mark>arc(300, 300, 275, 0, Math.PI*2, true)</mark>;</code>
+			<code>canvas.<mark>fillStyle</mark> = '#FAFAA2';</code>
+			<code>canvas.<mark>strokeStyle</mark> = '#000';</code>
+			<code>canvas.<mark>lineWidth</mark> = 50;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/circle.html">Исходный файл</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Анимация</h2>
+		<pre>
+			<code>function <mark>draw()</mark> {</code>
+			<code>    canvas.clearRect(0, 0, 600, 600);</code>
+			<code>    canvas.arc(<mark>x, y</mark>, 100, 0, Math.PI*2, true);</code>
+			<code>    <mark>x</mark> += 2; <mark>y</mark> += 2;</code>
+			<code>}</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/animation.html">Понеслась…</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="examples/particles/index.html">Частицы</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="examples/html5logo/index.html">Сияние</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="examples/doughnut/index.html">Бублик</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Изображения</h2>
+		<pre>
+			<code>var pepelsbey = <mark>new Image()</mark>;</code>
+			<code>    pepelsbey.src = 'pepelsbey.png';</code>
+			<code>    pepelsbey.onload = function() {</code>
+			<code>        canvas.<mark>drawImage</mark>(pepelsbey, 44, 44);</code>
+			<code>    }</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/image.html">Рисуем…</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="examples/ambilight/index.html">Ambilight</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Текст</h2>
+		<pre>
+			<code>canvas.font = '<mark>bold 7em "PT Sans", sans-serif</mark>';</code>
+			<code>canvas.fillStyle = 'rgba(0, 0, 0, 0.5)';</code>
+			<code>canvas.textAlign = 'center';</code>
+			<code>canvas.textBaseline = 'top';</code>
+			<code>canvas.fillText('<mark>Ололо</mark>', 290, 330);</code>
+		</pre>
+		<p class="note">
+			<a href="examples/canvas/text.html">Пишем…</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/vs.gif" alt="SVG vs. Canvas">
+	</section>
+
+	<section class="slide">
+		<h2>SVG vs. Canvas</h2>
+		<p>
+			<strong>SVG —</strong> масштабируемый вектор, с содержимым
+			<br>
+			<strong>Canvas —</strong> плоская, фиксированная растровая графика
+		</p>
+		<ul>
+			<li><a href="http://www.brucelawson.co.uk/2009/canvas-accessibility-and-svg/">Canvas, accessibility and SVG</a> — Брюс Лоусон</li>
+			<li><a href="http://dev.opera.com/articles/view/svg-or-canvas-choosing-between-the-two/">SVG or Canvas? Сhoosing Between the Two</a> — Dev.Opera</li>
+		</ul>
+		<p class="note">
+			Но вообще — это длинная история…
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Динамическая графика</h2>
+		<p>Вадим Макеев, Opera Software</p>
+		<ul>
+			<li><a href="https://pepelsbey.net">pepelsbey.net</a></li>
+			<li><a href="https://twitter.com/pepelsbey">twitter.com/pepelsbey</a></li>
+			<li><a href="mailto:pepelsbey@opera.com">pepelsbey@opera.com</a></li>
+		</ul>
+		<p>Презентация: <a href="https://pepelsbey.net/pres/dynamic-graphics/">pepelsbey.net/pres/dynamic-graphics</a></p>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2014 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

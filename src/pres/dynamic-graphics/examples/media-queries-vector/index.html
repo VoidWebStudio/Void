@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>Супер-логотип — Динамическая графика — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			}
+		article {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -250px 0 0 -500px;
+			width: 1000px;
+			height: 333px;
+			}
+		figure {
+			display: block;
+			height: 333px;
+			}
+		object {
+			width: 1000px;
+			}
+		input {
+			display: block;
+			width: 1000px;
+			height: 50px;
+			}
+	</style>
+	<script>
+		function init() {
+			var range = document.querySelector('input'),
+				image = document.querySelector('object');
+			range.onchange = function() {
+				image.style.width = this.value + 'px';
+			}
+		}
+		window.onload = init;
+	</script>
+</head>
+<body>
+	<article>
+		<figure>
+			<object data="logo.svg" type="image/svg+xml"></object>
+			<!-- <object> вместо <img> использован для совместимости с Webkit-ом -->
+		</figure>
+		<input type="range" min="100" max="1000" value="1000">
+	</article>
+</body>
+</html>

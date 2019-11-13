@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Непростая простая кнопка — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			padding:80px 100px;
+			background:#CCC;
+			color:#555;
+			font:15px Tahoma, sans-serif;
+			}
+		p {
+			margin:0;
+			}
+		a {
+			color:#118BF5;
+			text-decoration:none;
+			}
+
+		/* Button */
+		.button {
+			display:inline-block;
+			margin:0 50px 50px 0;
+			padding:0;
+			width:25px;
+			height:25px;
+			border:none;
+			background:#FFF 50% 50% no-repeat;
+			text-indent:-9999px;
+			}
+		.button.play {
+			background-image:url(images/play-button.svg);
+			}
+		.button.play.active {
+			background-image:url(images/play-active.svg);
+			}
+		.button.big {
+			width:250px;
+			height:250px;
+			}
+	</style>
+</head>
+<body>
+	<button class="button play big">Play</button>
+	<button class="button play active big">Play</button>
+	<br>
+	<button class="button play">Play</button>
+	<button class="button play active">Play</button>
+	<p>Пример кнопки c SVG-градиентами к заметке «<a href="https://pepelsbey.net/2012/07/uneasy-easy-button/">Непростая простая кнопка</a>» на сайте Пепелсбей.net.</p>
+</body>
+</html>

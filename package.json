@@ -1,0 +1,13 @@
+{
+  "name": "pepelsbey.net",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" eleventy",
+    "start": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" eleventy --serve --quiet"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.1",
+    "full-icu": "^1.2.1",
+    "luxon": "^1.11.3"
+  }
+}

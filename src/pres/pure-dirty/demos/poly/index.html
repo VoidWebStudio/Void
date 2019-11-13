@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Polygones</title>
+	<style>
+		* {padding:0;margin:0}
+		BODY {
+			padding:20px;
+			background:#000 url(img/flowers.gif)
+			}
+	</style>
+	<script type="text/javascript">
+		function drawCut(which)
+		{
+			var pointsArr = which.points;
+			var pointsLnt = pointsArr.length;
+			var pointsNll = [];
+
+			var Xmax = pointsArr[0];
+			var Xmin = pointsArr[0];
+			var Ymax = pointsArr[1];
+			var Ymin = pointsArr[1];
+
+			for(var i=0; i < pointsLnt; i+=2) {
+				Xmax = Math.max(Xmax,pointsArr[i]);
+				Xmin = Math.min(Xmin,pointsArr[i]);
+				Ymax = Math.max(Ymax,pointsArr[i+1]);
+				Ymin = Math.min(Ymin,pointsArr[i+1]);
+			}
+
+			var width = Xmax - Xmin;
+			var height = Ymax - Ymin;
+			
+			for(var j=0; j < pointsLnt; j+=2) {
+				pointsNll[j] = pointsArr[j] - Xmin;
+				pointsNll[j+1] = pointsArr[j+1] - Ymin;
+			}
+
+			var flashvars = 'points=' + pointsNll.join(',') + '&color=' + which.color;
+
+			var flash =	'<object width="' + width + '" height="' + height + '" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"><param name="movie" value="flash/cut.swf" /><param name="quality" value="high" /><param name="menu" value="false" /><param name="scale" value="noscale" /><param name="salign" value="lt" /><param name="wmode" value="transparent" />' +
+						'<param name="flashvars" value="' + flashvars + '" />' +
+						'<embed width="' + width + '" height="' + height + '" flashvars="' + flashvars + '" src="flash/cut.swf" quality="high" menu="false" scale="noscale" salign="lt" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>';
+
+			document.write(flash);
+		}
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		cut1 = {points:[0,104,109,104,143,0,177,104,286,104,198,168,231,271,143,207,55,271,88,168],color:'DD0000'};
+		cut2 = {points:[0,45,122,45,122,0,183,91,122,182,122,137,0,137],color:'00CCFF'};
+		cut3 = {points:[379,111,441,28,493,72,432,154],color:'FFFF00'};
+		cut4 = {points:[354,195,437,123,469,235],color:'00DD00'};
+
+		drawCut(cut1);
+		drawCut(cut2);
+		drawCut(cut3);
+		drawCut(cut4);
+	</script>
+
+</body>
+</html>

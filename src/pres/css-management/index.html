@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>CSS-менеджемент. Пять лет спустя — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>CSS-менеджемент. Пять лет спустя</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, <a href="http://www.opera.com/">Opera Software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>CSS-менеджемент. <span>Пять лет спустя</span></h2>
+		<img class="cover" src="pictures/cover.jpg" alt="">
+		<style>
+			#cover h2 {
+				position: absolute;
+				top: 240px;
+				right: 0;
+				left: 0;
+				color: #FFF;
+				text-shadow: 0 3px 50px rgba(0, 0, 0, 0.8);
+				text-align: center;
+				font-size: 90px;
+				}
+			#cover h2 span {
+				text-indent: -98px;
+				display: block;
+				font-size: 40px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="css">
+		<h2>CSS</h2>
+		<img src="pictures/css.svg" alt="" class="place m">
+		<style>
+			#css img {
+				width: 500px;
+				height: 452px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="beautiful">
+		<h2 class="shout">Красота.css</h2>
+		<style>
+			#beautiful {
+				background: #FFF url(pictures/rainbow-color.svg) 50% 100% no-repeat;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="portyanka">
+		<h2 class="shout">Портянка.css</h2>
+		<style>
+			#portyanka {
+				background: #FFF url(pictures/rainbow-grey.svg) 50% 0 no-repeat;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/portyanka.jpg" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Модульность</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Модульность</h2>
+		<ul>
+			<li><b>Цвета, шрифты:</b> fonts.css, colors.css</li>
+			<li><b>Функциональность:</b> catalog.css, gallery.css</li>
+			<li><b>Структура сайта:</b> forms.css, content.css</li>
+			<li><b>Компоненты:</b> paging.css button.css</li>
+		</ul>
+		<p class="note"><a href="http://bem.github.com/bem-method/pages/beginning/beginning.ru.html">БЭМ</a> — как яркий пример модульного подхода</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Подключение</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Прямо сразу</h2>
+		<pre>
+			<code><mark>&lt;style&gt;</mark></code>
+			<code>    body { color: whatever; }</code>
+			<code><mark>&lt;/style&gt;</mark></code>
+		</pre>
+		<p class="note">Не рекомендуется, кроме особых случаев</p>
+	</section>
+
+	<section class="slide">
+		<h2>Импорт в голову</h2>
+		<pre>
+			<code><mark>&lt;style&gt;</mark></code>
+			<code>    @import url(style.css);</code>
+			<code><mark>&lt;/style&gt;</mark></code>
+		</pre>
+		<p class="note">Не рекомендуется, кроме внутреннего подключения</p>
+	</section>
+
+	<section class="slide">
+		<h2>Прямо в голову</h2>
+		<pre>
+			<code><mark>&lt;head&gt;</mark></code>
+			<code>    &lt;link rel="stylesheet" href="style.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+		<p class="note">Оптимальный вариант для подключения к документу</p>
+	</section>
+
+	<section class="slide">
+		<h2>Без лишнего</h2>
+		<pre>
+			<code><mark>&lt;head&gt;</mark></code>
+			<code>    &lt;link rel="stylesheet" href="style.css"</code>
+			<code>        <mark class="important">type="text/css"</mark></code>
+			<code>        <mark class="important">media="all"</mark></code>
+			<code>        &gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Медиатипы</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Подключение</h2>
+		<pre>
+			<code>&lt;link href="style.css" media="<mark>all</mark>"&gt;</code>
+			<code>&lt;link href="style.css" media="<mark>screen</mark>"&gt;</code>
+			<code>&lt;link href="style.css" media="<mark>projection</mark>"&gt;</code>
+			<code>&lt;link href="style.css" media="<mark>handheld</mark>"&gt;</code>
+			<code>&lt;link href="style.css" media="<mark>print</mark>"&gt;</code>
+		</pre>
+		<p class="note">Подключение, в зависимости от медиатипа</p>
+	</section>
+
+	<section class="slide">
+		<h2>Импорт</h2>
+		<pre>
+			<code>@import url(style.css) <mark>all</mark>;</code>
+			<code>@import url(style.css) <mark>screen</mark>;</code>
+			<code>@import url(style.css) <mark>projection</mark>;</code>
+			<code>@import url(style.css) <mark>handheld</mark>;</code>
+			<code>@import url(style.css) <mark>print</mark>;</code>
+		</pre>
+		<p class="note">Импорт, в зависимости от медиатипа</p>
+	</section>
+
+	<section class="slide">
+		<h2>Не пригодились</h2>
+		<ul>
+			<li><b>all</b> — по умолчанию</li>
+			<li><b>screen</b> — для всех устройств с экраном</li>
+			<li><b>projection</b> — только для Opera в полноэкранном режиме</li>
+			<li><b>handheld</b> — никто не использует</li>
+			<li><b>print</b> — единственный полезный тип</li>
+		</ul>
+		<p class="note">Projection в Opera работает хитро для совместимости…</p>
+	</section>
+
+	<section class="slide">
+		<h2>Projection в Opera</h2>
+		<pre>
+			<code>&lt;link href="style.css" media="<mark>screen</mark>"&gt;</code>
+		</pre>
+		<p class="note">Стили сработают <em>и в полноэкранном режиме,</em> что равносильно:</p>
+		<pre>
+			<code>&lt;link href="style.css" media="<mark>screen, projection</mark>"&gt;</code>
+		</pre>
+		<p class="note">Сделано для совместимости с другими браузерами</p>
+	</section>
+
+	<section class="slide">
+		<h2>Projection в Opera</h2>
+		<pre>
+			<code>&lt;link href="style.css" media="<mark>screen</mark>"&gt;</code>
+			<code>&lt;link href="style.css" media="<mark>projection</mark>"&gt;</code>
+		</pre>
+		<p class="note">В этом случае стили разделятся на экранные и полноэкранные</p>
+	</section>
+
+	<section class="slide" id="media-queries">
+		<h2 class="shout">Медиавыражения</h2>
+		<style>
+			#media-queries h2 {
+				font-size: 130px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Медиавыражения</h2>
+		<pre>
+			<code>&lt;link rel="stylesheet" href="<mark>style.css</mark>"</code>
+			<code>      media="only <mark>screen</mark></code>
+			<code>             and (<mark>min-width: 800px</mark>)</code>
+			<code>             and (<mark>min-height: 620px</mark>)"&gt;</code>
+		</pre>
+		<p class="note">Подключение стилей в зависимости от особенностей устройства</p>
+	</section>
+
+	<section class="slide">
+		<h2>Медиавыражения</h2>
+		<pre>
+			<code>@media only <mark>screen</mark></code>
+			<code>       and (<mark>min-width: 800px</mark>)</code>
+			<code>       and (<mark>min-height: 620px</mark>) {</code>
+			<code>    body {</code>
+			<code>        <mark>color: whatever;</mark></code>
+			<code>        }</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Адаптация</h2>
+		<pre>
+			<code>&lt;link href="<mark>screen.css</mark>"&gt;</code>
+			<code>&lt;link href="<mark>screen-narrow.css</mark>"</code>
+			<code>      media="only screen</code>
+			<code>             and (max-width: 550px)"&gt;</code>
+			<code>&lt;link href="<mark>screen-wide.css</mark>"</code>
+			<code>      media="only screen and (min-width: 800px)</code>
+			<code>             and (min-height: 620px)"&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Адаптация</h2>
+		<pre>
+			<code>&lt;link href="screen.css"&gt;</code>
+			<code>&lt;link href="screen-narrow.css"</code>
+			<code>      media="only screen</code>
+			<code>             and (<mark>max-width: 550px</mark>)"&gt;</code>
+			<code>&lt;link href="screen-wide.css"</code>
+			<code>      media="only screen and (<mark>min-width: 800px</mark>)</code>
+			<code>             and (<mark>min-height: 620px</mark>)"&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Фильтрация</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Условные комментарии</h2>
+		<p>Множество возможностей: <code>lt</code> <code>lte</code> <code>gt</code> <code>gte</code> <code>&amp;</code> <code>|</code></p>
+		<pre>
+			<code><mark>&lt;!--[if IE]&gt;</mark></code>
+			<code>    &lt;font&gt;А здесь можно похулиганить…&lt;/font&gt;</code>
+			<code><mark>&lt;![endif]--&gt;</mark></code>
+		</pre>
+		<p class="note">К прискорбию, не будут работать начиная с IE10</p>
+	</section>
+
+	<section class="slide">
+		<h2>Можно и в лоб</h2>
+		<pre>
+			<code>&lt;!--[<mark>if IE 6</mark>]&gt;&lt;link href="<mark>ie6</mark>.css">&lt;![endif]--&gt;</code>
+			<code>&lt;!--[<mark>if IE 7</mark>]&gt;&lt;link href="<mark>ie7</mark>.css">&lt;![endif]--&gt;</code>
+			<code>&lt;!--[<mark>if IE 8</mark>]&gt;&lt;link href="<mark>ie8</mark>.css">&lt;![endif]--&gt;</code>
+		</pre>
+		<p class="note">Отдельный файл стилей для каждой версии IE</p>
+	</section>
+
+	<section class="slide">
+		<h2>Но лучше оптимально</h2>
+		<pre>
+			<code><mark>&lt;!--[if !IE]&gt;&lt;!--&gt;</mark></code>
+			<code>    &lt;link rel="stylesheet" href="<mark>main.css</mark>"&gt;</code>
+			<code><mark>&lt;!--&lt;![endif]--&gt;</mark></code>
+			<code><mark>&lt;!--[if IE]&gt;</mark></code>
+			<code>    &lt;link rel="stylesheet" href="<mark>main-and-ie.css</mark>"&gt;</code>
+			<code><mark>&lt;![endif]--&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Плюс фильтры для IE</h2>
+		<pre>
+			<code><mark>* html E</mark> {</code>
+			<code>    color: whatever; <mark class="important">IE6</mark></code>
+			<code>    }</code>
+			<code><mark>* + html E</mark> {</code>
+			<code>    color: nomatter; <mark class="important">IE7</mark></code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Опорные классы</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;!--[if <mark>lt IE 7</mark>]&gt;&lt;html class="<mark>no-js ie6 oldie</mark>"&gt; …</code>
+			<code>&lt;!--[if <mark>IE 7</mark>]&gt;   &lt;html class="<mark>no-js ie7 oldie</mark>"&gt; …</code>
+			<code>&lt;!--[if <mark>IE 8</mark>]&gt;   &lt;html class="<mark>no-js ie8 oldie</mark>"&gt; …</code>
+			<code>&lt;!--[if <mark>gt IE 8</mark>]&gt;&lt;!--&gt;&lt;html class="no-js"&gt; …</code>
+		</pre>
+		<p class="note"><a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Предложено</a> Полом Айришем, доведено до ума в <a href="http://html5boilerplate.com/">H5BP</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>Опорные классы</h2>
+		<pre>
+			<code><mark>.ie6 E</mark> {</code>
+			<code>    color: whatever; <mark class="important">IE6</mark></code>
+			<code>    }</code>
+			<code><mark>.ie7 E</mark> {</code>
+			<code>    color: nomatter; <mark class="important">IE7</mark></code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Архитектура</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Глобальные правила</h2>
+		<ul>
+			<li>Импорт шрифтов и внешних CSS-файлов</li>
+			<li>Сброс умолчаний браузера, <em>чтобы два раза не бегать</em></li>
+			<li>Базовые правила для документа, ссылок</li>
+		</ul>
+		<p class="note">Всё то, что потом будет до- и переопределяться</p>
+	</section>
+
+	<section class="slide">
+		<h2>Ластик</h2>
+		<pre>
+			<code><mark class="important">*</mark> {</code>
+			<code>    <mark>margin: 0;</mark></code>
+			<code>    <mark>padding: 0;</mark></code>
+			<code>    <mark>border: 0;</mark></code>
+			<code>    }</code>
+		</pre>
+		<p class="note">Проблемы с производительностью и формами</p>
+	</section>
+
+	<section class="slide">
+		<h2>Normalize.css</h2>
+		<pre>
+			<code>fieldset { <mark class="comment">/* фрагмент */</mark></code>
+			<code>    border: 1px solid <mark>#C0C0C0</mark>;</code>
+			<code>    margin: 0 2px;</code>
+			<code>    padding: 0.35em <mark>0.625em</mark> 0.75em;</code>
+			<code>    }</code>
+		</pre>
+		<p class="note">Переопределяет, а не отменяет браузерные свойства</p>
+	</section>
+
+	<section class="slide">
+		<h2>Reset.css</h2>
+		<pre>
+			<code>html, body, div, span, applet, object, iframe,</code>
+			<code>h3, h4, h5, h6, p, blockquote, pre, a, abbr, …</code>
+			<code>    <mark>margin: 0;</mark></code>
+			<code>    <mark>padding: 0;</mark> <mark class="comment">/* фрагмент */</mark></code>
+			<code>    }</code>
+		</pre>
+		<p class="note">Самое разумное решение от <a href="http://meyerweb.com/eric/tools/css/reset/">Эрика Мейера</a></p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Ликбез</h2>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m930 237h-434c-11.046 0-20 8.954-20 20v84h-190c-11.046 0-20 8.954-20 20v174c0 11.046 8.954 20 20 20h194c11.046 0 20-8.954 20-20v-89h430c11.046 0 20-8.954 20-20v-169c0-11.05-8.95-20-20-20z" fill="#FAFAA2"/>
+			<path d="m436 237h-284c-11.046 0-20 8.954-20 20v45c0 11.046 8.954 20 20 20h284c11.046 0 20-8.954 20-20v-45c0-11.05-8.95-20-20-20z" fill="#c00"/>
+			<g font-family="'PT Mono', monospace">
+				<text font-size="60" transform="translate(204.51 138)">Правило</text>
+				<text font-size="30" transform="translate(475 204)">Блок объявлений</text>
+				<text font-size="60" transform="translate(288.83 410)">свойство:значение;</text>
+				<text font-size="60" transform="translate(486.04 299.67)">{</text>
+				<text font-size="60" transform="translate(293 520)">}</text>
+				<text font-size="30" transform="translate(54 410)">Объявление</text>
+				<text font-size="60" transform="translate(149.49 299.68)" fill="#FFF">Селектор</text>
+			</g>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Форма блока</h2>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<text font-size="46.222" font-family="'PT Mono', monospace" transform="translate(284.8 160)">
+			<tspan y="0" x="0" fill="#C00">#one</tspan>
+			<tspan y="0" x="153.6" fill="#555">{</tspan>
+			<tspan y="71.111" x="76.8">color: whatever;</tspan>
+			<tspan y="142.222" x="0" fill="#555">}</tspan>
+			<tspan y="213.333" x="0" fill="#C00">#two</tspan>
+			<tspan y="213.333" x="153.6" fill="#555">{</tspan>
+			<tspan y="284.444" x="76.8">color: nomatter;</tspan>
+			<tspan y="355.556" x="0" fill="#555">}</tspan></text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z" fill="#c00"/>
+			<path fill="#555" d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z"/>
+			<path fill="#FAFAA2" d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<path fill="#555" d="m312.89 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.855 0 14.223-6.367 14.223-14.222v-34.845c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m384 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#555" d="m462.22 328.53h-21.689c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path d="m759.56 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z" fill="#FAFAA2"/>
+			<path d="m312.89 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.855 0 14.223-6.368 14.223-14.223v-34.845c0-7.87-6.37-14.23-14.22-14.23z" fill="#555"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z" fill="#c00"/>
+			<path fill="#555" d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z"/>
+			<path fill="#FAFAA2" d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<path fill="#555" d="m312.89 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.855 0 14.223-6.367 14.223-14.222v-34.845c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m384 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#555" d="m462.22 328.53h-21.689c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path d="m759.56 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z" fill="#FAFAA2"/>
+			<path d="m312.89 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.855 0 14.223-6.368 14.223-14.223v-34.845c0-7.87-6.37-14.23-14.22-14.23z" fill="#555"/>
+			<rect y="280.2" x="233.62" height="34.133" transform="matrix(.7071 -.7071 .7071 .7071 -140.94 254.27)" width="5.689"/>
+			<rect transform="matrix(.7071 -.7071 .7071 .7071 -181.14 270.92)" height="5.689" width="34.133" y="351.27" x="219.4"/>
+			<rect height="5.688" width="34.133" y="322.84" x="203.73"/>
+			<path fill="none" stroke="#000" stroke-width="8" d="M244.595,200.423l29.184,38.697l29.184-38.697H244.595z"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<text font-size="46.222" font-family="'PT Mono', monospace" transform="translate(284.8 160)">
+				<tspan y="0" x="0" fill="#C00">#one</tspan>
+				<tspan y="0" x="153.6" fill="#555">{</tspan>
+				<tspan y="71.111" x="76.8">color: whatever;</tspan>
+				<tspan y="142.222" x="76.8" fill="#555">}</tspan>
+				<tspan y="213.333" x="0" fill="#C00">#two</tspan>
+				<tspan y="213.333" x="153.6" fill="#555">{</tspan>
+				<tspan y="284.444" x="76.8">color: nomatter;</tspan>
+				<tspan y="355.556" x="76.8" fill="#555">}</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path fill="#c00" d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z"/>
+			<path fill="#555" d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z"/>
+			<path fill="#FAFAA2" d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<path fill="#555" d="m391.11 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.854 0 14.222-6.367 14.222-14.222v-34.845c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m384 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#555" d="m462.22 328.53h-21.689c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#FAFAA2" d="m759.56 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z"/>
+			<path fill="#555" d="m391.11 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.87-6.36-14.23-14.22-14.23z"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z" fill="#c00"/>
+			<path d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z" fill="#555"/>
+			<path d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z" fill="#FAFAA2"/>
+			<path fill="#555" d="m391.11 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.854 0 14.222-6.367 14.222-14.222v-34.845c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m384 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.37-14.23-14.22-14.23z"/>
+			<path fill="#555" d="m462.22 328.53h-21.689c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#FAFAA2" d="m759.56 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z"/>
+			<path fill="#555" d="m391.11 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.87-6.36-14.23-14.22-14.23z"/>
+			<path d="m258.19 208.18v47.228h-16.72l32.305 42.834 32.305-42.834h-16.72v-47.23h-31.17z" stroke="#000" stroke-width="8" fill="none"/>
+			<path d="m258.19 420.18v47.229h-16.72l32.305 42.834 32.305-42.834h-16.72v-47.23h-31.17z" stroke="#000" stroke-width="8" fill="none"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<text font-size="46.222" font-family="'PT Mono', monospace" transform="translate(284.8 160)">
+				<tspan y="0" x="0" fill="#C00">#one</tspan>
+				<tspan y="0" x="153.6" fill="#555">{</tspan>
+				<tspan y="71.111" x="76.8">color: whatever;</tspan>
+				<tspan y="142.222" x="76.8" fill="#555">}</tspan>
+				<tspan y="213.333" x="76.8" fill="#C00">#two</tspan>
+				<tspan y="213.333" x="232.532" fill="#555">{</tspan>
+				<tspan y="284.444" x="153.6">color: nomatter;</tspan>
+				<tspan y="355.556" x="153.6" fill="#555">}</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z" fill="#c00"/>
+			<path fill="#555" d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z"/>
+			<path fill="#FAFAA2" d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<path fill="#555" d="m391.11 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.854 0 14.222-6.367 14.222-14.222v-34.845c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m462.22 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.911c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path d="m540.44 328.53h-21.688c-7.855 0-14.223 6.367-14.223 14.223v34.85c0 7.855 6.368 14.223 14.223 14.223h21.688c7.854 0 14.223-6.367 14.223-14.223v-34.844c0.01-7.86-6.36-14.23-14.22-14.23z" fill="#555"/>
+			<path fill="#FAFAA2" d="m837.78 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.855 0 14.223-6.368 14.223-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z"/>
+			<path fill="#555" d="m469.33 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.87-6.36-14.23-14.22-14.23z"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m384 115.2h-99.911c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h99.91c7.854 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.37-14.22-14.22-14.22z" fill="#c00"/>
+			<path fill="#555" d="m462.22 115.2h-21.689c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h21.689c7.855 0 14.222-6.368 14.222-14.223v-34.845c0-7.85-6.36-14.22-14.22-14.22z"/>
+			<path fill="#FAFAA2" d="m759.56 186.31h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.222 14.222 14.222h397.24c7.854 0 14.222-6.367 14.222-14.222v-34.845c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<path fill="#555" d="m391.11 258.13h-28.8c-7.854 0-14.222 6.368-14.222 14.223v34.85c0 7.854 6.368 14.222 14.222 14.222h28.8c7.854 0 14.222-6.367 14.222-14.222v-34.845c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path fill="#c00" d="m462.22 328.53h-99.911c-7.854 0-14.222 6.367-14.222 14.223v34.85c0 7.855 6.368 14.223 14.222 14.223h99.911c7.855 0 14.222-6.367 14.222-14.223v-34.844c0-7.86-6.36-14.23-14.22-14.23z"/>
+			<path d="m540.44 328.53h-21.688c-7.855 0-14.223 6.367-14.223 14.223v34.85c0 7.855 6.368 14.223 14.223 14.223h21.688c7.854 0 14.223-6.367 14.223-14.223v-34.844c0.01-7.86-6.36-14.23-14.22-14.23z" fill="#555"/>
+			<path fill="#FAFAA2" d="m837.78 399.64h-397.25c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h397.24c7.855 0 14.223-6.368 14.223-14.223v-34.845c0.01-7.85-6.36-14.22-14.21-14.22z"/>
+			<path fill="#555" d="m469.33 471.47h-28.8c-7.854 0-14.222 6.367-14.222 14.222v34.845c0 7.854 6.368 14.223 14.222 14.223h28.8c7.854 0 14.222-6.368 14.222-14.223v-34.845c0.01-7.87-6.36-14.23-14.22-14.23z"/>
+			<rect transform="matrix(.7071 -.7071 .7071 .7071 -118.03 309.58)" height="34.133" width="5.689" y="280.2" x="311.84"/>
+			<rect transform="matrix(.7071 -.7071 .7071 .7071 -158.23 326.23)" height="5.689" width="34.133" y="351.27" x="297.62"/>
+			<rect height="5.688" width="34.133" y="322.84" x="281.96"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Древовидность</h2>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path fill="#FAFAA2" d="m640.49 79.645h-482.98c-7.855 0-14.222 6.367-14.222 14.222v439.82c0 7.855 6.367 14.223 14.222 14.223h482.98c7.854 0 14.222-6.367 14.222-14.223v-439.82c0-7.858-6.37-14.225-14.22-14.225z"/>
+			<text font-size="53.333" font-family="'PT Mono', monospace" transform="translate(210.49 174.22)">
+				<tspan y="0" x="0">#box</tspan>
+				<tspan y="106.667" x="0">#box ul</tspan>
+				<tspan y="213.333" x="0">#box ul li</tspan>
+				<tspan y="320" x="0">#box ul li a</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path fill="#FAFAA2" d="m876.49 399.64h-71.111v-92.44c0-7.854-6.368-14.223-14.223-14.223h-71.11v-92.444c0-7.854-6.368-14.222-14.223-14.222h-71.111v-92.454c0-7.854-6.367-14.222-14.222-14.222h-482.99c-7.855 0-14.222 6.367-14.222 14.222v119.82c0 7.855 6.367 14.223 14.222 14.223h71.111v92.444c0 7.854 6.368 14.223 14.222 14.223h71.111v92.444c0 7.854 6.368 14.222 14.222 14.222h71.111v92.444c0 7.855 6.367 14.223 14.222 14.223h482.98c7.854 0 14.222-6.367 14.222-14.223v-119.8c0.01-7.86-6.36-14.23-14.21-14.23z"/>
+			<text font-size="53.333" font-family="'PT Mono', monospace" transform="translate(190.49 174.22)">
+				<tspan y="0" x="0">#box</tspan>
+				<tspan y="106.667" x="76.8">#box ul</tspan>
+				<tspan y="213.333" x="179.2">#box ul li</tspan>
+				<tspan y="320" x="256">#box ul li a</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path fill="#FAFAA2" d="m372.77 79.732h-252.19c-4.026 0-7.29 3.264-7.29 7.29v462.38c0 4.024 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.266 7.29-7.29v-462.38c0-4.024-3.26-7.288-7.29-7.288z"/>
+			<path fill="#FAFAA2" d="m910.56 312.06v-61.42c0-4.026-3.264-7.29-7.29-7.29h-36.449v-47.386c0-4.026-3.266-7.29-7.29-7.29h-36.45v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.378c0-4.026-3.264-7.29-7.29-7.29h-252.2c-4.025 0-7.289 3.264-7.289 7.29v61.419c0 4.026 3.264 7.29 7.289 7.29h36.449v47.386c0 4.026 3.267 7.29 7.291 7.29h36.45v47.387c0 4.025 3.265 7.29 7.29 7.29h36.451v47.386c0 1.562 0.495 3.007 1.331 4.191h-125.26c-4.025 0-7.291 3.264-7.291 7.29v61.42c0 4.026 3.266 7.29 7.291 7.29h36.449v47.386c0 4.026 3.267 7.29 7.291 7.29h36.45v47.388c0 4.024 3.264 7.29 7.29 7.29h36.451v47.386c0 4.024 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.266 7.29-7.29v-61.42c0-4.026-3.264-7.29-7.29-7.29h-36.45v-47.387c0-4.025-3.265-7.29-7.29-7.29h-36.449v-47.388c0-4.023-3.266-7.29-7.29-7.29h-36.451v-47.4c0-1.562-0.495-3.005-1.331-4.191h125.26c4.03 0 7.3-3.26 7.3-7.29z"/>
+			<g font-size="27.338" font-family="'PT Mono', monospace">
+				<text transform="translate(147.73 365.14)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="0">#fox ul</tspan>
+					<tspan y="109.352" x="0">#fox ul li</tspan>
+					<tspan y="164.028" x="0">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(147.73 128.21)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="0">#box ul</tspan>
+					<tspan y="109.352" x="0">#box ul li</tspan>
+					<tspan y="164.028" x="0">#box ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 364.73)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="39.367">#fox ul</tspan>
+					<tspan y="109.352" x="91.855">#fox ul li</tspan>
+					<tspan y="164.028" x="131.223">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 127.8)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="39.367">#box ul</tspan>
+					<tspan y="109.352" x="91.855">#box ul li</tspan>
+					<tspan y="164.028" x="131.223">#box ul li a</tspan>
+				</text>
+			</g>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path fill="#FAFAA2" d="m372.77 79.732h-252.19c-4.026 0-7.29 3.264-7.29 7.29v462.38c0 4.026 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.264 7.29-7.29v-462.38c0-4.024-3.26-7.288-7.29-7.288z"/>
+			<path d="m910.56 312.06v-61.42c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.45v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.378c0-4.026-3.264-7.29-7.29-7.29h-252.19c-4.026 0-7.29 3.264-7.29 7.29v61.419c0 4.026 3.264 7.29 7.29 7.29h36.45v47.386c0 4.026 3.265 7.29 7.291 7.29h36.45v47.387c0 4.025 3.264 7.29 7.29 7.29h36.451v47.386c0 1.562 0.495 3.005 1.331 4.191h-125.27c-4.026 0-7.29 3.264-7.29 7.29v61.42c0 4.026 3.264 7.29 7.29 7.29h36.45v47.386c0 4.026 3.265 7.29 7.291 7.29h36.45v47.386c0 4.026 3.264 7.29 7.29 7.29h36.451v47.386c0 4.026 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.264 7.29-7.29v-61.419c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.45v-47.387c0-4.025-3.264-7.29-7.29-7.29h-36.451v-47.386c0-1.562-0.495-3.005-1.331-4.191h125.26c4.03-0.01 7.3-3.27 7.3-7.3z" fill="#FAFAA2"/>
+			<g font-size="27.338" font-family="'PT Mono', monospace">
+				<text transform="translate(147.73 365.14)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="0">#fox ul</tspan>
+					<tspan y="109.352" x="0">#fox ul li</tspan>
+					<tspan y="164.028" x="0">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(147.73 128.21)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="0">#box ul</tspan>
+					<tspan y="109.352" x="0">#box ul li</tspan>
+					<tspan y="164.028" x="0">#box ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 364.73)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="39.367">#fox ul</tspan>
+					<tspan y="109.352" x="91.855">#fox ul li</tspan>
+					<tspan y="164.028" x="131.223">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 127.8)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="39.367">#box ul</tspan>
+					<tspan y="109.352" x="91.855">#box ul li</tspan>
+					<tspan y="164.028" x="131.223">#box ul li a</tspan>
+				</text>
+			</g>
+			<polygon points="535.68 266.4 535.68 209.81 512.41 209.81 512.41 266.4 499.94 266.4 524.04 298.36 548.15 266.4" fill="#c00"/>
+			<polygon points="535.68 508.17 535.68 451.59 512.41 451.59 512.41 508.17 499.94 508.17 524.04 540.14 548.15 508.17" fill="#c00"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<path d="m910.56 312.06v-61.42c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.45v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.378c0-4.026-3.264-7.29-7.29-7.29h-252.19c-4.026 0-7.29 3.264-7.29 7.29v61.419c0 4.026 3.264 7.29 7.29 7.29h36.45v47.386c0 4.026 3.265 7.29 7.291 7.29h36.45v47.387c0 4.025 3.264 7.29 7.29 7.29h36.451v47.386c0 1.562 0.495 3.005 1.331 4.191h-125.27c-4.026 0-7.29 3.264-7.29 7.29v61.42c0 4.026 3.264 7.29 7.29 7.29h36.45v47.386c0 4.026 3.265 7.29 7.291 7.29h36.45v47.386c0 4.026 3.264 7.29 7.29 7.29h36.451v47.386c0 4.026 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.264 7.29-7.29v-61.419c0-4.026-3.264-7.29-7.29-7.29h-36.451v-47.386c0-4.026-3.264-7.29-7.29-7.29h-36.45v-47.387c0-4.025-3.264-7.29-7.29-7.29h-36.451v-47.386c0-1.562-0.495-3.005-1.331-4.191h125.26c4.03-0.01 7.3-3.27 7.3-7.3z" fill="#FAFAA2"/>
+			<path fill="#FAFAA2" d="m372.77 79.732h-252.19c-4.026 0-7.29 3.264-7.29 7.29v462.38c0 4.026 3.264 7.29 7.29 7.29h252.19c4.026 0 7.29-3.264 7.29-7.29v-462.38c0-4.024-3.26-7.288-7.29-7.288z"/>
+			<g font-size="27.338" font-family="'PT Mono', monospace">
+				<text transform="translate(147.73 365.14)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="0">#fox ul</tspan>
+					<tspan y="109.352" x="0">#fox ul li</tspan>
+					<tspan y="164.028" x="0">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(147.73 128.21)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="0">#box ul</tspan>
+					<tspan y="109.352" x="0">#box ul li</tspan>
+					<tspan y="164.028" x="0">#box ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 364.73)">
+					<tspan y="0" x="0">#fox</tspan>
+					<tspan y="54.676" x="39.367">#fox ul</tspan>
+					<tspan y="109.352" x="91.855">#fox ul li</tspan>
+					<tspan y="164.028" x="131.223">#fox ul li a</tspan>
+				</text>
+				<text transform="translate(547.01 127.8)">
+					<tspan y="0" x="0">#box</tspan>
+					<tspan y="54.676" x="39.367">#box ul</tspan>
+					<tspan y="109.352" x="91.855">#box ul li</tspan>
+					<tspan y="164.028" x="131.223">#box ul li a</tspan>
+				</text>
+			</g>
+			<rect y="71.132" x="459.53" height="34.133" transform="matrix(.707 -.7072 .7072 .707 73.093 352.83)" width="5.689"/>
+			<rect y="142.2" x="445.31" height="5.689" transform="matrix(.7071 -.7071 .7071 .7071 32.864 369.43)" width="34.133"/>
+			<rect y="113.78" x="429.64" height="5.689" width="34.133"/>
+			<rect y="310.78" x="459.53" height="34.134" transform="matrix(.7071 -.7071 .7071 .7071 -96.393 422.97)" width="5.689"/>
+			<rect transform="matrix(.7071 -.7071 .7071 .7071 -136.59 439.62)" height="5.689" width="34.133" y="381.85" x="445.31"/>
+			<rect height="5.689" width="34.133" y="353.42" x="429.64"/>
+			<polygon points="535.68 266.4 535.68 209.81 512.41 209.81 512.41 266.4 499.94 266.4 524.04 298.36 548.15 266.4" fill="#c00"/>
+			<polygon points="535.68 508.17 535.68 451.59 512.41 451.59 512.41 508.17 499.94 508.17 524.04 540.14 548.15 508.17" fill="#c00"/>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Всё в порядке</h2>
+	</section>
+
+	<section class="slide white">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<text font-size="104" font-family="'PT Sans', sans-serif" font-weight="bold" transform="translate(88 154.31)">
+				<tspan fill="#C00">Ж</tspan>
+				<tspan y="0" x="114.487">М Е Ы Р Ё А Ъ</tspan>
+				<tspan y="134.4" x="0">Ю В З Ь Ц Г Н Я Ф</tspan>
+				<tspan y="268.799" x="0">У Т К Ч Й Д Л Ш О</tspan>
+				<tspan y="403.2" x="0">И Щ Х С П Э</tspan>
+				<tspan fill="#C00">Б</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide white">
+		<svg class="cover" xmlns="http://www.w3.org/2000/svg" width="1024" height="640">
+			<rect x="0" y="0" width="1024" height="640" fill="#FFF"/>
+			<text font-size="104" font-family="'PT Sans', sans-serif" font-weight="bold" transform="translate(88 154.31)">
+				<tspan fill="#C00">А</tspan>
+				<tspan y="0" x="88.279">Б В Г Д Е Ё Ж З И</tspan>
+				<tspan y="134.4" x="0">Й К Л М Н О П Р С</tspan>
+				<tspan y="268.799" x="0">Т У Ф Х Ц Ч Ш Щ</tspan>
+				<tspan y="403.2" x="0">Ъ Ы Ь Э Ю</tspan>
+				<tspan fill="#C00">Я</tspan>
+			</text>
+		</svg>
+	</section>
+
+	<section class="slide">
+		<h2>Как сортировать?</h2>
+		<ul>
+			<li><b>По алфавиту</b> — прямо в лоб</li>
+			<li><b>По длине свойств</b> — чтобы <em>краси-иво</em></li>
+			<li><b>По настроению</b> — чтобы враг не разобрался в коде</li>
+		</ul>
+		<p class="note">Или включить мозг…</p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/box-model.svg" alt="">
+	</section>
+
+	<section class="slide" id="order">
+		<h2>Порядок свойств</h2>
+		<ol>
+			<li>Позиционирование</li>
+			<li>Свойства блока</li>
+			<li>Размеры блока</li>
+			<li>Цветовое оформление</li>
+			<li>Типы содержимого</li>
+			<li>Текст</li>
+			<li>Визуальные свойства</li>
+			<li>Раскладка</li>
+			<li>Документ</li>
+			<li>Специальные</li>
+		</ol>
+		<p class="note">Подробнее <a href="https://github.com/pepelsbey/zen-coding">в снипетах для Zen Coding</a></p>
+		<style>
+			#order ol {
+				-webkit-column-count: 2;
+				-moz-column-count: 2;
+				column-count: 2;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="csscomb">
+		<h2 class="shout">
+			<a href="http://csscomb.ru/">CSScomb.ru</a>
+		</h2>
+		<img class="cover" src="pictures/csscomb.jpg" alt="">
+		<style>
+			#csscomb h2 {
+				margin-top: 120px;
+				}
+			#csscomb a {
+				border: none;
+				color: #008000;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вкусовщина</h2>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/unicorn.svg" alt="">
+	</section>
+
+	<section class="slide">
+		<h2>Почитать и посмотреть</h2>
+		<ul>
+			<li><a href="http://vimeo.com/34212051">Причеши свой код. Правила хорошего тона в CSS</a></li>
+			<li><a href="https://web-standards.ru/articles/multiline-css/">Преимущества многострочного CSS</a></li>
+			<li><a href="http://vimeo.com/17586223">CSS-фреймворки</a></li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>CSS-менеджемент. Пять лет спустя</h2>
+		<p>Вадим Макеев, Opera Software</p>
+		<ul>
+			<li><a href="https://pepelsbey.net">pepelsbey.net</a></li>
+			<li><a href="https://twitter.com/pepelsbey">@pepelsbey</a> и <a href="https://twitter.com/odevrel_ru">@ODevRel_ru</a></li>
+			<li><a href="mailto:pepelsbey@opera.com">pepelsbey@opera.com</a></li>
+		</ul>
+		<p>Презентация: <a href="https://pepelsbey.net/pres/css-management/">pepelsbey.net/pres/css-management</a></p>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2014 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

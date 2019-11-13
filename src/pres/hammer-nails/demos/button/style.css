@@ -1,0 +1,57 @@
+body {
+    padding: 50px;
+    background-color: gainsboro;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 20px;
+}
+
+/* Group */
+
+.group {
+    margin: 0 0 50px;
+    padding: 0;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content 1fr;
+    border: none;
+}
+
+/* Button */
+
+.button {
+    grid-column: 1 / 2;
+}
+
+.button::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+/* Field */
+
+.field {
+    padding: 20px;
+    border: none;
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    font-family: inherit;
+    font-size: 25px;
+}
+
+.field:focus {
+    box-shadow: 0 0 0 0.4em tomato;
+}
+
+/* Todo */
+
+.todo summary:focus {
+    outline: none;
+    color: tomato;
+}
+
+.todo ul {
+    padding: 0;
+    list-style: none;
+}

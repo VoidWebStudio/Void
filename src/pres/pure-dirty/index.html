@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Чистый CSS для грязных трюков — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="description" content="А вы знали, что простой велосипед можно сделать на чистом CSS?">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		/* Codepen */
+
+		.codepen {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		/* Columns */
+
+	    .columns {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 75px;
+	    }
+		
+		/* Large */
+		
+		.large {
+			line-height: 1.5;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Чистый CSS для грязных трюков</h1>
+		<p>
+			<a href="https://pepelsbey.net/">Вадим Макеев</a>,
+			<a href="https://htmlacademy.ru/">HTML Academy</a>
+		</p>
+	</header>
+
+	<section class="slide clear">
+		<img class="cover" src="pictures/cover-1.jpg" alt="">
+		<h2 class="shout" style="color: white">
+			Чистый CSS
+		</h2>
+	</section>
+
+	<section class="slide clear">
+		<img class="cover" src="pictures/cover-2.jpg" alt="">
+		<h2 class="shout" style="color: white">
+			для грязных трюков
+		</h2>
+	</section>
+
+	<section class="slide clear" style="background: #302683">
+		<a href="https://htmlacademy.ru/">
+			<img class="place" width="700" src="pictures/html-academy.svg" alt="Логотип HTML Academy.">
+		</a>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="demos/ddm/index.html"></iframe>
+	</section>
+
+	<section class="slide">
+		<h2>17 декабря 2005</h2>
+		<pre>
+			<code>#nav LI A,</code>
+			<code>#nav LI:hover LI A,</code>
+			<code>#nav LI.<mark>sfhover</mark> LI A,</code>
+			<code>#nav LI:hover LI:hover LI A,</code>
+			<code>#nav LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> LI A,</code>
+			<code>#nav LI:hover LI:hover LI:hover LI A,</code>
+			<code>#nav LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> LI A { … }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>17 декабря 2005</h2>
+		<pre>
+			<code>#nav LI:hover A,</code>
+			<code>#nav LI.<mark>sfhover</mark> A,</code>
+			<code>#nav LI:hover LI:hover A,</code>
+			<code>#nav LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> A,</code>
+			<code>#nav LI:hover LI:hover LI:hover A,</code>
+			<code>#nav LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> LI.<mark>sfhover</mark> A,</code>
+			<code>#nav LI:hover LI:hover LI:hover LI:hover A, …</code>
+		</pre>
+	</section>
+
+	<section class="slide clear">
+		<img class="cover" src="pictures/pepelsbey.png" alt="Пепелсбей.net в 2015 году.">
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="demos/poly/index.html"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/una/embed/jrxbZq?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/una/embed/EgLPmZ?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/una/embed/KgRzRE?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/pepelsbey/embed/RyGxZE?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="http://www.mattzeunert.com/TodoCSS/"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="demos/menu/index.html"></iframe>
+	</section>
+
+	<section class="slide">
+		<h2>26 апреля 2018</h2>
+		<pre>
+			<code>.menu__radio--open<mark>:checked ~</mark> .menu__label--open {</code>
+			<code>	display: none;</code>
+			<code>}</code>
+			<code> </code>
+			<code>.menu__radio--open<mark>:checked ~</mark> .menu__label--close {</code>
+			<code>	display: block;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>26 апреля 2018</h2>
+		<pre>
+			<code>&lt;div class="menu__tab"&gt;</code>
+			<code>	<mark>&lt;input</mark> class="menu__radio menu__radio--open" …</code>
+			<code>	&lt;label class="menu__label menu__label--open" …</code>
+			<code>	<mark>&lt;input</mark> class="menu__radio menu__radio--close" …</code>
+			<code>	&lt;label class="menu__label menu__label--close" …</code>
+			<code>	&lt;ul class="<mark>menu__list</mark>"&gt;</code>
+			<code>		&lt;li class="menu__item"&gt;Реликтовый ледник&lt;/li&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide clear black">
+		<h2 class="shout" style="color: white">Не надо так</h2>
+	</section>
+
+	<section class="slide clear">
+		<h2 class="shout">А то что?</h2>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/KenanYusuf//embed/PZKEKd?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<iframe class="place codepen" src="https://codepen.io/miocene/embed/jLzmJq?height=640&amp;theme-id=light&amp;embed-version=2"></iframe>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://twitter.com/pepelsbey">@pepelsbey</a>
+		</h2>
+	</section>
+
+	<section class="slide" id="shower">
+		<img class="place" src="pictures/shower.svg" alt="Логотип Shower.">
+		<h2 class="shout">
+			<a href="http://shwr.me/">Shower</a>
+		</h2>
+		<style>
+			#shower img {
+				margin: 22px 0 0 -210px;
+				width: 150px;
+			}
+
+			#shower h2 {
+				margin-left: 100px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Ссылки</h2>
+		<ul>
+			<li><a href="http://youmightnotneedjs.com/">You Might Not Need JavaScript</a></li>
+			<li><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Don’t Need JavaScript</a></li>
+			<li><a href="http://www.mattzeunert.com/2017/10/30/javascript-free-todo-app.html">How to write a JS-free todo app using just HTML and CSS</a></li>
+			<li><a href="https://www.xanthir.com/b4Kn0">Toggling State in CSS</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Сделано на Шовере</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2017 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

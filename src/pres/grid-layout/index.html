@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Можно вообще всё. Раскладка по гриду — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Можно вообще всё. Раскладка по гриду</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, <a href="http://opera.com">Opera Software</a></p>
+	</header>
+
+	<section class="slide white">
+		<h2 class="shout" style="color: #FFF; font-size: 120px; text-shadow: 6px 12px 0 #000">
+			Можно вообще всё.<br>
+			Раскладка по гриду
+		</h2>
+		<figure>
+			<img class="cover width" src="pictures/relativity.jpg" alt="Обложка">
+			<figcaption><a href="http://www.mcescher.com/gallery/back-in-holland/relativity/">M. C. Escher, Relativity</a></figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<img class="place" width="450" src="pictures/opera.svg" alt="Лого Оперы">
+	</section>
+
+	<section class="slide black">
+		<img class="cover" src="pictures/me-old.jpg" alt="Старый Вадим">
+	</section>
+
+	<section class="slide black">
+		<img class="cover" src="pictures/me-young.jpg" alt="Молодой Вадим">
+	</section>
+
+	<section class="slide white">
+		<img class="place" height="80%" src="pictures/page.svg" alt="Канон Чихольда">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://www.w3.org/TR/2005/WD-css3-layout-20051215/">Template Layout</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">Grid Layout</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<img class="cover height" src="pictures/alex.jpg" alt="Алекс Могилевский">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/spec.png" alt="CSS Grid Layout Module">
+	</section>
+
+	<section class="slide white browsers">
+		<img class="place left next" src="pictures/browser-edge.png" alt="Edge">
+		<img class="place next" src="pictures/browser-nightly.png" alt="Firefox Nightly">
+		<img class="place right next" src="pictures/browser-safari-tp.png" alt="WebKit">
+	</section>
+
+	<section class="slide white browsers">
+		<img class="place left next" src="pictures/browser-opera.png" alt="Opera">
+		<img class="place next" src="pictures/browser-chrome.png" alt="Chrome">
+		<img class="place right next" src="pictures/browser-firefox.png" alt="Firefox">
+	</section>
+
+	<section class="slide">
+		<h2>Включаем</h2>
+		<ul>
+			<li><b>Opera:</b> <a href="opera://flags/#enable-experimental-web-platform-features">opera://flags/#enable-experimental-web-platform-features</a></li>
+			<li><b>Chrome:</b> <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a></li>
+			<li><b>Firefox:</b> <a href="about:config">about:config</a> — layout.css.grid.enabled</li>
+		</ul>
+	</section>
+
+	<section class="slide guides">
+		<h2 class="shout" style="margin-top: -29px; font-size: 252px">Гриды</h2>
+	</section>
+
+	<section class="slide white">
+		<h2 class="shout next">Контейнер</h2>
+		<div class="table">
+			<div class="table__line table__line-1"></div>
+			<div class="table__line table__line-4"></div>
+
+			<div class="table__line table__line-5"></div>
+			<div class="table__line table__line-8"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Линия</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1 next"></div>
+			<div class="table__line table__line-2 next"></div>
+			<div class="table__line table__line-3 next"></div>
+			<div class="table__line table__line-4 next"></div>
+
+			<div class="table__line table__line-5 next"></div>
+			<div class="table__line table__line-6 next"></div>
+			<div class="table__line table__line-7 next"></div>
+			<div class="table__line table__line-8 next"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Полоса</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1"></div>
+			<div class="table__line table__line-2"></div>
+			<div class="table__line table__line-3"></div>
+			<div class="table__line table__line-4"></div>
+
+			<div class="table__line table__line-5"></div>
+			<div class="table__line table__line-6"></div>
+			<div class="table__line table__line-7"></div>
+			<div class="table__line table__line-8"></div>
+
+			<div class="table__box table__track-1"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1"></div>
+			<div class="table__line table__line-2"></div>
+			<div class="table__line table__line-3"></div>
+			<div class="table__line table__line-4"></div>
+
+			<div class="table__line table__line-5"></div>
+			<div class="table__line table__line-6"></div>
+			<div class="table__line table__line-7"></div>
+			<div class="table__line table__line-8"></div>
+
+			<div class="table__box table__track-2"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Ячейка</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1"></div>
+			<div class="table__line table__line-2"></div>
+			<div class="table__line table__line-3"></div>
+			<div class="table__line table__line-4"></div>
+
+			<div class="table__line table__line-5"></div>
+			<div class="table__line table__line-6"></div>
+			<div class="table__line table__line-7"></div>
+			<div class="table__line table__line-8"></div>
+
+			<div class="table__box table__cell-1"></div>
+			<div class="table__box table__cell-2"></div>
+			<div class="table__box table__cell-3"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Область</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1"></div>
+			<div class="table__line table__line-2"></div>
+			<div class="table__line table__line-3"></div>
+			<div class="table__line table__line-4"></div>
+
+			<div class="table__line table__line-5"></div>
+			<div class="table__line table__line-6"></div>
+			<div class="table__line table__line-7"></div>
+			<div class="table__line table__line-8"></div>
+
+			<div class="table__box table__area"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Термины</h2>
+		<ul>
+			<li><b>grid container</b> — грид-контейнер</li>
+			<li><b>grid item</b> — грид-элемент</li>
+			<li><b>grid track</b> — грид-полоса</li>
+			<li><b>grid cell</b> — грид-ячейка</li>
+			<li><b>grid line</b> — грид-линия</li>
+			<li><b>grid area</b> — грид-область</li>
+		</ul>
+		<p>Подробнее в <a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md#grid-layout">словаре терминов по фронтенду</a>.</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Автоматика</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Заготовка</h2>
+		<pre>
+			<code>&lt;div class="<mark>sample</mark>"&gt;</code>
+			<code>	&lt;div class="<mark>sample__item</mark>"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="<mark>sample__item</mark>"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="<mark>sample__item</mark>"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="<mark>sample__item</mark>"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="<mark>sample__item</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Заготовка</h2>
+		<pre>
+			<code>.sample { <span class="comment">/* Пока пусто */</span> }</code>
+			<code>.sample__item {</code>
+			<code>	background: <mark style="background: #0175A7;color: #FFF">#0175A7</mark>;</code>
+			<code>	}</code>
+			<code>.sample__item<mark>:first-child</mark> { background: <mark style="background: #090;color: #FFF">#090</mark> }</code>
+			<code>.sample__item<mark>:last-child</mark> { background: <mark style="background: #C00;color: #FFF">#C00</mark> }</code>
+			<code>.sample__item<mark>::before</mark> { content: <mark>counter(list)</mark> }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--disabled">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<pre class="place" style="font-size: 50px">
+			<code>.sample {</code>
+			<code>	<mark>display: grid;</mark></code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Колонки</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Пополам</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-columns: <mark>1fr 1fr</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--two-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--two-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--two-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--two-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--two-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>На три</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-columns: <mark>1fr 1fr 1fr</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--three-cols">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">1fr ☛ 1 часть</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="margin-top: 235px; color: #FFF">фыр-фыр-фыр</h2>
+		<img class="cover" src="pictures/cat.jpg" alt="Котик">
+	</section>
+
+	<section class="slide">
+		<h2>Пропорционально</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-columns: <mark>1fr 2fr 3fr</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--three-cols-asc">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Фикс и остальное</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-columns: <mark>250px 1fr 250px</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--three-cols-fixed">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Строки</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Фикс и остальное</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-<mark>columns</mark>: 150px <mark>1fr</mark> 150px;</code>
+			<code>	grid-template-<mark>rows</mark>:	150px <mark>1fr</mark> 150px;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--three-cols-rows">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Ручник</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="table">
+			<div class="table__line table__line-1 next"></div>
+			<div class="table__line table__line-2 next"></div>
+			<div class="table__line table__line-3 next"></div>
+			<div class="table__line table__line-4 next"></div>
+
+			<div class="table__line table__line-5 next"></div>
+			<div class="table__line table__line-6 next"></div>
+			<div class="table__line table__line-7 next"></div>
+			<div class="table__line table__line-8 next"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Три колонки</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-columns: <mark>1fr 1fr 1fr</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--manual">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Шапка и подвал</h2>
+		<pre>
+			<code><mark>.sample</mark> :nth-child(1) {</code>
+			<code>	grid-column: <mark>1 / 4</mark>;</code>
+			<code>	}</code>
+			<code><mark>.sample</mark> :nth-child(5) {</code>
+			<code>	grid-column: <mark>1 / 4</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--manual-header-footer">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Подвал и шапка</h2>
+		<pre>
+			<code><mark>.sample</mark> :nth-child(1) {</code>
+			<code>	grid-row: <mark>3 / 4</mark>;</code>
+			<code>	}</code>
+			<code><mark>.sample</mark> :nth-child(5) {</code>
+			<code>	grid-row: <mark>1 / 2</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Подвал и шапка</h2>
+		<pre>
+			<code><mark>.sample</mark> :nth-child(1) {</code>
+			<code>	grid-area: <mark>3 / 1 / 4 / 4</mark>;</code>
+			<code>	}</code>
+			<code><mark>.sample</mark> :nth-child(5) {</code>
+			<code>	grid-area: <mark>1 / 1 / 2 / 4</mark>;</code>
+			<code>	}</code>
+		</pre>
+		<img class="arrow place right next" src="pictures/arrow.svg" alt="Против часовой">
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--manual-footer-header">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout next" style="margin: -20px 0 0 -50px; color: #FFF">ASCII</h2>
+		<figure>
+			<img class="cover width" src="pictures/me-young-ascii.png" alt="Вадим Макеев">
+			<figcaption><a href="https://www.instagram.com/p/BD0M9BFszqh/">Молодой, красивый</a></figcaption>
+		</figure>
+	</section>
+
+	<section class="slide white">
+		<div class="sample">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>ASCII</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-areas:</code>
+			<code>		<mark>'a a a a'</mark></code>
+			<code>		'b <mark class="important">c c</mark> d' <span class="comment">/* Шаблон области */</span></code>
+			<code>		<mark>'e e e e'</mark>;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>A B C D E</h2>
+		<pre>
+			<code>.sample :nth-child(<mark>1</mark>) { grid-area: <mark>a</mark> }</code>
+			<code>.sample :nth-child(<mark>2</mark>) { grid-area: <mark>b</mark> }</code>
+			<code>.sample :nth-child(<mark>3</mark>) { grid-area: <mark>c</mark> }</code>
+			<code>.sample :nth-child(<mark>4</mark>) { grid-area: <mark>d</mark> }</code>
+			<code>.sample :nth-child(<mark>5</mark>) { grid-area: <mark>e</mark> }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--ascii-sorted">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>B A E C D</h2>
+		<pre>
+			<code>.sample :nth-child(<mark>1</mark>) { grid-area: <mark>b</mark> }</code>
+			<code>.sample :nth-child(<mark>2</mark>) { grid-area: <mark>a</mark> }</code>
+			<code>.sample :nth-child(<mark>3</mark>) { grid-area: <mark>e</mark> }</code>
+			<code>.sample :nth-child(<mark>4</mark>) { grid-area: <mark>c</mark> }</code>
+			<code>.sample :nth-child(<mark>5</mark>) { grid-area: <mark>d</mark> }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--ascii-random">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>ASCII</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-areas:</code>
+			<code>		'a a a a'</code>
+			<code>		<mark>'b c c d'</mark></code>
+			<code>		'e e e e';</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>ASCII</h2>
+		<pre>
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-areas:</code>
+			<code>		'a a a a'</code>
+			<code>		<mark>'b c c d'</mark></code>
+			<code>		<mark>'b c c d'</mark></code>
+			<code>		'e e e e';</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--ascii-sorted">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<div class="sample sample--ascii-tall">
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+			<div class="sample__item"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<pre class="place" style="font-size: 40px">
+			<code><mark>.sample</mark> {</code>
+			<code>	grid-template-areas:</code>
+			<code>		'🐷 🐷 🐷 🐷'</code>
+			<code>		'🐸 🐼 🐼 🐤'</code>
+			<code>		'🐵 🐵 🐵 🐵';</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Свойства контейнера</h2>
+		<ul class="double">
+			<li><code>display</code></li>
+			<li><code>grid-template-columns</code></li>
+			<li><code>grid-template-rows</code></li>
+			<li><code>grid-template-areas</code></li>
+			<li><code>grid-template</code></li>
+			<li><code>grid-column-gap</code></li>
+			<li><code>grid-row-gap</code></li>
+			<li><code>grid-gap</code></li>
+			<li><code>justify-items</code></li>
+			<li><code>align-items</code></li>
+			<li><code>justify-content</code></li>
+			<li><code>align-content</code></li>
+			<li><code>grid-auto-columns</code></li>
+			<li><code>grid-auto-rows</code></li>
+			<li><code>grid-auto-flow</code></li>
+			<li><code>grid</code></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Свойства элемента</h2>
+		<ul class="double">
+			<li><code>grid-column-start</code></li>
+			<li><code>grid-column-end</code></li>
+			<li><code>grid-row-start</code></li>
+			<li><code>grid-row-end</code></li>
+			<li><code>grid-column</code></li>
+			<li><code>grid-row</code></li>
+			<li><code>grid-area</code></li>
+			<li><code>justify-self</code></li>
+			<li><code>align-self</code></li>
+		</ul>
+		<p><a href="http://chris.house/blog/a-complete-guide-css-grid-layout/">A Complete Guide to CSS Grid Layout</a></p>
+		<img class="place bottom right next" src="pictures/flexo.png" alt="Flexo">
+	</section>
+
+	<section class="slide">
+		<h2>Так флексы или гриды?</h2>
+		<figure>
+			<blockquote>
+				<p>Внешние гриды для общей раскладки, смесь вложенных флексов и гридов для компонентов страницы и блочные, инлайновые или табличные элементы, там, где находится текстовое содержимое.</p>
+			</blockquote>
+			<figcaption>
+				Таб Аткинс, <a href="https://lists.w3.org/Archives/Public/www-style/2013May/0114.html">www-style</a>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Ещё? Ещё!</h2>
+		<ul>
+			<li><a href="http://css-live.ru/tag/css3-grid-layout">Статьи CSS Live</a></li>
+			<li><a href="http://gridbyexample.com/">Grid by Example</a></li>
+			<li><a href="http://igalia.github.io/css-grid-layout/">CSS Grid Layout Examples</a></li>
+			<li><a href="http://chris.house/blog/a-complete-guide-css-grid-layout/">A Complete Guide to Grid</a></li>
+			<li><a href="https://github.com/FremyCompany/css-grid-polyfill">CSS Grid Polyfill</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="http://sokr.me/grl">sokr.me/grl</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://twitter.com/pepelsbey">@pepelsbey</a></h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/shower.svg" style="margin: 22px 0 0 -210px; width: 150px" alt="Логотип Шовера" class="place">
+		<h2 class="shout" style="margin-left: 100px"><a href="http://shwr.me/">Shower</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2016 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

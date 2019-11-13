@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Меню</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Menu */
+		
+		.menu {
+			display: flex;
+			margin-bottom: 50px;
+			line-height: 1.1;
+			font-size: 25px;
+		}
+		
+		/* Tab */
+		
+		.menu__tab {
+			position: relative;
+			background-color: white;
+		}
+
+		.menu__tab + .menu__tab {
+			border-left: 1px solid gainsboro;
+		}
+
+		/* Radio */
+		
+		.menu__radio {
+			display: none;
+		}
+		
+		/* Label */
+
+		.menu__label {
+			position: relative;
+			z-index: 1;
+			display: block;
+			padding: 0.8rem 1rem;
+		}
+
+		.menu__label--open:hover {
+			background-color: lightblue;
+		}
+
+		.menu__label--close {
+			display: none;
+			background-color: tomato;
+			color: white;
+		}
+
+		/* List */
+
+		.menu__list {
+			position: absolute;
+			display: none;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			background-color: white;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+
+		.menu__item {
+			padding: 0.7rem 1rem;
+		}
+
+		.menu__item + .menu__item {
+			border-top: 1px solid gainsboro;
+		}
+
+		.menu__item:hover {
+			background-color: lightblue;
+		}
+
+		/* Action */
+
+		.menu__radio--open:checked ~ .menu__label--open {
+			display: none;
+		}
+
+		.menu__radio--open:checked ~ .menu__label--close {
+			display: block;
+		}
+
+		.menu__radio--open:checked ~ .menu__list {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<div class="menu__tab">
+			<input class="menu__radio menu__radio--open" type="radio" id="menu__tab-1-open" name="menu__tabs">
+			<label class="menu__label menu__label--open" for="menu__tab-1-open">Исполинская ↓</label>
+			<input class="menu__radio menu__radio--close" type="radio" id="menu__tab-1-close" name="menu__tabs">
+			<label class="menu__label menu__label--close" for="menu__tab-1-close">Исполинская ↑</label>
+			<ul class="menu__list">
+				<li class="menu__item">Реликтовый ледник</li>
+				<li class="menu__item">Аргумент перигелия</li>
+				<li class="menu__item">Спектральная картина</li>
+			</ul>
+		</div>
+		<div class="menu__tab">
+			<input class="menu__radio menu__radio--open" type="radio" id="menu__tab-2-open" name="menu__tabs">
+			<label class="menu__label menu__label--open" for="menu__tab-2-open">Звёздная ↓</label>
+			<input class="menu__radio menu__radio--close" type="radio" id="menu__tab-2-close" name="menu__tabs">
+			<label class="menu__label menu__label--close" for="menu__tab-2-close">Звёздная ↑</label>
+			<ul class="menu__list">
+				<li class="menu__item">Нулевой меридиан</li>
+				<li class="menu__item">Математический горизонт</li>
+				<li class="menu__item">Космогоническая гипотеза</li>
+			</ul>
+		</div>
+		<div class="menu__tab">
+			<input class="menu__radio menu__radio--open" type="radio" id="menu__tab-3-open" name="menu__tabs">
+			<label class="menu__label menu__label--open" for="menu__tab-3-open">Спираль ↓</label>
+			<input class="menu__radio menu__radio--close" type="radio" id="menu__tab-3-close" name="menu__tabs">
+			<label class="menu__label menu__label--close" for="menu__tab-3-close">Спираль ↑</label>
+			<ul class="menu__list">
+				<li class="menu__item">Экваториальный эксцентриситет</li>
+				<li class="menu__item">Проницательная способность</li>
+				<li class="menu__item">Прямое восхождение</li>
+			</ul>
+		</div>
+	</div>
+	<details class="todo">
+		<summary>Туду</summary>
+		<ul>
+			<li>😰 Закрывать при клике за пределами меню.</li>
+			<li>😰 Закрывать при выборе одного из пунктов.</li>
+			<li>😰 Чтобы можно было пользоваться с клавиатуры.</li>
+			<li>😰 Объяснить скринридеру, что здесь нет формы.</li>
+			<li>😰 Объяснить скринридеру, что это меню открывается.</li>
+			<li>…</li>
+			<li>🤓 Убрать хаки, выучить JavaScript и ARIA?</li>
+		</ul>
+	</details>
+</body>
+</html>

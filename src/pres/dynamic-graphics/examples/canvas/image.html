@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>Картинка в Canvas — Динамическая графика — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			background: #000;
+			}
+		canvas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -300px 0 0 -300px;
+			}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="600"></canvas>
+	<script>
+		var canvas = document.querySelector('#canvas').getContext('2d');
+		var pepelsbey = new Image();
+			pepelsbey.src = '../../pictures/pepelsbey.png';
+			pepelsbey.onload = function() {
+				canvas.drawImage( pepelsbey, 44, 44 );
+			}
+	</script>
+</body>
+</html>

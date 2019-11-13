@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Яндекс.Субботник — Пепелсбей.net</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<style>
+		* {
+			padding:0;
+			margin:0;
+			}
+		BODY {
+			padding:1.8em 2em;
+			background:#FFF;
+			font:.8em Arial,sans-serif;
+			color:#000;
+			}
+		H1 {
+			margin:0 0 .8em;
+			font-weight:normal;
+			font-size:2em;
+			}
+			H1 SPAN {
+				color:#E00;
+				}
+
+		.schedule {
+			width:600px;
+			background:#FFF;
+			border-collapse:collapse;
+			}
+		.schedule TD,
+		.schedule TH {
+			padding:.5em 1em;
+			vertical-align:top;
+			text-align:left;
+			}
+		.schedule-hour,
+		.schedule-minute {
+			text-align:center;
+			background:#FC0;
+			border:solid 1px #D9AD00;
+			white-space:nowrap;
+			font-weight:normal;
+			}
+		.schedule-minute-even {
+			background:#FFE066;
+			}
+		.schedule-event {
+			width:90%;
+			background:#E8E8E8;
+			border:solid 1px #BBB;
+			}
+			.schedule-event H2 {
+				margin:.4em 0 .5em;
+				font-size:1.1em;
+				}
+		.schedule-event-even {
+			background:#F7F7F7;
+			}
+
+		@media print {
+			BODY {
+				padding:0;
+				font-size:8pt;
+				}
+			.schedule TD,
+			.schedule TH {
+				border-color:#000;
+				background:none;
+				}
+			.schedule-hour,
+			.schedule-minute {
+				font-size:6pt;
+				}
+			}
+	</style>
+</head>
+<body>
+	<h1><span>Я</span>ндекс.Субботник — Программа</h1>
+	<table class="schedule">
+	<tr>
+		<th rowspan="2" class="schedule-hour">10</th>
+		<th class="schedule-minute schedule-minute-even">30</th>
+		<td rowspan="2" class="schedule-event schedule-event-even">
+			<p>Регистрация, начало в 10:30</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">11</th>
+		<th class="schedule-minute">00</th>
+		<td rowspan="6" class="schedule-event">
+			<h2>Вёрстка в IntelliJIDEA</h2>
+			<p>Вадим Макишвили, начало в 11:00</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">30</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">12</th>
+		<th class="schedule-minute">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">30</th>
+		<td rowspan="4" class="schedule-event schedule-event-even">
+			<h2>API Яндекс.Карт</h2>
+			<p>Фёдор Голубев, начало в 12:30</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">13</th>
+		<th class="schedule-minute schedule-minute-even">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">30</th>
+		<td rowspan="2" class="schedule-event">
+			Перерыв
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">14</th>
+		<th class="schedule-minute schedule-minute-even">00</th>
+		<td rowspan="4" class="schedule-event schedule-event-even">
+			<h2>CSS Framework своими руками: Теория</h2>
+			<p>Виталий Харисов, начало в 14:00</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">30</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">15</th>
+		<th class="schedule-minute">00</th>
+		<td class="schedule-event">
+			Перерыв
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">15</th>
+		<td rowspan="5" class="schedule-event schedule-event-even">
+			<h2>CSS Framework своими руками: Практика</h2>
+			<p>Виталий Харисов, начало в 15:15</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">30</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">16</th>
+		<th class="schedule-minute schedule-minute-even">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">30</th>
+		<td rowspan="4" class="schedule-event">
+			<h2>С ножом против паровоза.<br>Оптимизация и нарезка графики для профессиональной вёрстки.</h2>
+			<p>Вадим Макеев, начало в 16:30</p>
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute">45</th>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">17</th>
+		<th class="schedule-minute">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">30</th>
+		<td class="schedule-event schedule-event-even">
+			Перерыв
+		</td>
+	</tr>
+	<tr>
+		<th class="schedule-minute">45</th>
+		<td rowspan="4" class="schedule-event">
+			<h2>Вёрстка для мобильных устройств</h2>
+			<p>Наталия Макишвили, начало в 17:45</p>
+		</td>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">18</th>
+		<th class="schedule-minute">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">30</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">45</th>
+		<td rowspan="4" class="schedule-event schedule-event-even">
+			<h2>Процесс деплоймента вёрстки – просто, быстро, безопасно</h2>
+			<p>Евгения Фирсова, начало в 18:45</p>
+		</td>
+	</tr>
+	<tr>
+		<th rowspan="4" class="schedule-hour">19</th>
+		<th class="schedule-minute schedule-minute-even">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute schedule-minute-even">30</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">45</th>
+		<td rowspan="5" class="schedule-event">
+			Общение в кулуарах
+		</td>
+	</tr>
+	<tr>
+		<th rowspan="3" class="schedule-hour">20</th>
+		<th class="schedule-minute">00</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">15</th>
+	</tr>
+	<tr>
+		<th class="schedule-minute">30</th>
+	</tr>
+	</table>
+	<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter155532=new Ya.Metrika(155532);yaCounter155532.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
+	<script src="https://mc.yandex.ru/metrika/watch.js" defer="defer"></script>
+	<noscript><img src="https://mc.yandex.ru/watch/155532" alt="" style="position:absolute"></noscript>
+</body>
+</html>

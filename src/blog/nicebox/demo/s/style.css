@@ -1,0 +1,56 @@
+@import 'reset.css';
+
+BODY {
+    padding:80px 100px;
+	background:#EBE9E8;
+    font:.8em Tahoma,sans-serif;
+	color:#3A2521;
+	}
+
+/* Form
+------------------------------------ */
+.form {
+	float:left;
+	padding:2em 2em .5em;
+	background:#FFF;
+	border:solid 1px #BAAEAC;
+	zoom:1;
+	}
+    .form FIELDSET {
+        float:left;
+        padding:0 0 1em;
+        width:15em;
+        }
+    .form LEGEND {
+        font-weight:bold;
+        }
+    .form UL {
+        margin:1em 0 0;
+        }
+    .form LI {
+        margin:0 0 .5em;
+        }
+    .form .button {
+        clear:both;
+        }
+
+/* Lost */
+.form .lost {
+	position:relative;
+	left:-9999px;
+	}
+
+/* Checks */
+.form .radio-on {
+	background:url(../i/radio/on.gif) 0 50% no-repeat;
+	}
+.form .radio-off {
+	background:url(../i/radio/off.gif) 0 50% no-repeat;
+	}
+.form .checkbox-on {
+	background:url(../i/checkbox/on.gif) 0 50% no-repeat;
+	}
+.form .checkbox-off {
+	background:url(../i/checkbox/off.gif) 0 50% no-repeat;
+	}
+

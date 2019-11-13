@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BEM is okay — Pepelsbey.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>BEM is okay</h1>
+		<p><a href="https://pepelsbey.net/">Vadim Makeev</a>, <a href="http://opera.com">Opera Software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2 class="place b l">BEM is okay</h2>
+		<img class="cover" src="pictures/cover.jpg" alt="">
+		<!-- Photo by Patrick Lauke https://www.flickr.com/photos/redux/ -->
+		<style>
+			#cover h2 {
+				margin: 0 0 80px 170px;
+				color: #005BA2;
+				text-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+				font-size: 90px;
+				}
+		</style>
+		<footer>
+			<p>First time I heard about BEM 7 years ago from Yandex developers. I was never against it, but I thought about it as a big overhead. And only last year I actually tried it realized that it’s not just “okay”, it’s really good.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="place" src="pictures/opera.jpg" alt="">
+		<footer>
+			<p>My name is Vadim Makeev, I work for Opera Software in Developer Relations team in Oslo. But this talk is not about our great products, it’s about technology as I’m really passioned for front-end development and I want to share my passion and experience.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="cover next" src="pictures/acid-1.png" alt="">
+		<img class="cover next" src="pictures/acid-2.png" alt="">
+		<img class="cover next" src="pictures/acid-3.png" alt="">
+		<footer>
+			<p>Web development is not just about creating something new from scratch. Bigger part of it is support and modification of existing code, not just “your code”, but also “their code”. That’s why it’s important to have methodology and code style.</p>
+			<p>This is your web site right after launch: it’s healthy, shiny and beautiful. In most cases this is how it will look after a year of “content management” and further development. After another year it will probably look like this: just a bloody mess instead of a former beauty.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Is CSS that bad?</h2>
+		<pre class="next">
+			<code>H1 { color: blue }</code>
+			<code>P EM { font-weight: bold }</code>
+			<code>A:link IMG { border: 2px solid blue }</code>
+			<code>A:visited IMG { border: 2px solid red }</code>
+			<code>A:active IMG { border: 2px solid lime }</code>
+		</pre>
+		<p class="next"><a href="http://www.w3.org/TR/CSS1/">From CSS 1 specification</a></p>
+		<footer>
+			<p>Why is it so? Not because CSS is bad, it’s because sometimes we use it as in early 90s. This is not just a bad CSS from someone’s code, this is example from CSS 1 specification from 1994. CSS is used to be like this, but it could be much better.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">So what?</h2>
+		<footer>
+			<p>I read two great articles last year. They really changed the way I work with CSS. I recommend you to read them, but in this specific order.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 140px"><a href="http://www.kapowaz.net/articles/cargo-cult-css">Cargo Cult CSS</a></h2>
+		<footer>
+			<p>First: Cargo Cult CSS, claiming that BEM is the worst thing that happened with CSS and CSS is mostly “okay” with all <code>:nth-something > :last-child::before</code> things.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 140px"><a href="http://philipwalton.com/articles/css-architecture/">CSS Architecture</a></h2>
+		<footer>
+			<p>Second: CSS Architecture, extending programming principles to CSS using BEM methodology. The best BEM introduction I’ve ever read.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">History</h2>
+		<footer>
+			<p>BEM is not something completely new. There were other people trying to make CSS more stable, bulletproof and maintainable. Let’s briefly have a look at those attempts.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/zeldman.jpg" alt="Jeffrey Zeldman">
+		<footer>
+			<p>As we’re talking about history and web standards we should mention this guy in a blue beanie. Thank you Jeffrey, for everything.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="dan-cederholm">
+		<h2 class="place right">Dan<br> Cederholm</h2>
+		<img class="cover width" src="pictures/dan-cederholm.jpg" alt="Dan Cederholm">
+		<style>
+			#dan-cederholm h2 {
+				margin: 0 90px 0 0;
+				color: #FFF;
+				text-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
+				font-size: 80px;
+				}
+		</style>
+		<footer>
+			<p>Dan Cederholm wrote the great “Bulletproof Web Desing” book back 2005. Some ideas of this book are still relevant today.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="cover height" src="pictures/bulletproof.jpg" alt="">
+		<footer>
+			<p>I beleive it was the first well known attempt to start thinking about front-end code quality.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="nicole-sullivan">
+		<h2 class="place right">Nicole<br> Sullivan</h2>
+		<img class="cover" src="pictures/nicole-sullivan.jpg" alt="Nicole Sullivan">
+		<style>
+			#nicole-sullivan h2 {
+				margin: 0 45px 0 0;
+				color: #FBF3E4;
+				font-size: 80px;
+				}
+		</style>
+		<footer>
+			<p>Then in 2009 Nicole Sullivan came up with OOCSS idea.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">OOCSS</h2>
+		<footer>
+			<p>OOCSS sounds bit naive from today’s point of view but it was important step in the right direction.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="jonathan-snook">
+		<h2 class="place right">Jonathan<br> Snook</h2>
+		<img class="cover" src="pictures/jonathan-snook.jpg" alt="Jonathan Snook">
+		<style>
+			#jonathan-snook h2 {
+				margin: 0 50px 0 0;
+				color: #352B15;
+				font-size: 80px;
+				}
+		</style>
+		<footer>
+			<p>Two years ago 2012 Jonathan Snook published his SMACSS book based on idea of modular and reusable CSS.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">SMACSS</h2>
+		<img class="place bottom next" src="pictures/smacss.png" alt="">
+		<footer>
+			<p>You probably saw this nice fellow with an axe. I would call this idea as “BEM for beginners”. It’s not that strict and could fit your needs better.</p>
+		</footer>
+	</section>
+
+	<section class="slide white">
+		<a href="http://webcomponents.org/">
+			<img class="place" src="pictures/web-components.png" alt="">
+		</a>
+		<footer>
+			<p>As you’re probably already heard Web Components is the next big thing. It’s all about components incapsulation, pretty similar to what BEM is already doing for a last 5 years alredy.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="vitaly-harisov">
+		<h2 class="place right">Vitaly<br> Harisov</h2>
+		<img class="cover width" src="pictures/vitaly-harisov.jpg" alt="Vitaly Harisov">
+		<style>
+			#vitaly-harisov h2 {
+				margin: 0 100px 0 0;
+				color: #515686;
+				font-size: 80px;
+				}
+		</style>
+		<footer>
+			<p>Seven years ago in 2007 Vitaly Harisov (head of front-end development in Yandex for may years) came up with idea of absolutely independent blocks.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">BEM</h2>
+		<footer>
+			<p>Two years later BEM idea got its name and basic conventions. It was 5 years ago.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="bem">
+		<h2 class="shout">
+			Block<br>
+			Element<br>
+			Modifier
+		</h2>
+		<style>
+			#bem h2 {
+				margin-left: 30%;
+				text-align: left;
+				}
+		</style>
+		<footer>
+			<p>BEM stands for: Block, Element, Modifier.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="bem-rules">
+		<h2 class="shout">
+			<div class="next">1. No IDs</div>
+			<div class="next">2. No cascade</div>
+			<div class="next">3. Unique classes</div>
+		</h2>
+		<style>
+			#bem-rules h2 {
+				margin-left: 15%;
+				text-align: left;
+				font-size: 120px;
+				}
+		</style>
+		<footer>
+			<p>And consists of a number of rules, here are the most important: no IDs, no cascase (for Cascading Style Sheets, yeah) and only unique classes are allowed.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>BEM</h2>
+		<pre>
+			<code><mark>.b-block</mark> {</code>
+			<code>	}</code>
+			<code>	.b-block__<mark>element</mark> {</code>
+			<code>		}</code>
+			<code>	.b-block_<mark>key_value</mark> {</code>
+			<code>		}</code>
+		</pre>
+		<footer>
+			<p>Basically it look like this: block and its elements and modifiers, all prefixed with b- and block name, which makes every class name unique.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="http://bem.info/">bem.info</a>
+		</h2>
+		<footer>
+			<p>From Yandex’s point of view BEM is not just a CSS convention, it’s also template engine, JavaScript library, tools, server and many other things. You can learn more on bem.info. But today I’m talking mostly about BEM as the basic idea of naming UI elements and its states.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="harry-nicolas">
+		<h2 class="place b">Harry<br> Roberts</h2>
+		<h2 class="place b">Nicolas<br> Gallagher</h2>
+		<img class="cover" src="pictures/harry-nicolas.jpg" alt="Гарри Робертс и Николас Галлахер">
+		<style>
+			#harry-nicolas h2 {
+				color: #FFF;
+				text-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
+				font-size: 60px;
+				}
+			#harry-nicolas h2:nth-of-type(1) {
+				margin-left: -125px;
+				}
+			#harry-nicolas h2:nth-of-type(2) {
+				margin-left: 350px;
+				}
+		</style>
+		<footer>
+			<p>Two years this two guys fell in love with BEM idea and interpreted it in a new way that became quite popular.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="bem-plus">
+		<h2 class="shout shrink">
+			BEM
+			<img class="next" src="pictures/new.gif" alt="">
+		</h2>
+		<style>
+			#bem-plus h2 img {
+				position: absolute;
+				margin-top: -170px;
+				}
+		</style>
+		<footer>
+			<p>It’s not completely new BEM, it’s rather a few adjustments that get this idea closer to people.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="bem-plus-rules">
+		<h2 class="shout">
+			<div class="next">4. No b-</div>
+			<div class="next">5. __ &amp; --</div>
+		</h2>
+		<style>
+			#bem-plus-rules h2 {
+				margin-left: 25%;
+				text-align: left;
+				}
+		</style>
+		<footer>
+			<p>In addition to the original principles of BEM this interpretation adds two new: there’s no need in b- plus new, more consistent and easier to read element and modifier separators.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>BEM</h2>
+		<pre>
+			<code><mark>.block</mark> {</code>
+			<code>	}</code>
+			<code>	.block__<mark>element</mark> {</code>
+			<code>		}</code>
+			<code>	.block--<mark>modifier</mark> {</code>
+			<code>		}</code>
+		</pre>
+		<footer>
+			<p>It’s pretty much the same BEM but with two underscores for element and two dashes for modifier.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">
+			<a href="http://csswizardry.com/csswizardry-grids/">csswizardry-grids</a>
+		</h2>
+		<footer>
+			<p>The great example library based on BEM idea is csswizardry-grids, modular grids library for Sass written by Harry Roberts. Everything you do with this library is basically eiter grid element or its elements and modifiers.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="place" src="pictures/smile.png" alt="">
+		<footer>
+			<p>Let’s go back to our smile. Imagine that just got new job and digging through code base of “their code” and trying to understand how it works. And you have the first task: insert a nice little smile module on the 404 page.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Smile.css</h2>
+		<pre>
+			<code><mark>.smile</mark> {</code>
+			<code>	background: yellow;</code>
+			<code>	border: 1px solid black;</code>
+			<code>	border-radius: 50%;</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>So you have found smile.css component with all needed styles: yellow background, border radius, etc.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Smile.html</h2>
+		<pre>
+			<code>&lt;div class="<mark>smile</mark>"&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+		</pre>
+		<footer>
+			<p>As well as smile.html template with smile class name and 300 of nested i elements to draw every pixel of this smile, just like in a typical CSS-only demo.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="place next" src="pictures/zombie.png" alt="">
+		<footer>
+			<p>So you go to 404 page and insert div with all needed content and smile class on it. But you see something really weird: a zombie.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Zombie?</h2>
+		<pre>
+			<code>&lt;div class="<mark>smile</mark>"&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+			<code>	&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;</code>
+		</pre>
+		<footer>
+			<p>Then you look at HTML code again. Just a smile.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Zombie?</h2>
+		<pre>
+			<code><mark>.smile</mark> {</code>
+			<code>	background: yellow;</code>
+			<code>	border: 1px solid black;</code>
+			<code>	border-radius: 50%;</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>CSS? The same: yellow smiley. Not a hint of a zombie.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Zombie!</h2>
+		<pre>
+			<code>&lt;body id="<mark class="important">404</mark>"&gt;</code>
+			<code>	&lt;div class="<mark>smile</mark>"&gt;</code>
+		</pre>
+		<pre>
+			<code><mark class="important">#404</mark> <mark>.smile</mark> { <mark class="comment">/* in 404.css file */</mark></code>
+			<code>	background: green;</code>
+			<code>	zombie: zombie;</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>And then you finally go to web inspector. Right, there’s #404 ID at body that changin .smile behavion somewhere in 404.css file included by someone for Halloween party or something.</p>
+			<p>Every developer that have to deal with such code reminds me this funny lion.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<img class="cover height" src="pictures/simba.gif" alt="">
+		<footer>
+			<p>But with probably less happy face.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>BEM-zombie</h2>
+		<pre>
+			<code>&lt;body&gt;</code>
+			<code>	&lt;div class="<mark>smile smile--zombie</mark>"&gt;</code>
+		</pre>
+		<pre>
+			<code><mark>.smile--zombie</mark> { <mark class="comment">/* in smile.css file */</mark></code>
+			<code>	background: green;</code>
+			<code>	zombie: zombie;</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>Proper BEM-zombie should look like this: smile--zombie modificator is presented in both HTML and CSS parts of your component so it’s clear what’s happening here.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Stylitis</h2>
+		<footer>
+			<p>There’s a well known disease called stylitis, it was a big problem a while ago.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Stylitis</h2>
+		<pre>
+			<code>&lt;span style="<mark>display: block;</mark> font-family: Arial, sans-serif;</code>
+			<code>	font-size: 11px; color: blue; <mark>border-style: solid</mark>;</code>
+			<code>	border-color: blue; <mark>border-width: 2px</mark>; padding: 20px;"&gt;</code>
+			<code>	<mark class="important">Terrible!</mark></code>
+			<code>&lt;/span&gt;</code>
+		</pre>
+		<footer>
+			<p>The main symptom if this disease is style attribute full of inline style. Terrible, right? We all agree.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Classitis</h2>
+		<footer>
+			<p>But there’s another similar problem nowadays: classitis.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Classitis</h2>
+		<pre>
+			<code>&lt;span class="<mark>display-block</mark> blue-box</code>
+			<code>	<mark>font-arial</mark> color-blue</code>
+			<code>	solid-blue-border <mark>padding-20</mark>"&gt;</code>
+			<code>	<mark class="important">Beautiful?</mark></code>
+			<code>&lt;/span&gt;</code>
+		</pre>
+		<footer>
+			<p>Symptoms look pretty similar to stylitis: a lot classed serving presentation is the same terrible way. It’s really hard to maintain. And you also start suffering from this disease using BEM.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Header CSS</h2>
+		<pre>
+			<code class="next"><mark>.header</mark> {</code>
+			<code class="next">	}</code>
+			<code class="next">	<mark>.header__logo</mark> {</code>
+			<code class="next">		}</code>
+			<code class="next">		<mark>.header__logo--huge</mark> { … }</code>
+			<code class="next">		<mark>.header__logo--monochome</mark> { … }</code>
+			<code class="next">		<mark>.header__logo--upside-down</mark> { … }</code>
+		</pre>
+		<footer>
+			<p>Let’s have a look at typical BEM element: header with search element which have a number of modificators. “Huge” for bigger logo, “monochrome” for print version and “upside-down” for a April 1st jokes.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Header HTML</h2>
+		<pre>
+			<code class="next">&lt;div class="<mark>header</mark>&gt;</code>
+			<code class="next">	&lt;div class="</code>
+			<code class="next">		<mark>header__logo</mark></code>
+			<code class="next">		<mark>header__logo--huge</mark></code>
+			<code class="next">		<mark>header__logo--monochome</mark></code>
+			<code class="next">		<mark>header__logo--upside-down</mark>"&gt;</code>
+		</pre>
+		<footer>
+			<p>But if one day you will have to build print version of a huge logo for April 1st joke you’ll end up with following markup. This is definitely a stylitis, thust me I’m a doctor.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Weird</h2>
+		<footer>
+			<p>This is obvious downside of using BEM idea.</p>
+		</footer>
+	</section>
+
+	<section class="slide" id="prepros">
+		<h2 class="shout shrink">Preprocessors</h2>
+		<style>
+			#prepros h2 {
+				margin-left: 0.5em;
+				font-size: 130px;
+				}
+			#prepros h2::before {
+				position: absolute;
+				margin: -0.24em 0 0 -0.5em;
+				color: #C00;
+				content: '+';
+				font-size: 1.8em;
+				}
+		</style>
+		<footer>
+			<p>But it could be easily solved by preprocessors.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>CSS</h2>
+		<pre>
+			<code><mark>.block</mark> {</code>
+			<code>	}</code>
+			<code>	.block__<mark>element</mark> {</code>
+			<code>		}</code>
+			<code>	.block--<mark>modifier</mark> {</code>
+			<code>		}</code>
+		</pre>
+		<footer>
+			<p>Here’s our typical BEM styles: block, elemen, modifier. As you can see we have to repeat block name over and over again.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Sass</h2>
+		<pre>
+			<code><mark>.block</mark> {</code>
+			<code>	<mark>&amp;__element</mark> {</code>
+			<code>		}</code>
+			<code>	<mark>&amp;--modifier</mark> {</code>
+			<code>		}</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>But with Sass magic you can use ampersand to prepend block’s name to every nested element of modifier. But they will not be actually nested in output CSS as typical nested selector.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Sass</h2>
+		<pre>
+			<code><mark>.block</mark> {</code>
+			<code>	<mark>&amp;__element</mark> {</code>
+			<code>		<mark>&amp;--modifier</mark> { … }</code>
+			<code>		}</code>
+			<code>	<mark>&amp;--modifier</mark> {</code>
+			<code>		}</code>
+			<code>	}</code>
+		</pre>
+		<footer>
+			<p>You can even nest modifiers to elements and resulted class will be also prepended with block and element names. Now you can easily change block name.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Classitis cured</h2>
+		<pre>
+			<code><mark>.header</mark> {</code>
+			<code>	<mark>&amp;__logo</mark> {</code>
+			<code>		<mark>&amp;--perverted</mark> {</code>
+			<code>			@extend <mark>%huge</mark>;</code>
+			<code>			@extend <mark>%monochrome</mark>;</code>
+			<code>			@extend <mark>%upside-down</mark>;</code>
+		</pre>
+		<footer>
+			<p>Let’s get back to our header block with search. This how we can cure symptoms of classitis: by adding new abstraction level using Sass silent classes.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Classitis cured</h2>
+		<pre>
+			<code>&lt;div class="<mark>header</mark>&gt;</code>
+			<code>	&lt;div class="</code>
+			<code>		<mark>header__logo</mark></code>
+			<code>		<mark>header__logo--huge</mark></code>
+			<code>		<mark>header__logo--monochome</mark></code>
+			<code>		<mark>header__logo--upside-down</mark>"&gt;</code>
+		</pre>
+		<footer>
+			<p>Before.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Common sense</h2>
+		<pre>
+			<code>&lt;div class="<mark>header</mark>&gt;</code>
+			<code>	&lt;div class="</code>
+			<code>		<mark>header__logo</mark></code>
+			<code>		<mark>header__logo--perverted</mark>"&gt;</code>
+		</pre>
+		<footer>
+			<p>After. Much better, right?</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">What else?</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://github.com/zenwalker/node-beml">BEML</a>
+		</h2>
+		<footer>
+			<p>There’s a similar solution for HTML called BEML that allows you not to write huge classes in HTML.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>BEML</h2>
+		<pre>
+			<code>&lt;header <mark>block</mark>="header"&gt;</code>
+			<code>	&lt;input <mark>elem</mark>="search" <mark>mod</mark>="size: huge"&gt;</code>
+			<code>&lt;/header&gt;</code>
+		</pre>
+		<footer>
+			<p>You just use bloc, elem and mod attributes that will be converted to actual BEM classes.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Modifiers</h2>
+		<pre class="next">
+			<code>styles/</code>
+			<code>	catalog.css</code>
+			<code>	catalog<mark>__layout</mark>.css</code>
+		</pre>
+		<pre class="next">
+			<code>pictures/</code>
+			<code>	picture.jpg</code>
+			<code>	picture<mark>--thumb</mark>.jpg</code>
+		</pre>
+		<footer>
+			<p>You can also use this double underscored and double dashes approach for naming anything you want: not just component files, but also picture thumbnails, for example.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Sublime Text</h2>
+		<pre>
+			<code>{</code>
+			<code>	"word_separators":</code>
+			<code>	"./\\()\"'-<mark>_</mark>:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?"</code>
+			<code>}</code>
+		</pre>
+		<footer>
+			<p>There’s a little trick to work with underscores easier: add underscore symbol as a word separator in your editor options. It will help you to navigate in such selectors much faster.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Links</h2>
+		<ul>
+			<li><a href="http://astore.amazon.com/simplebits-20/detail/0321808355">Bulletproof Web Design</a></li>
+			<li><a href="http://www.kapowaz.net/articles/cargo-cult-css">Cargo Cult CSS</a> &amp; <a href="http://philipwalton.com/articles/css-architecture/">CSS Architecture</a></li>
+			<li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">About HTML semantics and front-end architecture</a></li>
+			<li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding — getting your head ’round BEM syntax</a></li>
+			<li><a href="http://smacss.com">SMACSS</a>, <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS</a>, <a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS</a></li>
+			<li><a href="http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/">A New Front-End Methodology: BEM</a></li>
+			<li><a href="http://www.smashingmagazine.com/2013/02/21/the-history-of-the-bem-methodology/">The Evolution Of The BEM Methodology</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<img class="cover width next" src="pictures/the-end.gif" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="http://sokr.me/bem-en">sokr.me/bem-en</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://twitter.com/pepelsbey_" style="background: none">@pepelsbey_</a>
+		</h2>
+	</section>
+
+	<section class="slide" id="shwr">
+		<img class="place" src="pictures/shower.svg" alt="">
+		<h2 class="shout">
+			<a href="http://shwr.me/">Shower</a>
+		</h2>
+		<style>
+			#shwr h2 {
+				margin-left: 100px;
+				}
+			#shwr img {
+				margin: 23px 0 0 -210px;
+				width: 150px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout grow">Questions?</h2>
+	</section>
+
+	<p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
+	<div class="progress"></div>
+	<script src="../../shower/shower.min.js"></script>
+	<!-- Copyright © 2010–2014 Vadim Makeev — pepelsbey.net -->
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+</body>
+</html>

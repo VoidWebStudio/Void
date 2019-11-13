@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>My Vanilla CSS</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Purism, Luddism and fragile sugar tooling fatigue.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+        /* Large */
+
+		.large {
+			white-space: nowrap;
+			line-height: 1.5;
+			font-size: 50px;
+		}
+
+		@keyframes shake-slow {
+		    2%  { transform: translate(3px, 7px) rotate(3.5deg); }
+		    4%  { transform: translate(-6px, 10px) rotate(-1.5deg); }
+		    6%  { transform: translate(4px, 0px) rotate(2.5deg); }
+		    8%  { transform: translate(0px, 9px) rotate(0.5deg); }
+		    10% { transform: translate(4px, 3px) rotate(0.5deg); }
+		    12% { transform: translate(8px, 1px) rotate(3.5deg); }
+		    14% { transform: translate(6px, -2px) rotate(3.5deg); }
+		    16% { transform: translate(-6px, -4px) rotate(-1.5deg); }
+		    18% { transform: translate(4px, 9px) rotate(-2.5deg); }
+		    20% { transform: translate(-2px, 7px) rotate(3.5deg); }
+		    22% { transform: translate(10px, 5px) rotate(-0.5deg); }
+		    24% { transform: translate(-9px, -7px) rotate(1.5deg); }
+		    26% { transform: translate(-3px, -5px) rotate(3.5deg); }
+		    28% { transform: translate(9px, -3px) rotate(-2.5deg); }
+		    30% { transform: translate(4px, -3px) rotate(2.5deg); }
+		    32% { transform: translate(-7px, -3px) rotate(-2.5deg); }
+		    34% { transform: translate(-8px, 10px) rotate(3.5deg); }
+		    36% { transform: translate(-2px, -3px) rotate(1.5deg); }
+		    38% { transform: translate(-6px, -9px) rotate(-1.5deg); }
+		    40% { transform: translate(-6px, -6px) rotate(-1.5deg); }
+		    42% { transform: translate(8px, -9px) rotate(2.5deg); }
+		    44% { transform: translate(5px, 9px) rotate(-1.5deg); }
+		    46% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+		    48% { transform: translate(9px, -6px) rotate(-0.5deg); }
+		    50% { transform: translate(-6px, -4px) rotate(-1.5deg); }
+		    52% { transform: translate(0px, 10px) rotate(-0.5deg); }
+		    54% { transform: translate(8px, 9px) rotate(0.5deg); }
+		    56% { transform: translate(5px, 2px) rotate(-1.5deg); }
+		    58% { transform: translate(9px, -9px) rotate(2.5deg); }
+		    60% { transform: translate(1px, -1px) rotate(3.5deg); }
+		    62% { transform: translate(-2px, 4px) rotate(2.5deg); }
+		    64% { transform: translate(-7px, 5px) rotate(0.5deg); }
+		    66% { transform: translate(-8px, -6px) rotate(-1.5deg); }
+		    68% { transform: translate(-9px, 6px) rotate(0.5deg); }
+		    70% { transform: translate(-7px, -5px) rotate(0.5deg); }
+		    72% { transform: translate(3px, -8px) rotate(-2.5deg); }
+		    74% { transform: translate(-7px, 0px) rotate(-2.5deg); }
+		    76% { transform: translate(7px, -8px) rotate(-2.5deg); }
+		    78% { transform: translate(6px, 3px) rotate(2.5deg); }
+		    80% { transform: translate(3px, 4px) rotate(2.5deg); }
+		    82% { transform: translate(-9px, 1px) rotate(-0.5deg); }
+		    84% { transform: translate(-6px, 7px) rotate(1.5deg); }
+		    86% { transform: translate(7px, 9px) rotate(2.5deg); }
+		    88% { transform: translate(1px, -4px) rotate(0.5deg); }
+		    90% { transform: translate(9px, -9px) rotate(-2.5deg); }
+		    92% { transform: translate(-4px, -5px) rotate(-0.5deg); }
+		    94% { transform: translate(-2px, -9px) rotate(2.5deg); }
+		    96% { transform: translate(-6px, -6px) rotate(-1.5deg); }
+		    98% { transform: translate(-2px, -6px) rotate(-1.5deg); }
+		    0%, 100% { transform: translate(0, 0) rotate(0); }
+		}
+
+		.shake {
+			animation-name: shake-slow;
+			animation-duration: 5s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+    </style>
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>My Vanilla CSS</h1>
+		<p><a href="https://pepelsbey.net/">Vadim Makeev</a>, HTML Academy</p>
+	</header>
+
+	<section class="slide clear" id="cover">
+		<h2 class="shout">
+			My Vanilla CSS
+		</h2>
+		<figure>
+			<img class="cover width" src="pictures/vanilla.jpg" alt="Feet in woolen socks and a mug in front of a fireplace.">
+			<figcaption class="white"><a href="https://www.shutterstock.com/image-photo/feet-woollen-socks-by-christmas-fireplace-223147579">© Alex Master</a></figcaption>
+		</figure>
+		<style>
+			#cover h2 {
+				text-shadow:
+					0 10px 5px rgba(39, 17, 11, 0.4),
+					20px 10px 20px rgba(39, 17, 11, 0.5);
+				color: #fff;
+			}
+		</style>
+	</section>
+
+	<section class="slide clear" style="background: #302683">
+		<a href="https://htmlacademy.ru/">
+			<img class="place" width="700" src="pictures/html-academy.svg" alt="HTML Academy logo.">
+		</a>
+	</section>
+
+	<section class="slide clear black">
+		<video class="cover height" autoplay loop>
+			<source src="pictures/css-20.webm" type="video/webm">
+			<source src="pictures/css-20.mp4" type="video/mp4">
+		</video>
+	</section>
+
+	<section class="slide">
+		<ol class="place large" style="font-size: 70px">
+			<li class="next"><b>1996</b> CSS</li>
+			<li class="next"><b>2006</b> Sass</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Ruby and Sass</h2>
+		<div class="double">
+<pre><code><mark>@mixin</mark> parent
+  @if &amp;
+    &amp;:hover
+      color: tomato
+  <mark>@else</mark>
+    a
+      color: plum
+</code></pre>
+<pre><code>class parent
+  def set_tomato(n)
+    <mark>@tomato</mark> = n
+  end
+  def set_plum(n)
+    <mark>@plum</mark> = n
+  end</code></pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>CoffeeScript</h2>
+		<pre>
+			<code>isEqual: (other) <mark>-></mark></code>
+			<code>  if <mark>@scopes</mark>.length isnt other.scopes.length</code>
+			<code>    return false</code>
+			<code>  for scope, i in <mark>@scopes</mark></code>
+			<code>    if scope <mark>isnt</mark> other.scopes[i]</code>
+			<code>      return false</code>
+			<code>  <mark>true</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<ol class="place large" style="font-size: 70px">
+			<li class="next" value="3"><b>2009</b> Less</li>
+			<li class="next" value="4"><b>2010</b> Stylus</li>
+			<li class="next" value="5"><b>2013</b> PostCSS</li>
+			<li class="next" value="6"><b>2017</b> CSS-in-JS</li>
+		</ol>
+	</section>
+
+	<section class="slide clear" id="dev-opera">
+		<img class="cover" src="pictures/dev-opera-1.png" alt="Dev.Opera on desktop.">
+		<img class="place left next" height="640" src="pictures/dev-opera-2.png" alt="Dev.Opera on tablet.">
+		<img class="place right next" height="640" src="pictures/dev-opera-3.png" alt="Dev.Opera on mobile.">
+		<style>
+			#dev-opera img {
+				box-shadow: 0 0 0 1024px rgba(0, 0, 0, 0.5);
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Who wrote this garbage? Oh, right</h2>
+		<pre>
+			<code><mark>@include</mark> mq($from:lap, $until:desk) {</code>
+			<code>	<mark>@include</mark> layout($layout:6) {</code>
+			<code class="mark">		&__logo {</code>
+			<code>			<mark>@include</mark> span(2 at 1);</code>
+			<code>			}</code>
+			<code class="mark">		&__menu {</code>
+			<code>			<mark>@include</mark> span(4 at 3);</code>
+		</pre>
+		<img class="place right bottom" width="230" style="margin: 0 80px 90px 0" src="pictures/sass.svg" alt="Sass logo.">
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/error.png" alt="Console error.">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 110px">
+			CSS-in-JS
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 110px">
+			You might not need<br>
+			a CSS preprocessor
+		</h2>
+	</section>
+
+	<section class="slide">
+		<a href="http://cssnext.io/">
+			<img class="place" width="70%" src="pictures/cssnext.svg" alt="Cssnext logo.">
+		</a>
+	</section>
+
+	<section class="slide">
+		<h2>Future</h2>
+		<pre>
+			<code>a { </code>
+			<code>    <mark>--red:</mark> #d33;</code>
+			<code>    <mark>&:hover</mark> {</code>
+			<code>        color: <mark>color</mark>(var(--red) <mark>a</mark>(54%));</code>
+			<code>        }</code>
+			<code>    }</code>
+		</pre>
+		<p>
+			See <a href="https://drafts.csswg.org/css-color/#modifying-colors">CSS Color L4</a> draft
+			and <a href="http://tabatkins.github.io/specs/css-nesting/">CSS Nesting</a> abandoned napkin.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Helpers</h2>
+		<pre>
+			<code><mark>@svg-load</mark> nav url(img/nav.svg) {</code>
+			<code>    fill: #cfc;</code>
+			<code>}</code>
+			<code>.nav {</code>
+			<code>    background: <mark>svg-inline</mark>(nav);</code>
+			<code>}</code>
+		</pre>
+		<p>See <a href="https://github.com/TrySound/postcss-inline-svg">postcss-inline-svg</a> plugin.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Lazyness</h2>
+		<pre>
+			<code>.foo {</code>
+			<code>    position: <mark>absolute</mark> 10px 0;</code>
+			<code>}</code>
+			<code>.foo {</code>
+			<code>    position: <mark>absolute</mark>;</code>
+			<code class="mark">    top: 10px; right: 0; bottom: 10px; left: 0;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>SugarSS</h2>
+		<pre>
+			<code><mark>a</mark></code>
+			<code>    color: blue</code>
+			<code>.multiline,</code>
+			<code>.selector</code>
+			<code>    box-shadow:</code>
+			<code>        1px 0 9px rgba(0, 0, 0, .4)</code>
+			<code>        1px 0 3px rgba(0, 0, 0, .6)</code>
+		</pre>
+		<a href="https://github.com/postcss/sugarss">
+			<img class="place right bottom" width="230" style="margin: 0 85px 90px 0" src="pictures/sugarss.svg" alt="SugarSS logo.">
+		</a>
+	</section>
+
+	<section class="slide" id="css-in-js">
+		<h2>CSS-in-JS</h2>
+		<pre>
+			<code>const <mark>styles</mark> = {</code>
+			<code>    button: {</code>
+			<code>        '<mark>&amp;$warn</mark>': {</code>
+			<code>            color: 'red',</code>
+			<code>        '<mark>&amp;:hover</mark>, &amp;:focus': {</code>
+			<code>            color: 'white',</code>
+			<code>            background: 'red'</code>
+		</pre>
+		<a href="https://github.com/postcss/sugarss">
+			<img class="place right bottom shake" width="230" style="margin: 0 85px 90px 0" src="pictures/sugarss.svg" alt="SugarSS logo.">
+		</a>
+	</section>
+
+	<section class="slide clear" style="background: #2ccc9f">
+		<img class="place" width="820" src="pictures/sugarss.svg" alt="SugarSS logo.">
+		<img class="place left" width="280" src="pictures/sugarss.svg" alt="SugarSS logo.">
+		<img class="place right" width="280" src="pictures/sugarss.svg" alt="SugarSS logo.">
+		<div class="snow"></div>
+		<style>
+			.snow {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: url(pictures/snow.gif) center / cover;
+				image-rendering: pixelated;
+			}
+		</style>
+	</section>
+
+	<section class="slide clear">
+		<figure>
+			<img class="cover" src="pictures/bsod.png" alt="Blue screen of death.">
+			<figcaption class="white"><a href="https://en.wikipedia.org/wiki/Blue_Screen_of_Death">© Microsoft</a></figcaption>
+		</figure>
+	</section>
+
+	<section class="slide clear" style="background: #00f">
+		<h2 class="shout" style="color: #fff">It’s not CSS</h2>
+	</section>
+
+	<section class="slide clear" id="fss">
+		<h2 class="shout">It’s FSS</h2>
+		<p class="place next">Fantasy Style Sheets</p>
+		<style>
+			#fss {
+				background: #ff0080;
+				}
+			#fss h2 {
+				color: #fff;
+				}
+			#fss p {
+				margin-top: 130px;
+				color: #fff;
+				white-space: nowrap;
+				font-size: 61px;
+				}
+		</style>
+	</section>
+
+	<section class="slide clear">
+		<figure>
+			<img class="cover width" src="pictures/babel.jpg" alt="The Tower of Babel painting.">
+			<figcaption class="white"><a href="https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)">© Pieter Bruegel</a></figcaption>
+		</figure>
+	</section>
+	
+	<section class="slide clear">
+		<figure>
+			<video class="cover width" autoplay loop>
+				<source src="pictures/bolt.webm" type="video/webm">
+				<source src="pictures/bolt.mp4" type="video/mp4">
+			</video>
+			<figcaption class="white">
+				<a href="https://en.wikipedia.org/wiki/Bolt_(2008_film)">© The Walt Disney Company</a>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<ol class="place large" style="font-size: 70px">
+			<li class="next"><b>1996</b> CSS</li>
+			<li class="next"><b>2000</b> Fantsies ✨</li>
+			<li class="next"><b>2018</b> CSS?</li>
+		</ol>
+	</section>
+
+	<section class="slide black clear" id="tj">
+		<img class="place" src="pictures/tj.jpg" alt="TJ Holowaychuk">
+		<img class="place next" src="pictures/tj-2010.png" alt="TJ in 2010: Stylus">
+		<img class="place top next" src="pictures/tj-2013.png" alt="TJ in 2013: Rework">
+		<img class="place bottom next" src="pictures/tj-2017.png" alt="TJ in 2017: CSS">
+		<style>
+			#tj img:not(:first-of-type) {
+				box-shadow: 0 0 0 1024px rgba(0, 0, 0, 0.5);
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://twitter.com/pepelsbey">@pepelsbey</a>
+		</h2>
+	</section>
+
+	<section class="slide" id="shower">
+		<img class="place" src="pictures/shower.svg" alt="Shower logo.">
+		<h2 class="shout">
+			<a href="http://shwr.me/">Shower</a>
+		</h2>
+		<style>
+			#shower img {
+				margin: 22px 0 0 -210px;
+				width: 150px;
+			}
+			#shower h2 {
+				margin-left: 100px;
+			}
+		</style>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+
+	<!-- Copyright © 2017 Vadim Makeev — pepelsbey.net -->
+
+</body>
+</html>

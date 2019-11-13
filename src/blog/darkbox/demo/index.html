@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Даркбокс — Пепелсбей.net</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<script src="https://pepelsbey.net/static/j/jquery.js"></script>
+	<script>
+		$(function()
+		{
+			// Вешаем обработчик на ссылки с нужным классом
+			$('a.popup').click(function(){
+
+				var link = $(this);
+
+				// Создаём объекты
+				var frame = $('<div class="popup-frame"></div>');
+				var shadow = $('<div class="popup-shadow"></div>');
+				var loader = $('<div class="popup-loader"></div>');
+				var image = $('<img src="' + link.attr('href') + '" alt="' + link.attr('title') + '">');
+				var button = $('<span title="Закрыть"></span>');
+
+				// Цепляем их к BODY, а потом друг к другу
+				frame.appendTo('body');
+				shadow.appendTo(frame).animate({opacity:0.6},300);
+				loader.appendTo(frame);
+				image.appendTo(loader);
+
+				// Ждём загрузки картинки
+				image.load(function(){
+
+					button.appendTo(loader);
+
+					var w = image.width();
+					var h = image.height();
+
+					// Анимируем загрузчик до размеров картинки
+					// и одновременно смещаем к центру
+					loader.addClass('popup-loaded').animate({
+
+						width:w,
+						marginLeft:-w/2,
+						height:h,
+						marginTop:-h/2
+
+					},500,function(){
+
+						loader.addClass('popup-canvas');
+						image.animate({opacity:1},300,function(){
+
+							// Вешаем события для закрытия картинки
+							function closeit(){
+								loader.remove();
+								shadow.animate({opacity:0},300,function(){
+									frame.remove();
+								});
+							}
+
+							shadow.click(function(){closeit()});
+							button.click(function(){closeit()});
+
+							$(document).keydown(function(e){
+								if(e.which==27) closeit();
+							});
+						});
+					});
+				});
+
+				return false;
+			});
+		});
+	</script>
+	<style>
+		* {
+			padding:0;
+			margin:0;
+			}
+		HTML,BODY {
+			height:100%;
+			}
+		BODY {
+			font:.8125em/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;
+			color:#301B18;
+			}
+		H1 {
+			margin:0 0 1em;
+			font-weight:normal;
+			font-size:1.6em;
+			}
+		P {
+			margin:0 0 1em;
+			font-size:.85em;
+			}
+		IMG {
+			border:none;
+			}
+		A {
+			text-decoration:none;
+			color:#D00;
+			}
+		A:visited,
+		A:hover {
+			color:#DB8484;
+			}
+
+		#page {
+			padding:2em 3em;
+			}
+
+		/* Popup Styles */
+		.popup-frame {
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:999;
+			width:100%;
+			height:100%;
+			}
+		.popup-closed {
+			position:absolute;
+			width:0;
+			height:0;
+			}
+		.popup-shadow {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:#000;
+			opacity:0;
+			}
+		.popup-loader {
+			position:absolute;
+			top:50%;
+			left:50%;
+			overflow:hidden;
+			margin:-40px 0 0 -40px;
+			width:80px;
+			height:80px;
+			background:#000 url(i/spinner.gif) 25px 25px no-repeat;
+			opacity:.5;
+			}
+			.popup-loader IMG {
+				display:block;
+				opacity:0;
+				}
+		.popup-loaded {
+			background-image:none;
+			}
+		.popup-canvas {
+			overflow:visible;
+			opacity:1;
+			}
+			.popup-canvas SPAN {
+				position:absolute;
+				top:-12px;
+				left:-15px;
+				width:28px;
+				height:28px;
+				background:url(i/close.png) no-repeat;
+				cursor:pointer;
+				}
+	</style>
+	<!--[if IE]>
+	<style>
+		/* Избавляемся от прыжков при прокрутке для IE6 */
+		* HTML BODY {
+			background:url(about:blank) fixed;
+			}
+		* HTML .popup-frame {
+			position:absolute;
+			top:expression(0+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+'px');
+			}
+		.popup-shadow {
+			filter:alpha(opacity=0);
+			}
+		.popup-loader {
+			filter:alpha(opacity=50);
+			}
+			.popup-loader IMG {
+				filter:alpha(opacity=0);
+				}
+		.popup-canvas {
+			filter:none;
+			}
+			/* Путь к картинке только абсолютный */
+			* HTML .popup-canvas SPAN {
+				background:none;
+				filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='i/close.png',sizingMethod='crop');
+				}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="page">
+		<h1>Даркбокс</h1>
+		<p><a href="i-static/frau.jpg" class="popup"><img src="i-static/frau-t.jpg" alt="Фрау"></a></p>
+		<p>Пример скрипта для открытия картинок к заметке «<a href="https://pepelsbey.net/2008/11/darkbox/">Даркбокс</a>».</p>
+	</div>
+	<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter155532=new Ya.Metrika(155532);yaCounter155532.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
+	<script src="https://mc.yandex.ru/metrika/watch.js" defer="defer"></script>
+	<noscript><img src="https://mc.yandex.ru/watch/155532" alt="" style="position:absolute"></noscript>
+</body>
+</html>

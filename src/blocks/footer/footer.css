@@ -1,0 +1,14 @@
+/* Footer */
+
+.footer {
+    grid-column: 1 / -1;
+    margin-top: -1px;
+    padding: 20px;
+    background-color: hsl(6, 28%, 20%);
+    color: white;
+}
+
+.footer__copy {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Шаг №5 — Чай со спецэффектами — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			}
+		body {
+			font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+		body:lang(en-US) {
+			background: #519AB8 url(i/en.png);
+			}
+		body:lang(ru-RU) {
+			background: #115050 url(i/ru.png);
+			}
+		body:lang(ja-JP) {
+			background: #988C76 url(i/ja.jpg);
+			}
+
+		/* Cup */
+
+		.cup {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 2;
+			margin: -150px 0 0 -150px;
+			width: 300px;
+			height: 300px;
+			}
+		.vessel {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 2;
+			margin: -150px 0 0 -150px;
+			width: 300px;
+			height: 300px;
+			-webkit-border-radius: 150px;
+			-moz-border-radius: 150px;
+			border-radius: 150px;
+			-webkit-box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			-moz-box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			background: #FFF;
+			}
+		.tea {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -125px 0 0 -125px;
+			width: 250px;
+			height: 250px;
+			-webkit-border-radius: 125px;
+			-moz-border-radius: 125px;
+			border-radius: 125px;
+			-webkit-box-shadow: inset 10px 10px 50px rgba(0,0,0,.7);
+			-moz-box-shadow: inset 10px 10px 50px rgba(0,0,0,.7);
+			box-shadow: inset 10px 10px 50px rgba(0,0,0,.7);
+			}
+		.tea:lang(en-US) {
+			background: #692709;
+			}
+		.tea:lang(ru-RU) {
+			background: #400D13;
+			}
+		.tea:lang(ja-JP) {
+			background: #7B951B;
+			}
+		.sugar {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -25px 0 0 -25px;
+			width: 50px;
+			height: 50px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0 0 50px rgba(0,0,0,.7);
+			-moz-box-shadow: 0 0 50px rgba(0,0,0,.7);
+			box-shadow: 0 0 50px rgba(0,0,0,.7);
+			background: rgba(255,255,255,.1);
+			-webkit-transition: -webkit-transform 10s ease-out;
+			-moz-transition: -moz-transform 10s ease-out;
+			-o-transition: -o-transform 10s ease-out;
+			transition: transform 10s ease-out;
+			}
+		.sugar:nth-child(1) {
+			-webkit-transform: rotate(70deg) translate(-20px,20px);
+			-moz-transform: rotate(70deg) translate(-20px,20px);
+			-o-transform: rotate(70deg) translate(-20px,20px);
+			transform: rotate(70deg) translate(-20px,20px);
+			}
+		.cup:hover .sugar:nth-child(1) {
+			-webkit-transform: rotate(1200deg) translate(-20px,20px);
+			-moz-transform: rotate(1200deg) translate(-20px,20px);
+			-o-transform: rotate(1200deg) translate(-20px,20px);
+			transform: rotate(1200deg) translate(-20px,20px);
+			}
+		.sugar:nth-child(2) {
+			-webkit-transform: rotate(30deg) translate(35px,0);
+			-moz-transform: rotate(30deg) translate(35px,0);
+			-o-transform: rotate(30deg) translate(35px,0);
+			transform: rotate(30deg) translate(35px,0);
+			}
+		.cup:hover .sugar:nth-child(2) {
+			-webkit-transform: rotate(1200deg) translate(35px,0);
+			-moz-transform: rotate(1200deg) translate(35px,0);
+			-o-transform: rotate(1200deg) translate(35px,0);
+			transform: rotate(1200deg) translate(35px,0);
+			}
+		.bottom {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -70px 0 0 -70px;
+			width: 140px;
+			height: 140px;
+			-webkit-border-radius: 70px;
+			-moz-border-radius: 70px;
+			border-radius: 70px;
+			}
+		.bottom:lang(en-US) {
+			background: rgba(47,17,4,.3);
+			-webkit-box-shadow: 0 0 10px rgba(47,17,4,.4);
+			-moz-box-shadow: 0 0 10px rgba(47,17,4,.4);
+			box-shadow: 0 0 10px rgba(47,17,4,.4);
+			}
+		.bottom:lang(ja-JP) {
+			background: rgba(78,89,33,.3);
+			-webkit-box-shadow: 0 0 10px rgba(78,89,33,.4);
+			-moz-box-shadow: 0 0 10px rgba(78,89,33,.4);
+			box-shadow: 0 0 10px rgba(78,89,33,.4);
+			}
+		.bottom:lang(ru-RU) {
+			background: rgba(28,6,9,.3);
+			-webkit-box-shadow: 0 0 10px rgba(28,6,9,.4);
+			-moz-box-shadow: 0 0 10px rgba(28,6,9,.4);
+			box-shadow: 0 0 10px rgba(28,6,9,.4);
+			}
+		.handle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 1;
+			margin: -20px 0 0 -45px;
+			width: 90px;
+			height: 40px;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			-webkit-box-shadow: -30px 0 100px rgba(0,0,0,.8);
+			-moz-box-shadow: -30px 0 100px rgba(0,0,0,.8);
+			box-shadow: -30px 0 100px rgba(0,0,0,.8);
+			background: #FFF;
+			-webkit-transform: rotate(-145deg) translate(170px,0);
+			-moz-transform: rotate(-145deg) translate(170px,0);
+			-o-transform: rotate(-145deg) translate(170px,0);
+			transform: rotate(-145deg) translate(170px,0);
+			}
+
+		/* Saucer */
+		.saucer {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 1;
+			margin: -250px 0 0 -250px;
+			width: 500px;
+			height: 500px;
+			-webkit-border-radius: 250px;
+			-moz-border-radius: 250px;
+			border-radius: 250px;
+			-webkit-box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			-moz-box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			box-shadow: 20px 20px 100px rgba(0,0,0,.8);
+			background: #FFF;
+			}
+
+		/* Switcher */
+
+		.switcher {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			}
+		.switcher li {
+			position: relative;
+			float: right;
+			clear: both;
+			margin: 0 0 12px;
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			border: 5px solid transparent;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-webkit-box-shadow: 0 0 10px #000;
+			-moz-box-shadow: 0 0 10px #000;
+			box-shadow: 0 0 10px #000;
+			cursor: pointer;
+			}
+		.switcher li:hover {
+			border-color: #FFF;
+			}
+		.switcher:lang(en-US) li[lang=en-US],
+		.switcher:lang(ru-RU) li[lang=ru-RU],
+		.switcher:lang(ja-JP) li[lang=ja-JP] {
+			border-color: #FFF;
+			cursor: default;
+			}
+		.switcher li[lang=en-US] {
+			background: url(i/en.png);
+			}
+		.switcher li[lang=ru-RU] {
+			background: url(i/ru.png);
+			}
+		.switcher li[lang=ja-JP] {
+			background: url(i/ja.jpg);
+			}
+	</style>
+	<script>
+		function init() {
+			var html = document.documentElement;
+			var items = document.querySelectorAll('ul.switcher li');
+			for (var i=0; i<items.length; i++) {
+				items[i].onclick = function() {
+					html.lang = this.lang;
+				}
+			}
+		}
+		window.onload = init;
+	</script>
+</head>
+<body>
+	<div class="cup">
+		<div class="vessel">
+			<div class="tea">
+				<div class="sugar"></div>
+				<div class="sugar"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<div class="handle"></div>
+	</div>
+	<div class="saucer"></div>
+	<ul class="switcher">
+		<li lang="en-US" title="Английский"></li>
+		<li lang="ru-RU" title="Русский"></li>
+		<li lang="ja-JP" title="Японский"></li>
+	</ul>
+</body>
+</html>

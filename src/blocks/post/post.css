@@ -1,0 +1,23 @@
+/* Post */
+
+.post__caption {
+    margin-bottom: 12px;
+}
+
+.post__title {
+    margin-top: 0;
+    margin-bottom: 6px;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 36px;
+}
+
+.post__date {
+    margin: 0;
+    color: hsla(6, 28%, 20%, 0.68);
+    font-size: 16px;
+}
+
+.post__content {
+    max-width: 35em;
+}

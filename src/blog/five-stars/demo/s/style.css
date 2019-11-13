@@ -1,0 +1,60 @@
+@import 'reset.css';
+
+BODY {
+	padding:80px;
+	background:#FFF;
+	font:.8em Tahoma,sans-serif;
+	color:#000;
+	}
+
+.voting {
+	position:relative;
+	margin:0 0 1em;
+	width:104px;
+	height:22px;
+	overflow:hidden;
+	background:#CCC url(../i/stars.png) 0 -22px no-repeat;
+	}
+	.voting LI {
+		float:left;
+		}
+	.voting A {
+		position:absolute;
+		top:0;
+		left:0;
+		display:block;
+		height:22px;
+		text-indent:-9999px;
+		}
+	.voting A.cur,
+	.voting A:hover,
+	.voting:hover A.cur:hover,
+	.voting.phover A.cur:hover,
+	.voting:hover A:hover,
+	.voting.phover A:hover {
+		background:#FC0 url(../i/stars.png) no-repeat;
+		}
+	.voting:hover A.cur,
+	.voting.phover A.cur {
+		background:none;
+		}
+	.voting .one A {
+		width:15px;
+		z-index:5;
+		}
+	.voting .two A {
+		width:34px;
+		z-index:4;
+		}
+	.voting .three A {
+		width:56px;
+		z-index:3;
+		}
+	.voting .four A {
+		width:80px;
+		z-index:2;
+		}
+	.voting .five A {
+		width:104px;
+		z-index:1;
+		}

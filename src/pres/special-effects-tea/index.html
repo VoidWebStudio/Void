@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Чай со спецэффектами — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Чай со спецэффектами</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, <a href="http://www.opera.com/">Opera Software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2 class="place">Чай со спецэффектами</h2>
+		<style>
+			#cover {
+				background: url(pictures/en.png);
+				}
+			#cover h2 {
+				color: #FFF;
+				text-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+				font-size: 130px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;div class="<mark>cup</mark>"&gt;</code>
+			<code>    &lt;div class="<mark>vessel</mark>"&gt;</code>
+			<code>        &lt;div class="<mark>tea</mark>"&gt;<mark class="important">→</mark>&lt;/div&gt;</code>
+			<code>    &lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>handle</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+			<code>&lt;div class="<mark>saucer</mark>"&gt;&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;div class="<mark>tea</mark>"&gt;</code>
+			<code>    &lt;div class="<mark>sugar</mark>"&gt;&lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>sugar</mark>"&gt;&lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>bottom</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/1.html">Пример №1</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>CSS: border-radius</h2>
+		<pre>
+			<code>.vessel {</code>
+			<code>    width: <mark>300px</mark>;</code>
+			<code>    height: <mark>300px</mark>;</code>
+			<code>    border-radius: <mark>150px</mark>;</code>
+			<code>    }</code>
+		</pre>
+		<p class="note">
+			<a href="examples/2.html">Пример №2</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>CSS: box-shadow</h2>
+		<pre>
+			<code>.vessel {</code>
+			<code>    box-shadow:</code>
+			<code>        <mark>20px 20px 100px</mark></code>
+			<code>        <mark>rgba</mark>( 0, 0, 0, <mark class="important">0.8</mark> );</code>
+			<code>    }</code>
+		</pre>
+		<p class="note">
+			<a href="examples/3.html">Пример №3</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>CSS: transform и transition</h2>
+		<pre>
+			<code>.sugar {</code>
+			<code>    <mark>transform</mark>:</code>
+			<code>        rotate(70deg) translate(-20px, 20px);</code>
+			<code>    <mark>transition</mark>:</code>
+			<code>        transform 10s ease-out;</code>
+		</pre>
+		<p class="note">
+			<a href="examples/4.html">Пример №4</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Браузерные префиксы</h2>
+		<pre>
+			<code>.sugar {</code>
+			<code>    <mark>-webkit-</mark>transform: rotate(70deg);</code>
+			<code>    <mark>-moz-</mark>transform: rotate(70deg);</code>
+			<code>    <mark>-ms-</mark>transform: rotate(70deg);</code>
+			<code>    <mark>-o-</mark>transform: rotate(70deg);</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Национальные особенности</h2>
+		<pre>
+			<code>&lt;html <mark>lang="en-US"</mark>&gt;</code>
+		</pre>
+		<pre>
+			<code>BODY:<mark>lang(en-US)</mark> {</code>
+			<code>    background: #519AB8 url(en.png);</code>
+			<code>    }</code>
+		</pre>
+		<p class="note">
+			<a href="examples/5.html">Пример №5</a>
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Чай со спецэффектами</h2>
+		<p>Вадим Макеев, Opera Software</p>
+		<ul>
+			<li><a href="https://pepelsbey.net">pepelsbey.net</a></li>
+			<li><a href="https://twitter.com/pepelsbey">twitter.com/pepelsbey</a></li>
+			<li><a href="mailto:pepelsbey@opera.com">pepelsbey@opera.com</a></li>
+		</ul>
+		<p>Презентация: <a href="https://pepelsbey.net/pres/special-effects-tea/">pepelsbey.net/pres/special-effects-tea</a></p>
+	</section>
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2014 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

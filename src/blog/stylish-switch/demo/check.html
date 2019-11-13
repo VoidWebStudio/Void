@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Модный переключатель — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			padding:80px 100px;
+			background:#F7F7F7;
+			color:#555;
+			font:15px/1.6 Tahoma, sans-serif;
+			}
+		p {
+			margin:0;
+			}
+		a {
+			color:#118BF5;
+			text-decoration:none;
+			}
+
+		/* Switch */
+		.switch,
+		.switch-label,
+		.switch-slider {
+			width:154px;
+			height:54px;
+			}
+		.switch {
+			position:relative;
+			display:inline-block;
+			margin:0 50px 50px 0;
+			}
+			.switch-check {
+				position:absolute;
+				opacity:0;
+				}
+			.switch-label,
+			.switch-slider {
+				position:absolute;
+				top:0;
+				}
+			.switch-label {
+				left:0;
+				text-indent:-9999px;
+				}
+			.switch-slider {
+				border-radius:27px;
+		        box-shadow:
+		        	0 0 0 2px rgba(0, 0, 0, 0.1) inset,
+		        	0 0 4px rgba(0, 0, 0, 0.5) inset,
+		        	0 5px 4px 1px rgba(0, 0, 0, 0.3) inset,
+		        	0 27px 0 rgba(0, 0, 0, 0.07) inset;
+				-webkit-transition:width 0.2s linear;
+				-moz-transition:width 0.2s linear;
+				-o-transition:width 0.2s linear;
+				transition:width 0.2s linear;
+				}
+			.switch-slider-on {
+				left:0;
+				width:54px;
+				background:#369AEE url(images/on.svg) 100% 12px no-repeat;
+				}
+			.switch-slider-off {
+				right:0;
+				background:#FFF url(images/off.svg) 86px 14px no-repeat;
+				}
+				.switch-slider-off:after {
+					position:absolute;
+					top:1px;
+					left:1px;
+					width:52px;
+					height:52px;
+					border-radius:50%;
+					background:#E5E5E5;
+					background:-webkit-linear-gradient(#D0D0D0, #FDFDFD);
+					background:-moz-linear-gradient(#D0D0D0, #FDFDFD);
+					background:-o-linear-gradient(#D0D0D0, #FDFDFD);
+					background:linear-gradient(#D0D0D0, #FDFDFD);
+			        box-shadow:
+			        	0 0 2px 2px #FFF inset,
+			        	0 0 4px 1px rgba(0, 0, 0, 0.6);
+					content:'';
+					}
+			.switch-label:active .switch-slider-off:after,
+			.switch-check:focus + .switch-label .switch-slider-off:after {
+				background:#D5D5D5;
+				background:-webkit-linear-gradient(#C8C8C8, #E4E4E4);
+				background:-moz-linear-gradient(#C8C8C8, #E4E4E4);
+				background:-o-linear-gradient(#C8C8C8, #E4E4E4);
+				background:linear-gradient(#C8C8C8, #E4E4E4);
+				}
+			.switch-check:checked + .switch-label .switch-slider-on {
+				width:154px;
+				}
+			.switch-check:checked + .switch-label .switch-slider-off {
+				width:54px;
+				}
+	</style>
+</head>
+<body>
+	<div class="switch">
+		<input type="checkbox" checked id="switch-1" class="switch-check">
+		<label for="switch-1" class="switch-label">
+			Опция
+			<span class="switch-slider switch-slider-on"></span>
+			<span class="switch-slider switch-slider-off"></span>
+		</label>
+	</div>
+	<div class="switch">
+		<input type="checkbox" id="switch-2" class="switch-check">
+		<label for="switch-2" class="switch-label">
+			Опция
+			<span class="switch-slider switch-slider-on"></span>
+			<span class="switch-slider switch-slider-off"></span>
+		</label>
+	</div>
+	<p>Пример переключателя из интерфейса iOS на основе чекбокса к заметке «<a href="https://pepelsbey.net/2012/08/stylish-switch/">Модный переключатель</a>» на сайте Пепелсбей.net.</p>
+</body>
+</html>

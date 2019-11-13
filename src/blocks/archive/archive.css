@@ -1,0 +1,118 @@
+/* Archive */
+
+.archive {
+    grid-column: 1 / -1;
+}
+
+/* Title */
+
+.archive__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+/* List */
+
+.archive__list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 520px) {
+    .archive__list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 920px) {
+    .archive__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Item */
+
+.archive__item {
+    position: relative;
+    padding: 16px 20px;
+}
+
+.archive__item::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+}
+
+/* Link */
+
+.archive__link {
+    --archive__link-color: hsla(0, 100%, 40%, 0.2);
+    outline: none;
+    background-image: linear-gradient(
+        to top,
+        var(--archive__link-color),
+        var(--archive__link-color) 0.1em,
+        transparent 0.1em
+    );
+    background-position: left 0 bottom 0.1em;
+    color: hsl(0, 100%, 40%);
+    text-decoration: none;
+    line-height: 1;
+    font-size: 24px;
+}
+
+.archive__link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+}
+
+/* Date */
+
+.archive__date {
+    display: block;
+    margin-top: 4px;
+    color: hsla(6, 28%, 20%, 0.68);
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+/* Hover */
+
+.archive__item:not(.archive__item--current):hover::before {
+    background-color: hsla(6, 28%, 20%, 0.1);
+}
+
+/* Focus */
+
+.archive__link:focus::before {
+    box-shadow: 0 0 0 3px #91b4f5 inset;
+}
+
+/* Current */
+
+.archive__item--current::before {
+    background-color: hsl(0, 100%, 40%);
+}
+
+.archive__item--current .archive__link {
+    --archive__link-color: hsla(0, 100%, 100%, 0.4);
+    color: white;
+}
+
+.archive__item--current .archive__date {
+    color: white;
+}

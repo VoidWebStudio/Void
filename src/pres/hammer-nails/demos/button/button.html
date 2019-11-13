@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Кнопка</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.button {
+			display: inline-block;
+			margin: 0;
+			padding: 0.8rem 1rem;
+			border: none;
+			background-color: white;
+			text-align: center;
+			line-height: 1.1;
+			font-size: 50px;
+		}
+
+		.button:hover {
+			background-color: lightblue;
+		}
+
+		.button:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.2em tomato;
+		}
+
+		.button:active {
+			background-color: tomato;
+			color: white;
+		}
+
+		.button:disabled {
+			background-color: grey;
+			color: darkgrey;
+		}
+	</style>
+</head>
+<body>
+	<fieldset  disabled class="group">
+		<button class="button">
+			Пыщь
+		</button>
+		<button class="button">
+			Тыщь
+		</button>
+		<textarea class="field"></textarea>
+	</fieldset>
+	<script>
+		document.querySelectorAll('.button').forEach(function(item) {
+			item.addEventListener('click', function () {
+				pish();
+			})
+		});
+
+		function pish() {
+			document.querySelector('.field').value += 'Пыщь! ';
+		}
+	</script>	
+	<details class="todo" open>
+		<summary>Туду</summary>
+		<ul>
+			<li>😎 Подучить HTML</li>
+		</ul>
+	</details>	
+</body>
+</html>

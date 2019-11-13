@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Journal Sans New';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('../fonts/journal-sans-new-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Journal Sans New';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('../fonts/journal-sans-new-bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Journal Sans New';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('../fonts/journal-sans-new-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Journal Sans New Display';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('../fonts/journal-sans-new-display.woff2') format('woff2');
+}

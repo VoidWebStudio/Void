@@ -1,0 +1,225 @@
+/* Poem */
+
+.poem {
+	position: absolute;
+	top: 0;
+	left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	padding: 15px;
+	width: 1024px;
+	height: 640px;
+	background: #FFF;
+	overflow: hidden;
+	}
+.poem div {
+	float: left;
+    margin: 15px;
+    padding: 0 15px;
+	background: #0175A7;
+    border-radius: 10px;
+    color: #FFF;
+	}
+.poem div:first-child {
+	background: #090;
+	}
+.poem div:last-child {
+	background: #C00;
+	}
+
+/* Constructor */
+
+.poem.flex {
+	display: -webkit-flex;
+	display: flex;
+	}
+
+/* Axis */
+
+.axis-up {
+	background: #FFF url(pictures/arrow-up.svg) 50% 30px no-repeat;
+	}
+.axis-right {
+	background: #FFF url(pictures/arrow-right.svg) 767px 50% no-repeat;
+	}
+.axis-down {
+	background: #FFF url(pictures/arrow-down.svg) 50% 383px no-repeat;
+	}
+.axis-left {
+	background: #FFF url(pictures/arrow-left.svg) 30px 50% no-repeat;
+	}
+
+/* Main */
+
+.poem.row-reverse {
+	-webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+	}
+.poem.column {
+	-webkit-flex-direction: column;
+    flex-direction: column;
+	}
+.poem.column-reverse {
+	-webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+	}
+.poem.justify-end {
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	}
+.poem.justify-center {
+	-webkit-justify-content: center;
+	justify-content: center;
+	}
+.poem.justify-between {
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	}
+.poem.justify-around {
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	}
+
+/* Order */
+
+.poem.order div {
+	background-image: url(pictures/order-0.svg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	}
+.poem.order-2nd-1 div:nth-child(2) {
+	-webkit-order: 1;
+	order: 1;
+	background-image: url(pictures/order-1.svg);
+	}
+.poem.order-all-4 div {
+	-webkit-order: 4;
+	order: 4;
+	background-image: url(pictures/order-4.svg);
+	}
+.poem.order-arranged div:nth-child(1) {
+	-webkit-order: 2;
+	order: 2;
+	background-image: url(pictures/order-2.svg);
+	}
+.poem.order-arranged div:nth-child(2) {
+	-webkit-order: 1;
+	order: 1;
+	background-image: url(pictures/order-1.svg);
+	}
+.poem.order-arranged div:nth-child(3) {
+	-webkit-order: 4;
+	order: 4;
+	background-image: url(pictures/order-4.svg);
+	}
+.poem.order-arranged div:nth-child(4) {
+	-webkit-order: 3;
+	order: 3;
+	background-image: url(pictures/order-3.svg);
+	}
+
+/* Margin */
+
+.poem.margin div {
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	}
+
+/* Flex */
+
+.poem.grow div {
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	}
+.poem.grow-1st-4 div:nth-child(1) {
+	-webkit-flex-grow: 4;
+	flex-grow: 4;
+	}
+.poem.shrink div {
+	width: 25%;
+	}
+.poem.shrink div:nth-child(1) {
+	-webkit-flex-shrink: 4;
+	flex-shrink: 4;
+	}
+.poem.basis div:nth-child(1) {
+	-webkit-flex-basis: 250px;
+	flex-basis: 250px;
+	}
+
+/* Cross */
+
+.poem.align-items-height div {
+	height: 300px;
+	}
+.poem.align-items-end {
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	}
+.poem.align-items-center {
+	-webkit-align-items: center;
+	align-items: center;
+	}
+.poem.align-items-start-end div:nth-child(1) {
+	-webkit-align-self: flex-start;
+	align-self: flex-start;
+	}
+.poem.align-items-start-end div:nth-child(4) {
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+	}
+
+/* Multi */
+
+.poem.wrap {
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	}
+.poem.wrap-reverse {
+	-webkit-flex-wrap: wrap-reverse;
+	flex-wrap: wrap-reverse;
+	}
+.poem.align-content-center {
+	-webkit-align-content: center;
+    align-content: center;
+	}
+.poem.align-content-between {
+	-webkit-align-content: space-between;
+    align-content: space-between;
+	}
+.poem.align-content-start {
+	-webkit-align-content: flex-start;
+    align-content: flex-start;
+	}
+.poem.align-content-end {
+	-webkit-align-content: flex-end;
+    align-content: flex-end;
+	}
+
+/* Width */
+
+section:target .width-play {
+	-webkit-animation: width 4s linear 4s infinite alternate;
+	-moz-animation: width 4s linear 4s infinite alternate;
+	-o-animation: width 4s linear 4s infinite alternate;
+	animation: width 4s linear 4s infinite alternate;
+	}
+
+@-webkit-keyframes width {
+	from { width: 1024px }
+	to { width: 580px }
+	}
+@-moz-keyframes width {
+	from { width: 1024px }
+	to { width: 580px }
+	}
+@-o-keyframes width {
+	from { width: 1024px }
+	to { width: 580px }
+	}
+@keyframes width {
+	from { width: 1024px }
+	to { width: 580px }
+	}

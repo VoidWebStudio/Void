@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Режимы рендеринга Internet Explorer — Пепелсбей.net</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<link rel="stylesheet" href="s/style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>Режимы рендеринга Internet Explorer</h1>
+		<p>Приложение к публикации «<a href="https://pepelsbey.net/2008/09/ie-street-magic/">Уличная магия IE</a>»</p>
+	</div>
+	<div class="anchors">
+		<ul>
+			<li><a href="#ie6-sm">IE6 Standard Compliance Mode</a></li>
+			<li><a href="#ie6-qm">IE6 Quirks Mode</a></li>
+		</ul>
+		<ul>
+			<li><a href="#ie7-sm">IE7 Standard Compliance Mode</a></li>
+			<li><a href="#ie7-qm">IE7 Quirks Mode</a></li>
+		</ul>
+		<ul>
+			<li><a href="#ie8-ssm">IE8 Super Standard Compliance Mode</a></li>
+			<li><a href="#ie8-sm">IE8 Standard Compliance Mode</a></li>
+			<li><a href="#ie8-qm">IE8 Quirks Mode</a></li>
+		</ul>
+	</div>
+	<div class="convention">
+		<h2>Условные обозначения</h2>
+		<dl>
+			<dt><code class="code">Quirks Mode</code></dt>
+			<dd>Кривой режим, фактически на основе движка IE5</dd>
+		</dl>
+		<dl>
+			<dt><code class="code">Standard Compliance Mode</code></dt>
+			<dd>Режим совместимости со стандартами, впервые появился в IE6 и развился в IE7</dd>
+		</dl>
+		<dl>
+			<dt><code class="code">Super Standard Compliance Mode</code></dt>
+			<dd>Режим соответствия стандартам, впервые появился в IE8</dd>
+		</dl>
+		<dl>
+			<dt><code class="code doctype correct">DOCTYPE</code></dt>
+			<dd>корректное объявление DOCTYPE (HTML, XHTML)</dd>
+		</dl>
+		<dl>
+			<dt><code class="code doctype wrong">DOCTYPE</code></dt>
+			<dd>некорректное объявление DOCTYPE</dd>
+		</dl>
+		<dl>
+			<dt><code class="code doctype missed">DOCTYPE</code></dt>
+			<dd>отсутствующее объявление DOCTYPE</dd>
+		</dl>
+		<dl>
+			<dt><code class="code xml">XML</code></dt>
+			<dd>XML-декларация (пролог)</dd>
+		</dl>
+		<dl>
+			<dt><code class="code html">HTML</code></dt>
+			<dd>HTML-документ</dd>
+		</dl>
+		<dl>
+			<dt><code class="code compat">COMP</code></dt>
+			<dd>X-UA-Compatible мета-элемент</dd>
+		</dl>
+		<dl>
+			<dt><code class="code symbols">…</code></dt>
+			<dd>любые символы, кроме пробела и перевода строки</dd>
+		</dl>
+		<dl>
+			<dt><code class="code spaces">_</code></dt>
+			<dd>пробелы и переводы строк</dd>
+		</dl>
+	</div>
+	<div class="modes">
+		<dl id="ie6-sm">
+			<dt>IE6 <small>Standard Compliance Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie6-qm">
+			<dt>IE6 <small>Quirks Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype missed">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype wrong">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code symbols">…</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie7-sm">
+			<dt>IE7 <small>Standard Compliance Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code> <code class="code xml">XML</code> <code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie7-qm">
+			<dt>IE7 <small>Quirks Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype missed">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype wrong">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code symbols">…</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code symbols">…</code> <code class="code xml">XML</code> <code class="code symbols">…</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie8-ssm">
+			<dt>IE8 <small>Super Standard Compliance Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code> <code class="code xml">XML</code> <code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code compat">COMP = 8</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code compat">COMP = edge</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie8-sm">
+			<dt>IE8 <small>Standard Compliance Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code compat">COMP = EmulateIE7</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code compat">COMP = EmulateIE7</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code spaces">_</code> <code class="code xml">XML</code> <code class="code spaces">_</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code compat">COMP = EmulateIE7</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code compat">COMP = 7</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl id="ie8-qm">
+			<dt>IE8 <small>Quirks Mode</small></dt>
+			<dd>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype missed">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code doctype wrong">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr document">
+								<li><code class="code symbols">…</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code symbols">…</code> <code class="code xml">XML</code> <code class="code symbols">…</code></li>
+								<li><code class="code doctype correct">DOCTYPE</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="tl">
+					<div class="br">
+						<div class="bl">
+							<ol class="tr">
+								<li><code class="code compat">COMP = 6</code></li>
+								<li><code class="code html">HTML</code></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+	</div>
+	<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter155532=new Ya.Metrika(155532);yaCounter155532.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
+	<script src="https://mc.yandex.ru/metrika/watch.js" defer="defer"></script>
+	<noscript><img src="https://mc.yandex.ru/watch/155532" alt="" style="position:absolute"></noscript>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>Ambilight — Динамическая графика — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			background: #000;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			}
+		#video-wrap {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -128px 0 0 -272px;
+			width: 544px;
+			}
+		video {
+			position: relative;
+			z-index: 3;
+			border: 5px solid rgba(30,30,30,0.7);
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			}
+		canvas.ambilight-left,
+		canvas.ambilight-right {
+			position: absolute;
+			width: 300px;
+			height: 200%;
+			top: -50%;
+			}
+		canvas.ambilight-left {
+			left: -270px;
+			top: -53%;
+			background-image: url(mask3-left.png);
+			}
+		canvas.ambilight-right {
+			right: -270px;
+			top: -51%;
+			background-image: url(mask3-right.png);
+			}
+	</style>
+	<script src="jquery.js"></script>
+	<script src="ambilight.js"></script>
+</head>
+<body>
+	<div id="video-wrap">
+		<video autoplay controls autobuffer loop id="example" width="544" height="288">
+			<source src="video.webm" type="video/webm">
+		</video>
+	</div>
+	<script>
+		ambiLight.create(document.getElementById('example'))
+	</script>
+	<!-- Сергей Чикуёнок © http://chikuyonok.ru/2010/03/ambilight-video/ -->
+</body>
+</html>

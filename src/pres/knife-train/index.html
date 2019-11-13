@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Возвращение ножа и паровоза — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Возвращение ножа и паровоза</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, <a href="http://opera.com">Opera Software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2 class="next">Возвращение<br> ножа и паровоза</h2>
+		<img class="cover" src="pictures/cover.jpg" alt="">
+		<style>
+			#cover h2 {
+				position: absolute;
+				bottom: 20px;
+				left: 270px;
+				color: #000;
+				font-size: 70px;
+				text-indent: -50px;
+				text-shadow:
+					0 0 20px #FFF,
+					0 0 50px #FFF,
+					0 0 80px #FFF,
+					0 0 100px #FFF;
+				}
+			.full #cover h2.next {
+				visibility: visible;
+				opacity: 0;
+				}
+			.full #cover h2.active {
+				opacity: 1;
+				-webkit-transition: opacity 1s ease-out;
+				-moz-transition: opacity 1s ease-out;
+				-ms-transition: opacity 1s ease-out;
+				-o-transition: opacity 1s ease-out;
+				transition: opacity 1s ease-out;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Графика</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Растровая</h2>
+		<ol>
+			<li>GIF скоро стукнет 30, PNG и JPG — 20 лет.</li>
+			<li>SVG ещё молодой, всего 15 лет.</li>
+			<li>WebP всего 3 года и 40% поддержки.</li>
+			<li>Динамический растр Canvas и его 83%.</li>
+		</ol>
+		<p>Важность правильного выбора формата сложно переоценить.</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">SVG</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Шаблон</h2>
+		<pre>
+			<code><mark>&lt;svg</mark> xmlns="http://www.w3.org/2000/svg"&gt;</code>
+			<code>    <mark>&lt;rect</mark></code>
+			<code>        x="100" y="100"</code>
+			<code>        <mark>width="550" height="550"</mark></code>
+			<code>        fill="red" stroke="black"</code>
+			<code>    <mark>/&gt;</mark></code>
+			<code><mark>&lt;/svg&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="examples/svg/index.html">Мощъ SVG</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">WebP</h2>
+	</section>
+
+	<section class="slide" id="mif">
+		<h2 class="shout shrink">
+			MIF
+			<span>Magic Image Format</span>
+		</h2>
+		<style>
+			#mif h2 {
+				font-size: 300px;
+				}
+				#mif h2 span {
+					display: block;
+					font-size: 52px;
+					}
+		</style>
+	</section>
+
+	<section class="slide white" id="wtf">
+		<img class="place next" src="pictures/wtf.jpg" alt="">
+		<img class="place next" src="pictures/wtf.jpg" alt="">
+		<img class="place next" src="pictures/wtf.jpg" alt="">
+		<style>
+			#wtf img:nth-child(1) {
+				clip: rect(56px, 477px, 230px, 246px);
+				}
+			#wtf img:nth-child(2) {
+				clip: rect(0, 477px, 359px, 0);
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Редакторы</h2>
+	</section>
+
+	<section class="slide white">
+		<img class="place next" style="margin-left: -320px" src="pictures/good-ps.png" alt="">
+		<img class="place next" src="pictures/good-ai.png" alt="">
+		<img class="place next" style="margin-left: 320px" src="pictures/good-fw.png" alt="">
+		<img class="place next" style="margin: 220px 0 0 320px" src="pictures/carnation.jpg" alt="">
+	</section>
+
+	<section class="slide white" id="bad">
+		<img class="place next" src="pictures/bad-pixelmator.png" alt="">
+		<img class="place next" src="pictures/bad-gimp.png" alt="">
+		<img class="place next" src="pictures/bad-express.png" alt="">
+		<style>
+			#bad img:nth-child(1) {
+				margin: 20px 0 0 -300px;
+				}
+			#bad img:nth-child(2) {
+				margin-left: 35px;
+				}
+			#bad img:nth-child(3) {
+				z-index: -1;
+				margin-left: 320px;
+				}
+		</style>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout grow" style="color: #FFF">Не надо</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Фотошоп</h2>
+		<img class="place next" style="margin: 18px 0 0 -124px" src="pictures/lens.jpg" alt="">
+	</section>
+
+	<section class="slide white" id="toad">
+		<img class="place next" src="pictures/toad.png" alt="">
+		<style>
+			#toad img.next {
+				visibility: visible;
+				}
+			#toad img.active {
+				-webkit-transform: translate(-50%, -50%) scale(0.3);
+				-webkit-transition: -webkit-transform linear 0.5s;
+				-moz-transform: translate(-50%, -50%) scale(0.3);
+				-moz-transition: -moz-transform linear 0.5s;
+				-ms-transform: translate(-50%, -50%) scale(0.3);
+				-o-transform: translate(-50%, -50%) scale(0.3);
+				-o-transition: -moz-transform linear 0.5s;
+				transform: translate(-50%, -50%) scale(0.3);
+				transition: -moz-transform linear 0.5s;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Жаба</h2>
+		<ol>
+			<li class="next"><strong>Раньше за пакет:</strong> 60 000 &#8399;</li>
+			<li class="next"><strong>Ежемесячно:</strong> 5 000 &#8399;</li>
+			<li class="next"><strong>Сейчас:</strong> 1 500 &#8399;</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/panel-garbage.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/panel-zoomed.png" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place next" style="margin-left: -250px" src="pictures/panels-left.png" alt="">
+		<img class="place" src="pictures/panel.png" alt="">
+		<img class="place next" style="margin-left: 260px" src="pictures/panels-right.png" alt="">
+	</section>
+
+	<section class="slide white" style="background: #939393">
+		<img class="place bottom next" style="margin-left: -350px" src="pictures/knife-panel.png" alt="">
+		<img class="place top next" style="margin-left: 80px" src="pictures/knife-icon.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/knife-slices.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/knife-layer.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover height" src="pictures/knife-options.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/breaking.jpg" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/generator-layers.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/generator-enable.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover width" src="pictures/generator-result.png" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">sRGB</h2>
+	</section>
+
+	<section class="slide">
+		<img class="place" height="80%" src="pictures/sketch.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sketch-slices.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sketch-grid.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sketch-ios7.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sketch-cogwheel.jpg" alt="">
+	</section>
+
+	<section class="slide" id="sketch">
+		<h2 class="shout shrink">
+			Скетч <span>2000 ₶</span>
+		</h2>
+		<img class="place" src="pictures/sketch.jpg" alt="">
+		<style>
+			#sketch img {
+				margin-top: 150px;
+				width: 128px;
+				z-index: -1;
+				}
+			#sketch span {
+				position: absolute;
+				margin-left: 10px;
+				font-size: 75px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Утилиты</h2>
+	</section>
+
+	<section class="slide" id="xscope">
+		<h2 class="shout">xScope</h2>
+		<img class="place" src="pictures/xscope.jpg" alt="">
+		<style>
+			#xscope h2 {
+				margin-left: 200px;
+				}
+			#xscope img {
+				z-index: -1;
+				margin-left: -200px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="xscope-bacon">
+		<h2 class="shout">xScope</h2>
+		<img class="place" src="pictures/xscope-bacon.jpg" alt="">
+		<style>
+			#xscope-bacon h2 {
+				margin-left: 200px;
+				}
+			#xscope-bacon img {
+				z-index: -1;
+				margin-left: -200px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="colorsnapper">
+		<h2 class="shout">
+			Color<br>
+			Snapper
+		</h2>
+		<img class="place" src="pictures/colorsnapper.jpg" alt="">
+		<style>
+			#colorsnapper h2 {
+				margin-left: 525px;
+				text-align: left;
+				}
+			#colorsnapper img {
+				z-index: -1;
+				margin-left: -200px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="csshat">
+		<h2 class="shout">CSS Hat</h2>
+		<img class="place" src="pictures/csshat.jpg" alt="">
+		<style>
+			#csshat h2 {
+				margin-left: 120px;
+				}
+			#csshat img {
+				margin: -60px 0 0 -220px;
+				z-index: -1;
+				}
+		</style>
+	</section>
+
+	<section class="slide white">
+		<img class="cover width" src="pictures/css-hat.png" alt="">
+	</section>
+
+	<section class="slide" id="enigma">
+		<h2 class="shout">Enigma64</h2>
+		<img class="place" src="pictures/enigma.png" alt="">
+		<style>
+			#enigma h2 {
+				margin-left: 140px;
+				}
+			#enigma img {
+				margin: 10px 0 0 -280px;
+				z-index: -1;
+				}
+		</style>
+	</section>
+
+	<section class="slide white" id="enigma-panel">
+		<img class="place top next" src="pictures/enigma-panel.png" alt="">
+		<img class="place top next" src="pictures/enigma-options.png" alt="">
+		<style>
+			#enigma-panel img:nth-child(1) {
+				margin-left: -220px;
+				}
+			#enigma-panel img:nth-child(2) {
+				margin-left: 220px;
+				}
+		</style>
+	</section>
+
+	<section class="slide" id="slicy">
+		<h2 class="shout">Slicy</h2>
+		<img class="place" src="pictures/slicy.jpg" alt="">
+		<style>
+			#slicy img {
+				margin-left: -150px;
+				z-index: -1;
+				}
+			#slicy h2 {
+				margin-left: 200px;
+				}
+		</style>
+	</section>
+
+	<section class="slide black">
+		<img class="cover height" src="pictures/slicy-before.jpg" alt="">
+	</section>
+
+	<section class="slide black">
+		<img class="cover height" src="pictures/slicy-after.jpg" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Оптимизация</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Умная и тупая</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Умная оптимизация</h2>
+		<ul>
+			<li><a href="http://www.artlebedev.ru/tools/technogrette/img/jpeg-1/">Оптимизация JPEG</a> в 3 частях.</li>
+			<li><a href="http://www.artlebedev.ru/tools/technogrette/img/png-1/">Оптимизация PNG</a> в 4 частях.</li>
+			<li>Комбинаторика.</li>
+		</ul>
+	</section>
+
+	<section class="slide white" id="optimizers">
+		<figure class="place next">
+			<img src="pictures/image-optim.jpg" alt="">
+			<figcaption>ImageOptim</figcaption>
+		</figure>
+		<figure class="place next">
+			<img src="pictures/jpeg-mini.jpg" alt="">
+			<figcaption>JPEGmini</figcaption>
+		</figure>
+		<style>
+			#optimizers figure {
+				margin-top: 20px;
+				}
+			#optimizers figure:nth-child(1) {
+				margin-left: -200px;
+				}
+			#optimizers figure:nth-child(2) {
+				margin-left: 250px;
+				}
+			#optimizers figcaption {
+				margin-top: -30px;
+				text-align: center;
+				font-weight: bold;
+				font-size: 50px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://github.com/imgo/imgo">imgo</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://github.com/svg/svgo">svgo</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://github.com/veged/borschik">borschik</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="http://compass-style.org">Compass</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Спрайты?</h2>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/sprites.png" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">dataURI</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">SPDY</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Рисуем стилями</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Рисуем стилями</h2>
+		<pre>
+			<code>E {</code>
+			<code>    <mark>clip</mark>: rect(…);</code>
+			<code>    <mark>box-shadow</mark>:</code>
+			<code>        0 0 0 10px #FFF, 0 0 0 20px #000;</code>
+			<code>    <mark>border-radius</mark>: 12px;</code>
+			<code>    <mark>border-image</mark>: url(shadow.png) 199 187 repeat;</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">border-image</h2>
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-cat.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-zoom.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-box.jpg" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-border.png" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-box.png" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-corners.png" alt="">
+	</section>
+
+	<section class="slide white">
+		<img class="place" src="pictures/shadow-spacers.png" alt="">
+	</section>
+
+	<section class="slide">
+		<h2>Рисуем стилями</h2>
+		<pre>
+			<code>E {</code>
+			<code>    border: solid 0 transparent;</code>
+			<code>    border-width: <mark>199px</mark> <mark>187px</mark>;</code>
+			<code>    -webkit-border-image: url(shadow.png) 199 187 repeat;</code>
+			<code>    -o-border-image: url(shadow.png) <mark>199 187</mark> repeat;</code>
+			<code>    <mark>border-image</mark>: url(shadow.png) 199 187 repeat;</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">clip: rect</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="http://shinydemos.com">shinydemos.com</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/piano.png" alt="">
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/keys.png" alt="">
+	</section>
+
+	<section class="slide" id="keys">
+		<img class="cover next" src="pictures/keys-zoomed.png" alt="">
+		<img class="next" src="pictures/keys-1.png" alt="">
+		<img class="next" src="pictures/keys-2.png" alt="">
+		<img class="next" src="pictures/keys-3.png" alt="">
+		<style>
+			#keys {
+				background: #fff;
+				}
+			#keys img {
+				position: absolute;
+				}
+			#keys img:nth-child(1).next {
+				visibility: visible;
+				}
+			#keys img:nth-child(1).active {
+				opacity: 0.5;
+				}
+			#keys img:nth-child(2) {
+				top: 137px;
+				left: 361px;
+				}
+			#keys img:nth-child(3) {
+				top: 47px;
+				left: 361px;
+				}
+			#keys img:nth-child(4) {
+				top: 47px;
+				left: 190px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Читать дальше</h2>
+		<ul>
+			<li><a href="https://pepelsbey.net/2009/02/with-knife-against-train/">С ножом против паровоза</a></li>
+			<li><a href="https://medium.com/in-russian/8c4073155f7d">Коллективный .PSD</a></li>
+			<li><a href="https://medium.com/design-ux/25545f6cb161">Discovering Sketch</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Спасибо!</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="http://sokr.me/ktr">sokr.me/ktr</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://twitter.com/pepelsbey">@pepelsbey</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://pepelsbey.net">pepelsbey.net</a>
+		</h2>
+	</section>
+
+	<section class="slide" id="shower">
+		<img class="place" src="pictures/shower.svg" alt="">
+		<h2 class="shout">
+			<a href="http://shwr.me/">Shower</a>
+		</h2>
+		<style>
+			#shower h2 {
+				margin-left: 100px;
+				}
+			#shower img {
+				margin: 28px 0 0 -220px;
+				width: 170px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout grow">Вопросы?</h2>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2014 Vadim Makeev — pepelsbey.net -->
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

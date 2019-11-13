@@ -1,0 +1,19 @@
+body {
+    padding: 50px;
+    background-color: gainsboro;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 20px;
+}
+
+/* Todo */
+
+.todo summary:focus {
+    outline: none;
+    color: tomato;
+}
+
+.todo ul {
+    padding: 0;
+    list-style: none;
+}

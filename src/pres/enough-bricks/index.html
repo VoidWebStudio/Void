@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Хватит кирпичей — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Как делать сетки и раскладки в браузере на примере Grid Layout, который поймут даже дизайнеры.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Хватит кирпичей</h1>
+		<p><a href="https://pepelsbey.net/">Вадим Макеев</a>, HTML Академия</p>
+	</header>
+
+	<section class="slide black" id="cover">
+		<img class="cover" src="pictures/cover.png" alt="Груда кирпичей">
+		<h2 class="shout">Хватит</h2>
+		<style>
+			#cover h2 {
+				color: #fff;
+				margin-top: -0.1em;
+				text-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+				text-indent: 0.2em;
+				letter-spacing: 0.2em;
+				text-transform: lowercase;
+				font-variant: small-caps;
+				font-size: 250px;
+				}
+		</style>
+	</section>
+
+	<section class="slide black" id="academy">
+		<a href="https://htmlacademy.ru/">
+			<img class="place" width="700" src="pictures/html-academy.svg" alt="Логотип HTML Академии">
+		</a>
+		<style>
+			#academy {
+				background: #302683;
+				}
+			#academy img {
+				margin-top: 20px;
+				}
+		</style>
+	</section>
+
+	<section class="slide white">
+		<a href="https://pitercss.com/">
+			<img class="cover" src="pictures/pitercss.png" alt="Сайт pitercss_conf">
+		</a>
+	</section>
+
+	<section class="slide white" id="bricks">
+		<p>
+			<img class="next" src="pictures/brick-1.svg" width="256" alt="Кирпич 1">
+			<img class="next" src="pictures/brick-2.svg" width="256" alt="Кирпич 2">
+			<img class="next" src="pictures/brick-3.svg" width="256" alt="Кирпич 3">
+			<img class="next" src="pictures/brick-4.svg" width="256" alt="Кирпич 4">
+			<img class="next" src="pictures/brick-5.svg" width="256" alt="Кирпич 5">
+			<img class="next" src="pictures/brick-6.svg" width="256" alt="Кирпич 6">
+		</p>
+		<style>
+			#bricks p {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				justify-items: center;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Объекты</h2>
+	</section>
+
+	<section class="slide">
+		<h2 style="color: white">Swiss in CSS</h2>
+		<iframe class="cover" src="https://swissincss.com/konstruktive-grafik.html" width="1024" height="640"></iframe>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Стол, лист, стена</li>
+			<li class="next">Двумерная <strong>плоскость</strong></li>
+			<li class="next">Независимость частей</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Глубина, объём</li>
+			<li class="next">Не только сочетание</li>
+			<li class="next"><strong>Взаимодействие</strong></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Расположение</h2>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Слои краски, пиксели</li>
+			<li class="next">Знание о размерах</li>
+			<li class="next">Но <strong>изоляция</strong> в слоях</li>
+		</ul>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/word.png" alt="Текст в Ворде">
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Строка за строкой</li>
+			<li class="next">Следуют в <strong>потоке</strong></li>
+			<li class="next">В вебе с первых дней</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Размеры</h2>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Полоса набора</li>
+			<li class="next">Ограничение формата</li>
+			<li class="next">Нет конечной формы</li>
+			<li class="next">Шаблон, правила</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Адаптивность</h2>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/hinting.png" alt="Хинтинг буквы А">
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Хинтинг шрифтов</li>
+			<li class="next">Детализация иконок</li>
+			<li class="next">Ретиновая графика</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Поворот экрана</li>
+			<li class="next">Размеры экранов</li>
+			<li class="next">Увеличение шрифта</li>
+			<li class="next">Способы ввода</li>
+		</ul>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/58-artboards.png" alt="58 артбордов">
+		<p class="place bottom">Это 29 × 2 = 58, а 29 × 5 = божечки-кошечки…</p>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/58-bricks.png" alt="58 кирпичей">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Редакторы</h2>
+	</section>
+
+	<section class="slide black xcode">
+		<img class="place left" src="pictures/ios-fixed.png" alt="Фиксированное расположение в iOS">
+		<img class="place right next" src="pictures/ios-constraints.png" alt="Привязанное расположение в iOS">
+	</section>
+
+	<section class="slide black xcode">
+		<img class="place left" src="pictures/stack-render.png" alt="Отрендеренный компонент">
+		<img class="place right next" src="pictures/stack-scheme.png" alt="Схематический компонент">
+	</section>
+
+	<section class="slide black xcode">
+		<img class="place left" src="pictures/xcode-constrain.png" alt="Фиксированное расположение в iOS">
+		<img class="place right next" src="pictures/xcode-align.png" alt="Привязанное расположение в iOS">
+	</section>
+
+	<section class="slide white" id="photoshop">
+		<img class="cover" src="pictures/photoshop.png" alt="Окно Photoshop">
+		<img class="place" src="pictures/icon-photoshop.png" width="200" alt="Иконка Photoshop">
+		<img class="place next" src="pictures/brick-1.svg" width="512" alt="Кирпич">
+		<style>
+			#photoshop img.place {
+				margin: 25px 0 0 -140px;
+				}
+		</style>
+	</section>
+
+	<section class="slide white" id="sketch">
+		<img class="cover" src="pictures/sketch.png" alt="Окно Sketch">
+		<img class="place" src="pictures/icon-sketch.png" width="200" alt="Иконка Sketch">
+		<img class="place next" src="pictures/brick-5.svg" width="512" alt="Кирпич">
+		<style>
+			#sketch img.place {
+				margin: 20px 0 0 -20px;
+				}
+		</style>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sketch-autolayout.png" alt="Автораскладка в Sketch">
+	</section>
+
+	<section class="slide white" id="figma">
+		<img class="cover" src="pictures/figma.png" alt="Окно Figma">
+		<img class="place" src="pictures/icon-figma.png" width="200" alt="Иконка Figma">
+		<img class="place next" src="pictures/brick-6.svg" width="512" alt="Кирпич">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/figma-constraints.png" alt="Ограничители в Figma">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Медиа</h2>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Шрифтовик</li>
+			<li class="next">Полиграфист</li>
+			<li class="next">Промдизайнер</li>
+			<li class="next">Веб-дизайнер?</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Технологии</h2>
+	</section>
+
+	<section class="slide black">
+		<figure>
+			<video class="cover width" onclick="this.play()">
+				<source src="pictures/bricks.webm" type="video/webm">
+				<source src="pictures/bricks.mp4" type="video/mp4">
+			</video>
+			<figcaption class="white">
+				<a href="http://www.cc.com/shows/futurama">© Matt Groening</a>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/html-sketch.png" alt="Слои в Sketch">
+	</section>
+
+	<section class="slide">
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;div class="<mark>header</mark>"&gt;</code>
+			<code>    &lt;h1&gt;Заголовок&lt;/h1&gt;</code>
+			<code>&lt;/div&gt;</code>
+			<code>&lt;div class="<mark>navigation</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;div class="<mark>sidebar</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;div class="<mark>content</mark>"&gt;&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/css-sketch.png" alt="Стили в Sketch">
+	</section>
+
+	<section class="slide">
+		<h2>CSS</h2>
+		<pre>
+			<code><mark>.header</mark> {</code>
+			<code>    text-align: left;</code>
+			<code>    font: <mark>55px Gotham Pro</mark>, sans-serif;</code>
+			<code>    color: #ffffff;</code>
+			<code>    opacity: <mark>0.5</mark>;</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/svg-sketch.png" alt="Кривые в Sketch">
+	</section>
+
+	<section class="slide">
+		<h2>SVG</h2>
+		<pre>
+			<code><mark>&lt;svg</mark> width="164" height="90"&gt;</code>
+			<code>    <mark>&lt;path</mark> fill="<mark>#ffffff"</mark> d="M19.205 40.66c8.03 0 13.475-4…</code>
+			<code>        0-10.615-3.025-10.615-8.965 0-6.105 4.95-9.295 12…</code>
+			<code>        40h4.235V15.305h15.07v-3.74H70.29V40zm35.663.66c-…</code>
+			<code>        0-1.485-.22-2.035-.385L.945 89c.88.22 2.475.44 34…</code>
+			<code>        11-12.32h-5.225l-15.565 16.39v-16.39h-4.235V89z"/&gt;</code>
+			<code><mark>&lt;/svg&gt;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Раскладки</h2>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li>Текст</li>
+			<li class="next">Таблицы</li>
+			<li class="next">Флоаты</li>
+			<li class="next">Флексы</li>
+			<li class="next">Гриды</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Гриды</h2>
+	</section>
+
+	<section class="slide white">
+		<div class="app app--grid">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/app-photoshop.png" alt="Приложение в Photoshop">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/app-sketch.png" alt="Приложение в Sketch">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/app-figma.png" alt="Приложение в Figma">
+	</section>
+
+	<section class="slide white">
+		<div class="app app--color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;div class="<mark>app</mark>"&gt;</code>
+			<code>    &lt;div class="<mark>header</mark>"&gt;&lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>navigation</mark>"&gt;&lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>sidebar</mark>"&gt;&lt;/div&gt;</code>
+			<code>    &lt;div class="<mark>content</mark>"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>CSS</h2>
+		<pre>
+			<code><mark>.app</mark> {</code>
+			<code>	display: <mark>grid</mark>;</code>
+			<code>	grid-gap: <mark>25px</mark>;</code>
+			<code>	grid-template-columns: <mark>256px</mark> auto;</code>
+			<code>	grid-template-rows: <mark>256px</mark> auto;</code>
+			<code>	}</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="app app--color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>CSS</h2>
+		<pre>
+			<code>.app <mark>div</mark> {</code>
+			<code>    background: <mark>#4b86c2</mark>;</code>
+			<code>    }</code>
+			<code>.app div<mark>:first-child</mark> { background: #c00; }</code>
+			<code>.app div<mark>:last-child</mark> { background: #090; }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="responsive responsive--large">
+			<div class="responsive__header">header</div>
+			<div class="responsive__navigation">navigation</div>
+			<div class="responsive__content">content</div>
+			<div class="responsive__sidebar">sidebar</div>
+			<div class="responsive__banner">banner</div>
+			<div class="responsive__footer">footer</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Малый</h2>
+		<pre>
+			<code><mark>.grid</mark> {</code>
+			<code>    display: <mark>grid</mark>;</code>
+			<code>    grid-gap: <mark>25px</mark>;</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Малый</h2>
+		<pre>
+			<code>grid-template-<mark>areas</mark>:</code>
+			<code>    '<mark>header</mark>'</code>
+			<code>    'navigation'</code>
+			<code>    'content'</code>
+			<code>    'sidebar'</code>
+			<code>    'banner'</code>
+			<code>    '<mark>footer</mark>';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Адреса</h2>
+		<pre>
+			<code>.header      { grid-area: <mark>header</mark>; }</code>
+			<code>.navigation  { grid-area: <mark>navigation</mark>; }</code>
+			<code>.content     { grid-area: <mark>content</mark>; }</code>
+			<code>.sidebar     { grid-area: <mark>sidebar</mark>; }</code>
+			<code>.banner      { grid-area: <mark>banner</mark>; }</code>
+			<code>.footer      { grid-area: <mark>footer</mark>; }</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="responsive responsive--small">
+			<div class="responsive__header">header</div>
+			<div class="responsive__navigation">navigation</div>
+			<div class="responsive__content">content</div>
+			<div class="responsive__sidebar">sidebar</div>
+			<div class="responsive__banner">banner</div>
+			<div class="responsive__footer">footer</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Средний</h2>
+		<pre>
+			<code>grid-template-areas:</code>
+			<code>    '<mark>header</mark>      <mark>header</mark>'</code>
+			<code>    'navigation  navigation'</code>
+			<code>    'sidebar     content'</code>
+			<code>    'banner      <mark>footer</mark>';</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="responsive responsive--medium">
+			<div class="responsive__header">header</div>
+			<div class="responsive__navigation">navigation</div>
+			<div class="responsive__content">content</div>
+			<div class="responsive__sidebar">sidebar</div>
+			<div class="responsive__banner">banner</div>
+			<div class="responsive__footer">footer</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Большой</h2>
+		<pre>
+			<code>grid-template-areas:</code>
+			<code>    'header      header   header'</code>
+			<code>    '<mark>navigation</mark>  content  sidebar'</code>
+			<code>    '<mark>navigation</mark>  content  <mark>banner</mark>'</code>
+			<code>    'footer      footer   footer';</code>
+		</pre>
+	</section>
+
+	<section class="slide white">
+		<div class="responsive responsive--large">
+			<div class="responsive__header">header</div>
+			<div class="responsive__navigation">navigation</div>
+			<div class="responsive__content">content</div>
+			<div class="responsive__sidebar">sidebar</div>
+			<div class="responsive__banner">banner</div>
+			<div class="responsive__footer">footer</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Большой</h2>
+		<pre>
+			<code>@media (<mark>min-width: 512px</mark>) {</code>
+			<code>    .grid { grid-template-areas: <mark class="important">…</mark>; }</code>
+			<code>    }</code>
+			<code>@media (<mark>min-width: 768px</mark>) {</code>
+			<code>    .grid { grid-template-areas: <mark class="important">…</mark>; }</code>
+			<code>    }</code>
+		</pre>
+	</section>
+
+	<section class="slide black">
+		<figure>
+			<video class="cover width" onclick="this.play()">
+				<source src="pictures/bricks.webm#t=5" type="video/webm">
+				<source src="pictures/bricks.mp4#t=5" type="video/mp4">
+			</video>
+			<figcaption class="white">
+				<a href="http://www.cc.com/shows/futurama">© Matt Groening</a>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<ul class="place" style="font-size: 50px">
+			<li class="next">Отказаться от Photoshop</li>
+			<li class="next">Тестировать в HTML</li>
+			<li class="next">Прототипировать сетки</li>
+			<li class="next">Научиться верстать</li>
+		</ul>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/academy-1.png" alt="Базовые курсы HTML Академии">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/academy-2.png" alt="Остальные курсы HTML Академии">
+	</section>
+
+	<section class="slide">
+		<h2>Ещё? Ещё!</h2>
+		<ul>
+			<li><a href="https://www.sketchapp.com/">Sketch</a> и <a href="https://medium.com/p/c8a11422c7b5">Auto-Layout</a>, <a href="https://www.figma.com/">Figma</a></li>
+			<li><a href="https://jonyablonski.com/project/swiss-in-css/">Swiss in CSS</a> Джона Яблонски</li>
+			<li><a href="http://codepen.io/bemdesign-blocks/full/PpoEoz/">Раскладки по Брокману на гридах</a> Юрия Егорова</li>
+			<li><a href="https://medium.com/p/ac2447ab5fbe">Компоненты веб-интерфейса</a> Данилы Ковчего</li>
+			<li><a href="http://labs.jensimmons.com/">Experimental Layout Lab</a> Джен Симмонс</li>
+			<li><a href="https://htmlacademy.ru/courses">Курсы HTML Академии</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://sokr.me/ebr">sokr.me/ebr</a>
+		</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">
+			<a href="https://twitter.com/pepelsbey">@pepelsbey</a>
+		</h2>
+	</section>
+
+	<section class="slide" id="shower">
+		<img class="place" src="pictures/shower.svg" alt="Логотип Шовера">
+		<h2 class="shout">
+			<a href="http://shwr.me/">Shower</a>
+		</h2>
+		<style>
+			#shower img {
+				margin: 22px 0 0 -210px;
+				width: 150px;
+				}
+			#shower h2 {
+				margin-left: 100px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="../shower/shower.min.js"></script>
+
+	<!-- Copyright © 2010–2017 Vadim Makeev — pepelsbey.net -->
+
+	<script>(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter155532=new Ya.Metrika({id:155532})}catch(a){}});var e=b.getElementsByTagName('script')[0],d=b.createElement('script'),a=function(){e.parentNode.insertBefore(d,e)};d.async=!0;d.src='//mc.yandex.ru/metrika/watch.js';'[object Opera]'==c.opera?b.addEventListener('DOMContentLoaded',a):a()})(document,window,'yandex_metrika_callbacks');</script><noscript><img src="https://mc.yandex.ru/watch/155532" alt=""></noscript>
+
+</body>
+</html>

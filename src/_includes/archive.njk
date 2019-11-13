@@ -1,0 +1,17 @@
+<aside class="archive">
+    <h2 class="archive__title">
+        Архив
+    </h2>
+    <ul class="archive__list">
+    {%- for post in collections.post | reverse -%}
+        <li class="archive__item{% if post.url == page.url %} archive__item--current{% endif %}">
+            <a class="archive__link" href="{{ post.url }}">
+                {{ post.data.title }}
+            </a>
+            <time class="archive__date">
+                {{ post.data.date | readableDate }}
+            </time>
+        </li>
+    {%- endfor -%}
+    </ul>
+</aside>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>Текст в Canvas — Динамическая графика — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			background: #000;
+			}
+		canvas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -300px 0 0 -300px;
+			background: #FAFAA2;
+			}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="600"></canvas>
+	<script>
+		var canvas = document.querySelector('#canvas').getContext('2d');
+			canvas.font = 'bold 7em "PT Sans", sans-serif';
+			canvas.fillStyle = 'rgba( 0, 0, 0, 0.5 )';
+			canvas.textAlign = 'center';
+			canvas.textBaseline = 'top';
+			canvas.fillText( 'Ололо', 290, 220 );
+	</script>
+</body>
+</html>

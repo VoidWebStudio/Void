@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ title }}{% if page.url != '/' %} — Пепелсбей.net{% endif %}
+    </title>
+    <link rel="stylesheet" href="/blocks/index.css">
+</head>
+<body class="page__body">
+    {{ content | safe }}
+</body>
+</html>

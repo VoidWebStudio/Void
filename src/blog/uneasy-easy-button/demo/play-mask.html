@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Непростая простая кнопка — Пепелсбей.net</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			padding:80px 100px;
+			background:#CCC;
+			color:#555;
+			font:15px Tahoma, sans-serif;
+			}
+		p {
+			margin:0;
+			}
+		a {
+			color:#118BF5;
+			text-decoration:none;
+			}
+
+		/* Button */
+		.button {
+			display:inline-block;
+			margin:0 50px 50px 0;
+			padding:0;
+			width:25px;
+			height:25px;
+			border:none;
+			background:#000 50% 50% no-repeat;
+			text-indent:-9999px;
+			}
+		.button.play {
+			background-image:url(images/play-mask.svg);
+			}
+		.button.play.active {
+			background-color:#1ABEF1;
+			background-image:url(images/play-mask.svg),
+				-webkit-linear-gradient(-15deg, #0020FF 38%, rgba(26, 190, 241, 0) 49%),
+				-webkit-linear-gradient(-110deg, #0020FF 41%, rgba(26, 190, 241, 0) 52%);
+			background-image:url(images/play-mask.svg),
+				-moz-linear-gradient(-15deg, #0020FF 38%, rgba(26, 190, 241, 0) 49%),
+				-moz-linear-gradient(-110deg, #0020FF 41%, rgba(26, 190, 241, 0) 52%);
+			background-image:url(images/play-mask.svg),
+				-o-linear-gradient(-15deg, #0020FF 38%, rgba(26, 190, 241, 0) 49%),
+				-o-linear-gradient(-110deg, #0020FF 41%, rgba(26, 190, 241, 0) 52%);
+			background-image:url(images/play-mask.svg),
+				linear-gradient(105deg, #0020FF 38%, rgba(26, 190, 241, 0) 49%),
+				linear-gradient(200deg, #0020FF 41%, rgba(26, 190, 241, 0) 52%);
+			}
+		.button.big {
+			width:250px;
+			height:250px;
+			}
+	</style>
+</head>
+<body>
+	<button class="button play big">Play</button>
+	<button class="button play active big">Play</button>
+	<br>
+	<button class="button play">Play</button>
+	<button class="button play active">Play</button>
+	<p>Пример кнопки с SVG-маской к заметке «<a href="https://pepelsbey.net/2012/07/uneasy-easy-button/">Непростая простая кнопка</a>» на сайте Пепелсбей.net.</p>
+</body>
+</html>

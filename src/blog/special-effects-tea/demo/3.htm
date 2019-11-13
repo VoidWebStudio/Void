@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Пример №3 — Чай со спецэффектами — Пепелсбей.net</title>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			padding:0;
+			margin:0;
+			}
+
+		BODY {
+			background:#519AB8;
+			font:13px 'Helvetica Neue','Helvetica','Arial',sans-serif;
+			}
+		
+		/* Cup */
+		.cup {
+			position:absolute;
+			top:50%;
+			left:50%;
+			z-index:2;
+			margin:-150px 0 0 -150px;
+			width:300px;
+			height:300px;
+			}
+			.vessel {
+				position:absolute;
+				top:50%;
+				left:50%;
+				z-index:2;
+				margin:-150px 0 0 -150px;
+				width:300px;
+				height:300px;
+				-webkit-border-radius:150px;
+				-moz-border-radius:150px;
+				border-radius:150px;
+				-webkit-box-shadow:20px 20px 100px rgba(0,0,0,.8);
+				-moz-box-shadow:20px 20px 100px rgba(0,0,0,.8);
+				box-shadow:20px 20px 100px rgba(0,0,0,.8);
+				background:#FFF;
+				}
+				.tea {
+					position:absolute;
+					top:50%;
+					left:50%;
+					margin:-125px 0 0 -125px;
+					width:250px;
+					height:250px;
+					-webkit-border-radius:125px;
+					-moz-border-radius:125px;
+					border-radius:125px;
+					-webkit-box-shadow:inset 10px 10px 50px rgba(0,0,0,.7);
+					-moz-box-shadow:inset 10px 10px 50px rgba(0,0,0,.7);
+					box-shadow:inset 10px 10px 50px rgba(0,0,0,.7);
+					background:#692709;
+					}
+				.sugar {
+					position:absolute;
+					top:50%;
+					left:50%;
+					margin:-25px 0 0 -25px;
+					width:50px;
+					height:50px;
+					-webkit-border-radius:8px;
+					-moz-border-radius:8px;
+					border-radius:8px;
+					-webkit-box-shadow:0 0 50px rgba(0,0,0,.7);
+					-moz-box-shadow:0 0 50px rgba(0,0,0,.7);
+					box-shadow:0 0 50px rgba(0,0,0,.7);
+					background:rgba(255,255,255,.1);
+					}
+				.bottom {
+					position:absolute;
+					top:50%;
+					left:50%;
+					margin:-70px 0 0 -70px;
+					width:140px;
+					height:140px;
+					-webkit-border-radius:70px;
+					-moz-border-radius:70px;
+					border-radius:70px;
+					-webkit-box-shadow:0 0 10px rgba(47,17,4,.4);
+					-moz-box-shadow:0 0 10px rgba(47,17,4,.4);
+					box-shadow:0 0 10px rgba(47,17,4,.4);
+					background:rgba(47,17,4,.3);
+					}
+			.handle {
+				position:absolute;
+				top:50%;
+				left:50%;
+				z-index:1;
+				margin:-20px 0 0 -340px;
+				width:90px;
+				height:40px;
+				-webkit-border-radius:20px;
+				-moz-border-radius:20px;
+				border-radius:20px;
+				-webkit-box-shadow:-30px 0 100px rgba(0,0,0,.8);
+				-moz-box-shadow:-30px 0 100px rgba(0,0,0,.8);
+				box-shadow:-30px 0 100px rgba(0,0,0,.8);
+				background:#FFF;
+				}
+
+		/* Saucer */
+		.saucer {
+			position:absolute;
+			top:50%;
+			left:50%;
+			z-index:1;
+			margin:-250px 0 0 -250px;
+			width:500px;
+			height:500px;
+			-webkit-border-radius:250px;
+			-moz-border-radius:250px;
+			border-radius:250px;
+			-webkit-box-shadow:20px 20px 100px rgba(0,0,0,.8);
+			-moz-box-shadow:20px 20px 100px rgba(0,0,0,.8);
+			box-shadow:20px 20px 100px rgba(0,0,0,.8);
+			background:#FFF;
+			}
+	</style>
+</head>
+<body>
+	<div class="cup">
+		<div class="vessel">
+			<div class="tea">
+				<div class="sugar"></div>
+				<div class="sugar"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<div class="handle"></div>
+	</div>
+	<div class="saucer"></div>
+</body>
+</html>

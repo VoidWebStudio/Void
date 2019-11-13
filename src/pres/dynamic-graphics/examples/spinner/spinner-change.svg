@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+
+	<defs>
+		<style>
+			#rect	{ fill: #000 }
+		</style>
+		<rect width="50" height="150" rx="25" ry="25" id="rect"/>
+	</defs>
+
+	<g transform="rotate( 0, 250, 250 )">
+		<g>
+			<use x="225" y="0" xlink:href="#rect" id="one">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.7s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+			<use x="225" y="350" xlink:href="#rect" id="five">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.3s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+		</g>
+		<g transform="rotate( 45, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="two">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+			<use x="225" y="350" xlink:href="#rect" id="six">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.4s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+		</g>
+		<g transform="rotate( 90, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="three">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.1s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+			<use x="225" y="350" xlink:href="#rect" id="seven">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.5s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+		</g>
+		<g transform="rotate( 135, 250, 250 )">
+			<use x="225" y="0" xlink:href="#rect" id="four">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.2s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+			<use x="225" y="350" xlink:href="#rect" id="eight">
+				<animate
+					attributeName="opacity"
+					values="1.0; 0.8; 0.6; 0.4; 0.2; 0.1; 0.1; 0.1"
+					begin="0.6s"
+					dur="0.7s"
+					calcMode="discrete"
+					repeatCount="indefinite"
+				/>
+			</use>
+		</g>
+	</g>
+
+</svg>

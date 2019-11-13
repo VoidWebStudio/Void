@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<title>Drop Down Menu</title>
+	<style type="text/css">
+		* {padding:0;margin:0;}
+		
+		BODY {
+			padding:20px;
+			background:#EBE9E8;
+			font:17px Arial,Helvetica,sans-serif;
+			}
+		#nav,
+		#nav UL {
+			float:left;
+			background:#3A2521;
+			border:solid 1px #EBE9E8;
+			list-style:none;
+			line-height:1em;
+			}
+		#nav {
+			border-width:0 0 1px 1px;
+			}
+		#nav UL {
+			margin-left:-1px;
+			border-width:1px 0;
+			}
+		#nav A {
+			display:block;
+			padding:0.3em .8em;
+			text-decoration:none;
+			text-align:center;
+			}
+		#nav A.parent {
+			background:url(arrow.gif) 100% 50% no-repeat;
+			}
+		#nav LI {
+			float:left;
+			border-right:solid 1px #EBE9E8;
+			}
+		#nav LI:hover,
+		#nav LI.sfhover {
+			background:#A00;
+			color:#FFF;
+			}
+			#nav LI UL {
+				position:absolute;
+				top:-999em;
+				height:auto;
+				width:15em;
+				background:#3A2521;
+				font-weight:normal;
+				border-width:1px;
+				}
+			#nav LI LI {
+				padding-right:1em;
+				width:14em;
+				border:none;
+				}
+				#nav LI UL A {
+					width:13.4em;
+					text-align:left;
+					}
+				#nav LI A,
+				#nav LI:hover LI A,
+				#nav LI.sfhover LI A,
+				#nav LI:hover LI:hover LI A,
+				#nav LI.sfhover LI.sfhover LI A,
+				#nav LI:hover LI:hover LI:hover LI A,
+				#nav LI.sfhover LI.sfhover LI.sfhover LI A {
+					color:#FFF;
+					}
+				#nav LI:hover A,
+				#nav LI.sfhover A,
+				#nav LI:hover LI:hover A,
+				#nav LI.sfhover LI.sfhover A,
+				#nav LI:hover LI:hover LI:hover A,
+				#nav LI.sfhover LI.sfhover LI.sfhover A,
+				#nav LI:hover LI:hover LI:hover LI:hover A,
+				#nav LI.sfhover LI.sfhover LI.sfhover LI.sfhover A {
+					color:#FFF;
+					}
+				#nav LI UL UL {
+					margin:-1.6em 0 0 15.3em;
+					}
+				#nav LI:hover UL UL,
+				#nav LI.sfhover UL UL,
+				#nav LI:hover UL UL UL,
+				#nav LI.sfhover UL UL UL {
+					top:-999em;
+					}
+				#nav LI:hover UL,
+				#nav LI.sfhover UL,
+				#nav LI LI:hover UL,
+				#nav LI LI.sfhover UL,
+				#nav LI LI LI:hover UL,
+				#nav LI LI LI.sfhover UL {
+					top:auto;
+					}
+		#player {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			}
+	</style>
+	<!--[if IE]>
+	<style type="text/css">
+		#nav LI UL A {
+			margin-right:-1em;
+			width:15em;
+			w\idth:13.4em
+			}
+	</style>
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<script type="text/javascript">
+		sfHover = function() {
+			var sfEls = document.getElementById('nav').getElementsByTagName('LI');
+			for (var i=0; i<sfEls.length; i++) {
+				sfEls[i].onmouseover=function() {
+					this.className+=' sfhover';
+				}
+				sfEls[i].onmouseout=function() {
+					this.className=this.className.replace(new RegExp(' sfhover\\b'),'');
+				}
+			}
+		}
+		window.onload = sfHover;
+	</script>
+	<![endif]-->
+</head>
+<body>
+	<ul id="nav">
+		<li><a href="#">Команды</a></li>
+		<li><a href="#">Успехов</a>
+			<ul>
+				<li><a href="#">Оркестра</a></li>
+				<li><a href="#" class="parent">Представляет</a>
+					<ul>
+						<li><a href="#">Мог бы работал</a></li>
+						<li><a href="#">Периоды безусловно</a></li>
+						<li><a href="#">Консалтинговые</a></li>
+						<li><a href="#" class="parent">Эзотерическая</a>
+							<ul>
+								<li><a href="#">Прийти принять</a></li>
+								<li><a href="#">Электронной</a></li>
+								<li><a href="#">Кремния принять</a></li>
+								<li><a href="#">Проектировать</a></li>
+								<li><a href="#">Соответствующим</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Безответственный</a></li>
+						<li><a href="#">Может сможем</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Создаете искусство</a></li>
+				<li><a href="#">Деградируют</a></li>
+				<li><a href="#">Байты сомнений</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Неодинаковые</a>
+			<ul>
+				<li><a href="#">Если просто на</a></li>
+				<li><a href="#" class="parent">Станет система</a>
+					<ul>
+						<li><a href="#">Мы опа никто</a></li>
+						<li><a href="#">Попали покупать</a></li>
+						<li><a href="#">Вам ничьи система</a></li>
+						<li><a href="#" class="parent">Вероломно остальных!</a>
+							<ul>
+								<li><a href="#">Понять плохого</a></li>
+								<li><a href="#">Их дурак письмо</a></li>
+								<li><a href="#">Сэкономленного</a></li>
+								<li><a href="#">Покупать фон</a></li>
+								<li><a href="#">Раздутых программистом</a></li>
+								<li><a href="#">Оно поехала</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Руководители</a></li>
+						<li><a href="#">Отключаются</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="parent">Адрес погодите</a>
+					<ul>
+						<li><a href="#">Мы где компании</a></li>
+						<li><a href="#">Сказать определить</a></li>
+						<li><a href="#">Отпуск</a></li>
+						<li><a href="#">Возникновения</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Шагов обеспечении</a></li>
+			</ul>
+		</li>
+	</ul>
+	<audio id="player" controls src="everyday.mp3"></audio>
+</body>
+</html>
